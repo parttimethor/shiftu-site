@@ -1142,3 +1142,86 @@ html[data-theme="light"] .hero__mascot-img { filter: drop-shadow(0 16px 26px rgb
   .console__pipe { gap: 4px; padding: 10px 10px; }
   .pstage { font-size: .64rem; padding: 6px 2px; letter-spacing: -.01em; }
 }
+
+/* =========================================================
+   The Lead Journey
+   ========================================================= */
+.journey { display: grid; grid-template-columns: 158px minmax(0,1fr) 304px; gap: 16px; align-items: start; margin-top: 6px; }
+.journey__tabs { display: flex; gap: 8px; justify-content: center; flex-wrap: wrap; margin-bottom: 24px; }
+.journey__tab { font-family: var(--display); font-size: .9rem; font-weight: 500; color: var(--ink-2); padding: 9px 18px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); transition: color .22s var(--ease), border-color .22s var(--ease), background .22s var(--ease); }
+.journey__tab:hover { color: var(--ink); border-color: var(--line-2); }
+.journey__tab.is-active { color: #fff; background: linear-gradient(180deg, var(--blue-bright), var(--blue)); border-color: transparent; box-shadow: 0 8px 22px -8px rgba(43,107,245,.7); }
+
+/* rail */
+.journey__rail { position: relative; display: flex; flex-direction: column; padding: 6px 0; }
+.journey__rail::before { content: ""; position: absolute; left: 15px; top: 26px; bottom: 26px; width: 2px; background: var(--line-2); }
+.jrail__step { position: relative; display: flex; align-items: center; gap: 12px; padding: 12px 0; }
+.jrail__dot { position: relative; z-index: 1; width: 32px; height: 32px; flex: 0 0 auto; border-radius: 50%; border: 1px solid var(--line-2); background: var(--bg-2); display: grid; place-items: center; transition: border-color .35s var(--ease), background .35s var(--ease), box-shadow .35s var(--ease); }
+.jrail__dot::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--muted); transition: background .35s var(--ease), transform .35s var(--ease); }
+.jrail__label { font-family: var(--display); font-size: .86rem; color: var(--muted); transition: color .35s var(--ease); }
+.jrail__step.is-active .jrail__dot { border-color: var(--blue); background: rgba(43,107,245,.2); box-shadow: 0 0 18px -2px rgba(79,141,255,.8); }
+.jrail__step.is-active .jrail__dot::after { background: var(--blue-bright); transform: scale(1.25); }
+.jrail__step.is-active .jrail__label { color: var(--ink); }
+.jrail__step.is-done .jrail__dot { border-color: rgba(79,141,255,.5); background: rgba(43,107,245,.12); }
+.jrail__step.is-done .jrail__dot::after { background: var(--good); }
+.jrail__step.is-done .jrail__label { color: var(--ink-2); }
+
+/* scene */
+.journey__scene { display: flex; flex-direction: column; min-width: 0; height: 470px; border-radius: var(--radius-lg); border: 1px solid var(--line-2); background: rgba(8,13,30,.55); backdrop-filter: blur(8px); overflow: hidden; box-shadow: 0 30px 70px -40px rgba(0,0,0,.9); }
+.journey__chan { display: flex; align-items: center; gap: 9px; padding: 13px 16px; border-bottom: 1px solid var(--line); font-family: var(--display); font-size: .82rem; color: var(--ink-2); background: rgba(255,255,255,.02); }
+.journey__chan b { color: var(--ink); font-weight: 600; }
+.jchan__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--blue-bright); box-shadow: 0 0 8px var(--blue-bright); }
+.journey__feed { flex: 1; overflow-y: auto; padding: 16px; display: flex; flex-direction: column; gap: 12px; }
+.journey__feed::-webkit-scrollbar { width: 6px; } .journey__feed::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 3px; }
+
+/* artifact cards (event / invoice / handoff) */
+.jcard { align-self: flex-end; max-width: 82%; display: flex; gap: 12px; align-items: flex-start; padding: 13px 15px; border-radius: 14px; border: 1px solid rgba(79,141,255,.3); background: linear-gradient(180deg, rgba(43,107,245,.14), rgba(43,107,245,.06)); opacity: 0; transform: translateY(8px); transition: opacity .4s var(--ease), transform .4s var(--ease); }
+.jcard.is-in { opacity: 1; transform: none; }
+.jcard b { font-family: var(--display); font-size: .92rem; font-weight: 600; display: block; }
+.jcard span { font-size: .84rem; color: var(--ink-2); display: block; margin-top: 2px; }
+.jcard__ic { flex: 0 0 auto; width: 34px; height: 34px; border-radius: 10px; display: grid; place-items: center; background: rgba(43,107,245,.18); border: 1px solid rgba(79,141,255,.35); }
+.jcard__ic svg { width: 18px; height: 18px; fill: none; stroke: var(--blue-bright); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
+.jcard--invoice .jcard__row { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; }
+.jcard--invoice .jcard__row span { margin-top: 0; }
+.jcard__amt { font-family: var(--display); color: var(--good); font-weight: 600; font-size: .92rem; }
+.jcard--handoff { border-color: rgba(52,211,153,.4); background: linear-gradient(180deg, rgba(52,211,153,.12), transparent); }
+.jcard--handoff .jcard__ic { background: rgba(52,211,153,.16); border-color: rgba(52,211,153,.4); }
+.jcard--handoff .jcard__ic svg { stroke: var(--good); }
+
+/* audit panel (the receipts) */
+.journey__audit { display: flex; flex-direction: column; height: 470px; border-radius: var(--radius-lg); border: 1px solid var(--line); background: rgba(255,255,255,.02); overflow: hidden; }
+.journey__audit-head { display: flex; align-items: center; gap: 8px; padding: 14px 15px; border-bottom: 1px solid var(--line); font-family: var(--display); font-size: .74rem; letter-spacing: .1em; text-transform: uppercase; color: var(--ink-2); }
+.journey__audit-dot { width: 7px; height: 7px; border-radius: 50%; background: var(--good); box-shadow: 0 0 8px var(--good); }
+.journey__log { flex: 1; overflow-y: auto; padding: 8px; display: flex; flex-direction: column; gap: 6px; }
+.journey__log::-webkit-scrollbar { width: 6px; } .journey__log::-webkit-scrollbar-thumb { background: var(--line-2); border-radius: 3px; }
+.jlog { display: flex; gap: 9px; padding: 9px 10px; border-radius: 10px; background: var(--surface); border: 1px solid var(--line); opacity: 0; transform: translateY(6px); transition: opacity .3s var(--ease), transform .3s var(--ease); }
+.jlog.is-in { opacity: 1; transform: none; }
+.jlog__t { font-family: var(--display); font-size: .7rem; color: var(--muted); flex: 0 0 auto; padding-top: 1px; font-variant-numeric: tabular-nums; }
+.jlog__b { min-width: 0; display: flex; flex-direction: column; gap: 3px; }
+.jlog__stage { align-self: flex-start; font-family: var(--display); font-size: .6rem; font-weight: 600; letter-spacing: .05em; text-transform: uppercase; color: var(--blue-bright); padding: 2px 7px; border-radius: 5px; background: rgba(43,107,245,.12); border: 1px solid rgba(79,141,255,.25); }
+.jlog__act { font-size: .82rem; color: var(--ink); line-height: 1.35; }
+.jlog__meta { font-size: .72rem; color: var(--muted); line-height: 1.35; }
+
+/* controls */
+.journey__controls { display: flex; align-items: center; justify-content: center; gap: 16px; margin-top: 26px; flex-wrap: wrap; }
+.journey__hint { font-family: var(--display); font-size: .82rem; color: var(--muted); }
+.btn[data-journey-run].is-running { opacity: .65; cursor: default; }
+
+@media (max-width: 980px) {
+  .journey { grid-template-columns: 1fr; gap: 14px; }
+  .journey__rail { flex-direction: row; overflow-x: auto; gap: 4px; padding: 2px 0 8px; scrollbar-width: none; }
+  .journey__rail::-webkit-scrollbar { display: none; }
+  .journey__rail::before { display: none; }
+  .jrail__step { flex-direction: column; gap: 6px; flex: 1 0 auto; text-align: center; padding: 4px 6px; }
+  .jrail__label { font-size: .72rem; }
+  .journey__scene { height: 430px; }
+  .journey__audit { height: 300px; }
+}
+
+/* light theme */
+html[data-theme="light"] .journey__scene { background: rgba(255,255,255,.72); }
+html[data-theme="light"] .journey__audit { background: rgba(12,20,48,.025); }
+html[data-theme="light"] .jrail__dot { background: #fff; }
+html[data-theme="light"] .jcard { background: linear-gradient(180deg, rgba(43,107,245,.12), rgba(43,107,245,.05)); }
+html[data-theme="light"] .jcard b { color: var(--ink); }
+html[data-theme="light"] .jcard--handoff { background: linear-gradient(180deg, rgba(16,185,129,.12), transparent); }

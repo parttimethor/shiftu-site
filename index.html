@@ -183,45 +183,34 @@
     </div>
   </section>
 
-  <!-- ============ HOW IT WORKS (preview) ============ -->
-  <section class="section section--alt how" id="how">
+  <!-- ============ THE LEAD JOURNEY ============ -->
+  <section class="section section--alt journey-sec" id="journey">
     <div class="container">
       <header class="section__head" data-reveal>
-        <span class="kicker">How it works</span>
-        <h2>One loop. Every workflow.</h2>
-        <p>The same operating loop runs underneath every industry. You configure the inputs,
-          the cadences, and the hand-offs. Shift Ü runs the loop.</p>
+        <span class="kicker">Watch it work</span>
+        <h2>One lead, start to finish.</h2>
+        <p>The whole loop, running on a real workflow. Pick an industry and watch it go. Every step it
+          takes leaves a record you can read, on the right.</p>
       </header>
-      <ol class="loop">
-        <li class="loop__step" data-reveal>
-          <span class="loop__num">01</span>
-          <span class="loop__icon"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span>
-          <h3>Intake</h3><p>Capture every form, call, text, and web lead in one place, structured the moment it lands.</p>
-        </li>
-        <li class="loop__step" data-reveal>
-          <span class="loop__num">02</span>
-          <span class="loop__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>
-          <h3>Schedule</h3><p>Book, confirm, and remind across absolute dates and recurring cadences. No double-bookings.</p>
-        </li>
-        <li class="loop__step" data-reveal>
-          <span class="loop__num">03</span>
-          <span class="loop__icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
-          <h3>Follow up</h3><p>Chase every lead until it converts, on your cadence, with consent and opt-out built in.</p>
-        </li>
-        <li class="loop__step" data-reveal>
-          <span class="loop__num">04</span>
-          <span class="loop__icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
-          <h3>Bill</h3><p>Send invoices, track receivables, and nudge overdue accounts before they slip.</p>
-        </li>
-        <li class="loop__step" data-reveal>
-          <span class="loop__num">05</span>
-          <span class="loop__icon"><svg viewBox="0 0 24 24"><path d="M6 3v12M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 9c0 7-12 3-12 9"/></svg></span>
-          <h3>Route</h3><p>Classify what needs a human and hand it off with the full context attached.</p>
-        </li>
-      </ol>
-      <div class="center-cta" data-reveal>
-        <a href="product.html" class="btn btn--glass btn--lg" data-magnetic>Watch the loop run a real lead
-          <svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+
+      <div class="journey__tabs" data-journey-tabs role="tablist" aria-label="Choose an industry"></div>
+
+      <div class="journey" data-journey data-reveal>
+        <ol class="journey__rail" data-journey-rail aria-hidden="true"></ol>
+        <div class="journey__scene">
+          <div class="journey__chan" data-journey-chan></div>
+          <div class="journey__feed" data-journey-feed aria-live="polite"></div>
+        </div>
+        <aside class="journey__audit" aria-label="Audit trail">
+          <div class="journey__audit-head"><span class="journey__audit-dot"></span>Audit trail</div>
+          <ol class="journey__log" data-journey-log></ol>
+        </aside>
+      </div>
+
+      <div class="journey__controls" data-reveal>
+        <button class="btn btn--primary btn--lg" data-journey-run data-magnetic>Replay the loop
+          <svg viewBox="0 0 24 24" class="ico"><path d="M3 12a9 9 0 1 0 3-6.7L3 8M3 3v5h5"/></svg></button>
+        <span class="journey__hint">Deterministic: same lead, same result, every time.</span>
       </div>
     </div>
   </section>

@@ -827,9 +827,149 @@
     apply(getTheme());
   }
 
+  /* =========================================================
+     The Lead Journey: one lead, the whole loop, with receipts.
+     Watch intake to schedule to follow-up to bill to route run on a
+     real workflow. Every step appends an artifact AND an audit entry
+     (policy + gate + deterministic timestamp). Not a chatbot: bounded.
+     ========================================================= */
+  function initJourney() {
+    const root = $("[data-journey]");
+    if (!root) return;
+    const railEl = $("[data-journey-rail]", root);
+    const chanEl = $("[data-journey-chan]", root);
+    const feedEl = $("[data-journey-feed]", root);
+    const logEl  = $("[data-journey-log]", root);
+    const tabsEl = $("[data-journey-tabs]");
+    const runBtn = $("[data-journey-run]");
+    const STAGES = ["Intake", "Schedule", "Follow-up", "Bill", "Route"];
+    let busy = false, token = 0, current = "dealership";
+
+    const esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;" }[c]));
+    const sleep = (ms) => new Promise((r) => setTimeout(r, prefersReduced ? 0 : ms));
+    const T0 = 11*3600 + 42*60 + 3; // 11:42:03 baseline, deterministic (no Date)
+    const fmt = (s) => { const p = (n) => String(n).padStart(2,"0"); return p(Math.floor(s/3600)%24)+":"+p(Math.floor(s/60)%60)+":"+p(s%60); };
+
+    const CAL = '<svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>';
+    const USR = '<svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4 4-6 8-6s8 2 8 6"/></svg>';
+    const DOL = '<svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>';
+
+    const SCN = {
+      dealership: { label: "Car dealership", channel: "Web form", time: "11:42 PM", who: "Marcus T.", steps: [
+        { st:0, k:"in",  text:"Is the 2023 RAV4 still available? What's the out-the-door price?", a:{act:"Captured web lead, structured and deduped", pol:"First response under 60s", gate:"None"} },
+        { st:0, k:"out", text:"Hi Marcus, the 2023 RAV4 XLE is on the lot. Out-the-door is $34,980 including fees. Want to come see it?", a:{act:"Answered with live inventory and price", pol:"Never quote below floor", gate:"Price within policy"} },
+        { st:1, k:"event", title:"Test drive booked", meta:"Tomorrow 2:30 PM, reminder set", a:{act:"Booked test drive", pol:"No double-booking", gate:"Slot confirmed open"} },
+        { st:2, k:"out", text:"You're set for 2:30 PM tomorrow. I'll text a reminder an hour before. Reply STOP to opt out anytime.", a:{act:"Scheduled reminder", pol:"Consent on file, opt-out included", gate:"None"} },
+        { st:3, k:"inv", title:"Deposit hold drafted", line:"Refundable test-drive hold", amt:"Held", a:{act:"Drafted deposit, not charged", pol:"No charge without human approval", gate:"Awaiting rep approval"} },
+        { st:4, k:"hand", title:"Handed to sales rep", meta:"Full transcript and lead profile attached", a:{act:"Routed to a human with context", pol:"Enrich and attach transcript", gate:"None"} }
+      ]},
+      dental: { label: "Dental office", channel: "Missed call, text-back", time: "6:18 PM", who: "Priya R.", steps: [
+        { st:0, k:"in",  text:"Hi, do you have any cleaning appointments this week?", a:{act:"Missed call answered by text", pol:"Text back under 60s", gate:"None"} },
+        { st:0, k:"out", text:"We do. I can offer Thursday 9:00 AM or Friday 1:15 PM for a cleaning. Are you a returning patient?", a:{act:"Offered open slots", pol:"Only show bookable times", gate:"Calendar checked"} },
+        { st:1, k:"event", title:"Cleaning booked", meta:"Friday 1:15 PM, insurance on file", a:{act:"Booked cleaning", pol:"No double-booking", gate:"Slot confirmed open"} },
+        { st:2, k:"out", text:"Booked for Friday 1:15 PM. I'll send a reminder and your intake form the day before.", a:{act:"Scheduled reminder and intake form", pol:"Consent on file", gate:"None"} },
+        { st:3, k:"inv", title:"Estimate prepared", line:"Cleaning and exam, pending insurance", amt:"$0 now", a:{act:"Prepared estimate", pol:"Never bill before service", gate:"None"} },
+        { st:4, k:"hand", title:"Front desk notified", meta:"Chart and insurance details attached", a:{act:"Routed to front desk", pol:"Attach chart context", gate:"None"} }
+      ]},
+      restaurant: { label: "Restaurant", channel: "Instagram DM", time: "7:55 PM", who: "Jordan M.", steps: [
+        { st:0, k:"in",  text:"Do you have a table for 6 tomorrow around 7?", a:{act:"Captured DM, parsed party size and time", pol:"Answer every channel", gate:"None"} },
+        { st:0, k:"out", text:"We'd love to have you. For a party of 6 I can do 6:45 or 8:15. Which works better?", a:{act:"Offered seatings", pol:"Only offer real availability", gate:"Floor plan checked"} },
+        { st:1, k:"event", title:"Reservation held", meta:"Tomorrow 6:45 PM, party of 6", a:{act:"Held reservation", pol:"No double-booking", gate:"Table confirmed open"} },
+        { st:2, k:"out", text:"Booked for 6 at 6:45 PM tomorrow. I'll text a confirmation. Reply STOP to opt out.", a:{act:"Scheduled confirmation", pol:"Consent on file, opt-out included", gate:"None"} },
+        { st:3, k:"inv", title:"No deposit required", line:"Party-size policy: deposits at 8 or more", amt:"$0.00", a:{act:"Applied deposit policy", pol:"Deposits only for parties of 8+", gate:"Rule evaluated"} },
+        { st:4, k:"hand", title:"Added to floor plan", meta:"Host notified with party size and notes", a:{act:"Routed to host", pol:"Attach booking notes", gate:"None"} }
+      ]}
+    };
+
+    railEl.innerHTML = STAGES.map((s, i) => '<li class="jrail__step" data-rs="'+i+'"><span class="jrail__dot"></span><span class="jrail__label">'+s+'</span></li>').join("");
+    function markRail(i, state) {
+      const el = railEl.querySelector('[data-rs="'+i+'"]'); if (!el) return;
+      if (state === "active") { el.classList.add("is-active"); el.classList.remove("is-done"); }
+      else if (state === "done") { el.classList.remove("is-active"); el.classList.add("is-done"); }
+    }
+
+    function artifact(sc, step) {
+      const el = document.createElement("div");
+      if (step.k === "in") {
+        el.className = "msg msg--in";
+        el.innerHTML = '<span class="msg__avatar">'+esc(sc.who[0])+'</span><div><div class="msg__meta">'+esc(sc.who)+'</div><div class="msg__body">'+esc(step.text)+'</div></div>';
+      } else if (step.k === "out") {
+        el.className = "msg msg--ai";
+        el.innerHTML = '<span class="msg__avatar">Ü</span><div><div class="msg__meta">Shift Ü</div><div class="msg__body">'+esc(step.text)+'</div></div>';
+      } else if (step.k === "event") {
+        el.className = "jcard jcard--event";
+        el.innerHTML = '<span class="jcard__ic">'+CAL+'</span><div><b>'+esc(step.title)+'</b><span>'+esc(step.meta)+'</span></div>';
+      } else if (step.k === "inv") {
+        el.className = "jcard jcard--invoice";
+        el.innerHTML = '<span class="jcard__ic">'+DOL+'</span><div style="flex:1"><div class="jcard__row"><b>'+esc(step.title)+'</b><span class="jcard__amt">'+esc(step.amt)+'</span></div><span>'+esc(step.line)+'</span></div>';
+      } else {
+        el.className = "jcard jcard--handoff";
+        el.innerHTML = '<span class="jcard__ic">'+USR+'</span><div><b>'+esc(step.title)+'</b><span>'+esc(step.meta)+'</span></div>';
+      }
+      feedEl.appendChild(el);
+      requestAnimationFrame(() => el.classList.add("is-in"));
+      feedEl.scrollTop = feedEl.scrollHeight;
+    }
+
+    function audit(step, dt) {
+      const li = document.createElement("li");
+      li.className = "jlog";
+      li.innerHTML = '<span class="jlog__t">'+fmt(T0+dt)+'</span><div class="jlog__b"><span class="jlog__stage">'+STAGES[step.st]+'</span><span class="jlog__act">'+esc(step.a.act)+'</span><span class="jlog__meta">Policy: '+esc(step.a.pol)+' &middot; Gate: '+esc(step.a.gate)+'</span></div>';
+      logEl.appendChild(li);
+      requestAnimationFrame(() => li.classList.add("is-in"));
+      logEl.scrollTop = logEl.scrollHeight;
+    }
+
+    async function play(key) {
+      token++; const my = token;
+      busy = true; current = key;
+      const sc = SCN[key];
+      feedEl.innerHTML = ""; logEl.innerHTML = "";
+      railEl.querySelectorAll(".jrail__step").forEach((s) => s.classList.remove("is-active","is-done"));
+      chanEl.innerHTML = '<span class="jchan__dot"></span><b>New lead</b> &middot; '+esc(sc.channel)+' &middot; '+esc(sc.time);
+      if (runBtn) { runBtn.classList.add("is-running"); runBtn.disabled = true; }
+      let last = -1, dt = 0;
+      for (const step of sc.steps) {
+        if (my !== token) return;
+        if (step.st !== last) { for (let i = 0; i < step.st; i++) markRail(i, "done"); markRail(step.st, "active"); last = step.st; }
+        await sleep(150);
+        if (my !== token) return;
+        artifact(sc, step);
+        dt += 2;
+        await sleep(170);
+        audit(step, dt);
+        await sleep(540);
+      }
+      for (let i = 0; i < STAGES.length; i++) markRail(i, "done");
+      if (runBtn) { runBtn.classList.remove("is-running"); runBtn.disabled = false; }
+      busy = false;
+    }
+
+    Object.keys(SCN).forEach((k, idx) => {
+      const b = document.createElement("button");
+      b.className = "journey__tab" + (idx === 0 ? " is-active" : "");
+      b.type = "button"; b.setAttribute("role", "tab"); b.setAttribute("aria-selected", idx === 0 ? "true" : "false");
+      b.textContent = SCN[k].label;
+      b.addEventListener("click", () => {
+        tabsEl.querySelectorAll(".journey__tab").forEach((t) => { t.classList.remove("is-active"); t.setAttribute("aria-selected","false"); });
+        b.classList.add("is-active"); b.setAttribute("aria-selected","true");
+        play(k);
+      });
+      tabsEl.appendChild(b);
+    });
+    if (runBtn) runBtn.addEventListener("click", () => play(current));
+
+    let started = false;
+    if ("IntersectionObserver" in window) {
+      const io = new IntersectionObserver((es) => { es.forEach((e) => { if (e.isIntersecting && !started) { started = true; play(current); } }); }, { threshold: 0.3 });
+      io.observe(root);
+    } else { play(current); }
+  }
+
   /* ---------- boot ---------- */
   setupTheme();
   initConsole();
+  initJourney();
   setupSettle();
   setupScrollChoreography();
 })();
