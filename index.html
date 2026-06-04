@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Shift Ü — The admin runs itself now</title>
+<meta name="description" content="Shift Ü is the deterministic AI ops layer that runs your intake, scheduling, follow-ups, and billing — the redundant admin work that used to need a back office. Predictable, bounded, always on." />
+<meta name="theme-color" content="#060b1c" />
+<meta property="og:title" content="Shift Ü — The admin runs itself now" />
+<meta property="og:description" content="The deterministic AI ops layer for service businesses. Intake, scheduling, follow-ups, and billing — handled." />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://shiftu.io" />
+<link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
+<link rel="apple-touch-icon" href="assets/shiftu-logo.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=Poppins:wght@600;700;800&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+<div class="bg-grid" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+<div class="bg-glow bg-glow--2" aria-hidden="true"></div>
+<div class="cursor-glow" data-cursor aria-hidden="true"></div>
+<div class="scroll-progress" data-progress aria-hidden="true"></div>
+
+<!-- ============ nav ============ -->
+<header class="nav" data-nav>
+  <div class="nav__inner">
+    <a class="brand" href="index.html" aria-label="Shift Ü home">
+      <span class="brand__mark"><span class="brand__shift">Shift</span><span class="brand__u">Ü</span></span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="product.html">Product</a>
+      <a href="industries.html">Industries</a>
+      <a href="company.html">Company</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+    <div class="nav__cta">
+      <a href="contact.html" class="btn btn--ghost">Sign in</a>
+      <a href="contact.html" class="btn btn--primary" data-magnetic>Book a demo</a>
+    </div>
+    <button class="nav__burger" data-burger aria-label="Open menu" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+  <div class="nav__mobile" data-mobile-menu>
+    <a href="product.html">Product</a>
+    <a href="industries.html">Industries</a>
+    <a href="company.html">Company</a>
+    <a href="contact.html">Contact</a>
+    <a href="contact.html" class="btn btn--primary btn--block">Book a demo</a>
+  </div>
+</header>
+
+<main id="top">
+
+    <!-- ============ HERO — Playable console ============ -->
+  <section class="hero hero--console" id="hero">
+    <div class="hero__ambient" aria-hidden="true"></div>
+
+    <div class="hero__mascot" data-mascot>
+      <span class="hero__mascot-glow" aria-hidden="true"></span>
+      <img class="hero__mascot-img" src="assets/mascot-thomas.png" alt="Thomas, the Shift Ü mascot" draggable="false" />
+    </div>
+
+    <div class="hero__grid">
+      <div class="hero__content">
+        <span class="eyebrow" data-reveal><span class="eyebrow__dot"></span>Deterministic AI ops for service businesses</span>
+        <h1 class="hero__title" data-settle>
+          <span class="line">Shift the busywork.</span>
+          <span class="line line--accent" data-settle-accent>Ü keep the business.</span>
+        </h1>
+        <p class="hero__sub" data-reveal>
+          The deterministic AI ops layer that runs your intake, scheduling, follow-ups, and billing.
+          Don't take our word for it — message it like a customer and watch it work.
+        </p>
+        <div class="hero__actions" data-reveal>
+          <a href="contact.html" class="btn btn--primary btn--lg" data-magnetic>Book a demo
+            <svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="product.html" class="btn btn--glass btn--lg" data-magnetic>
+            <svg viewBox="0 0 24 24" class="ico"><path d="M8 5v14l11-7z" fill="currentColor" stroke="none"/></svg>See how it works</a>
+        </div>
+        <div class="hero__chips" data-reveal>
+          <span class="chip">Always on</span>
+          <span class="chip">Bounded &amp; auditable</span>
+          <span class="chip">Your tools, connected</span>
+        </div>
+      </div>
+
+      <div class="console" data-console data-reveal>
+        <div class="console__bar">
+          <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
+          <span class="console__title">shift-ü · live</span>
+          <span class="console__live"><span class="console__pulse"></span>online</span>
+        </div>
+        <div class="console__pipe" aria-hidden="true">
+          <span class="pstage" data-stage>Intake</span>
+          <span class="pstage" data-stage>Schedule</span>
+          <span class="pstage" data-stage>Follow-up</span>
+          <span class="pstage" data-stage>Bill</span>
+          <span class="pstage" data-stage>Route</span>
+        </div>
+        <div class="console__feed" data-feed aria-live="polite"></div>
+        <div class="console__presets" data-presets></div>
+        <form class="console__form" data-form>
+          <input class="console__input" data-input type="text" placeholder="Message Shift Ü like a customer…" aria-label="Message Shift Ü" autocomplete="off" />
+          <button class="console__send" type="submit" aria-label="Send">
+            <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
+          </button>
+        </form>
+      </div>
+    </div>
+
+    <a href="#shift" class="hero__scroll" aria-label="Scroll down"><span class="hero__mouse"><span></span></span><span>Scroll</span></a>
+  </section>
+
+  <!-- ============ TRUST / MARQUEE ============ -->
+  <section class="trust" aria-label="Industries served">
+    <p class="trust__label">Purpose-built for high-volume service operations</p>
+    <div class="marquee" data-marquee>
+      <div class="marquee__track">
+        <span>Car Dealerships</span><i>•</i><span>Dental Offices</span><i>•</i><span>Accounting Firms</span><i>•</i><span>Insurance Offices</span><i>•</i><span>Restaurant Groups</span><i>•</i>
+        <span>Car Dealerships</span><i>•</i><span>Dental Offices</span><i>•</i><span>Accounting Firms</span><i>•</i><span>Insurance Offices</span><i>•</i><span>Restaurant Groups</span><i>•</i>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ THE SHIFT ============ -->
+  <section class="section shift" id="shift">
+    <div class="container">
+      <header class="section__head" data-reveal>
+        <span class="kicker">The shift</span>
+        <h2>Admin overhead is a tax on every<br class="br-d"> service business.</h2>
+        <p>Every lead, appointment, and invoice needs a human to chase it. Shift Ü takes the
+          repetitive half of that work off your team's plate — without taking your hands off the wheel.</p>
+      </header>
+      <div class="shift__grid">
+        <article class="panel panel--before" data-reveal>
+          <h3><span class="panel__tag panel__tag--bad">Before</span> Running on people</h3>
+          <ul class="ticklist ticklist--bad">
+            <li>Leads sit in an inbox and go cold overnight</li>
+            <li>No-shows because reminders never went out</li>
+            <li>Follow-ups depend on someone remembering</li>
+            <li>Invoices sent late, AR chased by hand</li>
+            <li>Staff buried in the same tickets every day</li>
+          </ul>
+        </article>
+        <div class="shift__arrow" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg><span class="shift__echo"></span><span class="shift__echo"></span><span class="shift__echo"></span><span class="shift__echo"></span></div>
+        <article class="panel panel--after" data-reveal>
+          <h3><span class="panel__tag panel__tag--good">With Shift Ü</span> Running on a system</h3>
+          <ul class="ticklist ticklist--good">
+            <li>Every lead answered in seconds, day or night</li>
+            <li>Appointments booked, confirmed, and reminded</li>
+            <li>Follow-ups run on a cadence that never forgets</li>
+            <li>Invoices sent on time, overdue accounts nudged</li>
+            <li>Routine tickets resolved or routed with context</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ HOW IT WORKS (preview) ============ -->
+  <section class="section how" id="how">
+    <div class="container">
+      <header class="section__head" data-reveal>
+        <span class="kicker">How it works</span>
+        <h2>One loop. Every workflow.</h2>
+        <p>The same operating loop runs underneath every industry. You configure the inputs,
+          the cadences, and the hand-offs — Shift Ü runs the loop.</p>
+      </header>
+      <ol class="loop">
+        <li class="loop__step" data-reveal>
+          <span class="loop__num">01</span>
+          <span class="loop__icon"><svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h16M4 17h10"/></svg></span>
+          <h3>Intake</h3><p>Capture every form, call, text, and web lead in one place — structured the moment it lands.</p>
+        </li>
+        <li class="loop__step" data-reveal>
+          <span class="loop__num">02</span>
+          <span class="loop__icon"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg></span>
+          <h3>Schedule</h3><p>Book, confirm, and remind across absolute dates and recurring cadences. No double-bookings.</p>
+        </li>
+        <li class="loop__step" data-reveal>
+          <span class="loop__num">03</span>
+          <span class="loop__icon"><svg viewBox="0 0 24 24"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></span>
+          <h3>Follow up</h3><p>Chase every lead until it converts — on your cadence, with consent and opt-out built in.</p>
+        </li>
+        <li class="loop__step" data-reveal>
+          <span class="loop__num">04</span>
+          <span class="loop__icon"><svg viewBox="0 0 24 24"><path d="M12 1v22M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></span>
+          <h3>Bill</h3><p>Send invoices, track receivables, and nudge overdue accounts before they slip.</p>
+        </li>
+        <li class="loop__step" data-reveal>
+          <span class="loop__num">05</span>
+          <span class="loop__icon"><svg viewBox="0 0 24 24"><path d="M6 3v12M6 21a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 9a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM18 9c0 7-12 3-12 9"/></svg></span>
+          <h3>Route</h3><p>Classify what needs a human and hand it off with the full context attached.</p>
+        </li>
+      </ol>
+      <div class="center-cta" data-reveal>
+        <a href="product.html" class="btn btn--glass btn--lg" data-magnetic>Watch the loop run a real lead
+          <svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ STATS ============ -->
+  <section class="section stats" aria-label="Outcomes">
+    <div class="container">
+      <div class="stats__grid">
+        <div class="stat" data-reveal><span class="stat__num"><span data-count="60" data-suffix="s">0</span></span><span class="stat__label">Average first response</span></div>
+        <div class="stat" data-reveal><span class="stat__num"><span data-count="24" data-suffix="/7">0</span></span><span class="stat__label">Always-on coverage</span></div>
+        <div class="stat" data-reveal><span class="stat__num"><span data-count="100" data-suffix="%">0</span></span><span class="stat__label">Follow-ups completed</span></div>
+        <div class="stat" data-reveal><span class="stat__num"><span data-count="5" data-suffix="">0</span></span><span class="stat__label">Industries supported</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ PLATFORM TEASER ============ -->
+  <section class="section platform" id="platform">
+    <div class="container">
+      <header class="section__head" data-reveal>
+        <span class="kicker">The platform</span>
+        <h2>Modular by design.</h2>
+        <p>One operating core, composed of capability modules. Turn on what your business needs —
+          the rest stays out of your way.</p>
+      </header>
+      <div class="modules">
+        <article class="module" data-reveal>
+          <div class="module__glow"></div><span class="module__badge">Core</span>
+          <h3>Ops Engine</h3>
+          <p>The deterministic loop — intake, scheduling, follow-up, billing, routing — with the gates, scheduler, and consent controls every workflow runs on.</p>
+        </article>
+        <article class="module" data-reveal>
+          <div class="module__glow"></div><span class="module__badge">Module</span>
+          <h3>Sales &amp; Pipeline</h3>
+          <p>Capture, qualify, and chase leads through to a booked appointment or a closed deal — with proposals and reminders handled for you.</p>
+        </article>
+        <article class="module" data-reveal>
+          <div class="module__glow"></div><span class="module__badge">Module</span>
+          <h3>Billing &amp; Support</h3>
+          <p>Send invoices, track receivables, and field routine support — escalating to a human only when it genuinely needs one.</p>
+        </article>
+      </div>
+      <div class="center-cta" data-reveal>
+        <a href="product.html#platform" class="btn btn--glass" data-magnetic>Explore the platform
+          <svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="section cta" id="contact">
+    <div class="container">
+      <div class="cta__card" data-reveal>
+        <span class="cta__token" aria-hidden="true"></span>
+        <div class="cta__glow" aria-hidden="true"></div>
+        <span class="kicker">Ready when you are</span>
+        <h2>Give the busywork to Shift Ü.</h2>
+        <p>Tell us where your team spends its day. We'll show you the loop running on your workflows in a 20-minute demo.</p>
+        <div class="cta__actions">
+          <a href="contact.html" class="btn btn--primary btn--lg" data-magnetic>Book a demo
+            <svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+          <a href="tel:+17809992270" class="btn btn--glass btn--lg" data-magnetic>
+            <svg viewBox="0 0 24 24" class="ico"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3-8.6A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8.1 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg>780-999-2270</a>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<!-- ============ footer ============ -->
+<footer class="footer">
+  <div class="container footer__inner">
+    <div class="footer__brand">
+      <span class="brand__mark"><span class="brand__shift">Shift</span><span class="brand__u">Ü</span></span>
+      <p>The deterministic AI ops layer for service businesses.</p>
+    </div>
+    <nav class="footer__col" aria-label="Product">
+      <h4>Product</h4>
+      <a href="product.html">How it works</a>
+      <a href="product.html#demo">Live demo</a>
+      <a href="industries.html">Industries</a>
+      <a href="product.html#platform">Platform</a>
+    </nav>
+    <nav class="footer__col" aria-label="Company">
+      <h4>Company</h4>
+      <a href="company.html">Team</a>
+      <a href="contact.html">Book a demo</a>
+      <a href="mailto:christian@shiftu.io">christian@shiftu.io</a>
+      <a href="tel:+17809992270">780-999-2270</a>
+    </nav>
+  </div>
+  <div class="container footer__bottom">
+    <span>© <span data-year>2026</span> Shift Ü. All rights reserved.</span>
+    <span class="footer__made">Built in Edmonton, AB</span>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
