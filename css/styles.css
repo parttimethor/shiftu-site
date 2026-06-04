@@ -1076,12 +1076,14 @@ html.no-webgl .hero--engine .hero__static {
 /* =========================================================
    Mascot — Thomas (animated)
    ========================================================= */
+/* Thomas perches on the console's top edge (toward the right), peeking up.
+   Anchored to the console wrapper so he never lands on copy and stays put. */
+.console-wrap { position: relative; min-width: 0; }
 .hero__mascot {
-  position: absolute; z-index: 3;
-  left: 39%;
-  bottom: clamp(6px, 3vh, 34px);
-  width: clamp(152px, 17vw, 228px);
-  transform: translateX(-50%);   /* JS adds the cursor-follow offset on top */
+  position: absolute; z-index: 5;
+  top: 0; right: clamp(12px, 2.4vw, 36px);
+  width: clamp(120px, 12vw, 158px);
+  transform: translateY(-86%);   /* lift ~86% above the top edge; JS adds the cursor lean */
   cursor: pointer; will-change: transform;
 }
 .hero__mascot-img {

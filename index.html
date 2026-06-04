@@ -59,11 +59,6 @@
   <section class="hero hero--console" id="hero">
     <div class="hero__ambient" aria-hidden="true"></div>
 
-    <div class="hero__mascot" data-mascot>
-      <span class="hero__mascot-glow" aria-hidden="true"></span>
-      <img class="hero__mascot-img" src="assets/mascot-thomas.png" alt="Thomas, the Shift Ü mascot" draggable="false" />
-    </div>
-
     <div class="hero__grid">
       <div class="hero__content">
         <span class="eyebrow" data-reveal><span class="eyebrow__dot"></span>Deterministic AI ops for service businesses</span>
@@ -88,7 +83,12 @@
         </div>
       </div>
 
-      <div class="console" data-console data-reveal>
+      <div class="console-wrap" data-reveal>
+        <div class="hero__mascot" data-mascot>
+          <span class="hero__mascot-glow" aria-hidden="true"></span>
+          <img class="hero__mascot-img" src="assets/mascot-thomas.png" alt="Thomas, the Shift Ü mascot" draggable="false" />
+        </div>
+        <div class="console" data-console>
         <div class="console__bar">
           <span class="dot dot--r"></span><span class="dot dot--y"></span><span class="dot dot--g"></span>
           <span class="console__title">shift-ü · live</span>
@@ -109,6 +109,7 @@
             <svg viewBox="0 0 24 24"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4z"/></svg>
           </button>
         </form>
+        </div>
       </div>
     </div>
 

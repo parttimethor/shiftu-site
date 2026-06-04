@@ -140,8 +140,8 @@
     }, { passive: true });
     const mascotTick = () => {
       mvx = lerp(mvx, tvx, 0.06); mvy = lerp(mvy, tvy, 0.06);
-      // keep the CSS centering (translateX(-50%)) and add the cursor-follow lean on top
-      mascotEl.style.transform = "translateX(-50%) translate(" + (mvx * 26) + "px," + (mvy * 16) + "px)";
+      // keep the CSS perch (translateY(-86%)) and add a small cursor-follow lean on top
+      mascotEl.style.transform = "translateY(-86%) translate(" + (mvx * 18) + "px," + (mvy * 12) + "px)";
       requestAnimationFrame(mascotTick);
     };
     mascotTick();
