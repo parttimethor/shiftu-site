@@ -1,5 +1,5 @@
 /* =========================================================
-   Shift Ü — interactions
+   Shift Ü: interactions
    ========================================================= */
 (function () {
   "use strict";
@@ -162,7 +162,7 @@
       const email = (d.get("email") || "").toString().trim();
       const industry = (d.get("industry") || "").toString().trim();
       const msg = (d.get("message") || "").toString().trim();
-      const subject = `Shift Ü demo request — ${biz || name || "new lead"}`;
+      const subject = `Shift Ü demo request: ${biz || name || "new lead"}`;
       const body =
         `Name: ${name}\n` +
         `Business: ${biz}\n` +
@@ -177,23 +177,23 @@
   }
 
   /* =========================================================
-     Floating assistant — scripted FAQ helper
+     Floating assistant: scripted FAQ helper
      (inspired by Section AI's persistent widget)
      ========================================================= */
   (function assistant() {
     if (!document.body) return;
 
     const FAQ = [
-      { k: ["work", "how", "loop", "do you do", "what is"], a: "Shift Ü runs one deterministic loop — intake → schedule → follow-up → bill → route — 24/7, with approval gates and a full audit trail. Want to <a href='product.html#demo'>watch it work a live lead</a>?" },
-      { k: ["price", "cost", "pricing", "how much", "expensive"], a: "Pricing tracks your volume and which modules you switch on. The fastest way to a real number is a quick demo — <a href='contact.html'>book one here</a>." },
+      { k: ["work", "how", "loop", "do you do", "what is"], a: "Shift Ü runs one deterministic loop: intake → schedule → follow-up → bill → route, 24/7, with approval gates and a full audit trail. Want to <a href='product.html#demo'>watch it work a live lead</a>?" },
+      { k: ["price", "cost", "pricing", "how much", "expensive"], a: "Pricing tracks your volume and which modules you switch on. The fastest way to a real number is a quick demo. <a href='contact.html'>Book one here</a>." },
       { k: ["industr", "who", "fit", "dealership", "dental", "accounting", "insurance", "restaurant"], a: "We're built for appointment-driven businesses: car dealerships (live today), plus dental, accounting, insurance, and restaurants. <a href='industries.html'>See your industry →</a>" },
-      { k: ["demo", "book", "call", "talk", "meeting", "started", "sign up"], a: "Let's do it — <a href='contact.html'>book a 20-minute demo</a> and we'll run the loop on your workflows." },
-      { k: ["safe", "trust", "determin", "hallucinat", "reliable", "secure", "bound"], a: "It only does what it's configured to do — bounded, gated, and logged. No improvised actions, no surprises." },
+      { k: ["demo", "book", "call", "talk", "meeting", "started", "sign up"], a: "Let's do it. <a href='contact.html'>Book a 20-minute demo</a> and we'll run the loop on your workflows." },
+      { k: ["safe", "trust", "determin", "hallucinat", "reliable", "secure", "bound"], a: "It only does what it's configured to do: bounded, gated, and logged. No improvised actions, no surprises." },
       { k: ["human", "team", "people", "staff", "replace", "job"], a: "Routine work runs automatically; anything that needs a person is routed to your team with the full context attached. It frees the front desk, it doesn't replace the judgment." },
       { k: ["hi", "hey", "hello", "yo"], a: "Hey! Ask me how the loop works, what it costs, or which industries we cover." },
-      { k: ["tool", "connect", "crm", "calendar", "integrat", "sms"], a: "Shift Ü plugs into the tools you already run — CRM, calendar, SMS, invoicing. No rip-and-replace." }
+      { k: ["tool", "connect", "crm", "calendar", "integrat", "sms"], a: "Shift Ü plugs into the tools you already run: CRM, calendar, SMS, invoicing. No rip-and-replace." }
     ];
-    const FALLBACK = "Good question — the honest answer is a quick demo will cover it best. <a href='contact.html'>Want to book one?</a>";
+    const FALLBACK = "Good question. The honest answer is a quick demo will cover it best. <a href='contact.html'>Want to book one?</a>";
     const CHIPS = ["How does it work?", "Pricing?", "Which industries?", "Book a demo"];
 
     const launch = document.createElement("button");
@@ -260,7 +260,7 @@
       launch.classList.add("is-hidden");
       if (!greeted) {
         greeted = true;
-        addMsg("Hey — I'm the Shift Ü assistant. Ask me how the loop works, what it costs, or which industries we cover.", "ai");
+        addMsg("Hey, I'm the Shift Ü assistant. Ask me how the loop works, what it costs, or which industries we cover.", "ai");
       }
       setTimeout(() => input.focus(), 200);
     }
@@ -290,7 +290,7 @@
       steps: [
         { t: "sys", text: "New lead · Web form · 11:42 PM" },
         { t: "in", text: "Is the 2023 RAV4 still available? What's the out-the-door price?" },
-        { t: "ai", text: "Hi Marcus — yes, the 2023 RAV4 XLE is on the lot. Out-the-door is $34,980 incl. fees. Want to see it? I've got tomorrow 10:00 AM or 2:30 PM open." },
+        { t: "ai", text: "Hi Marcus, yes, the 2023 RAV4 XLE is on the lot. Out-the-door is $34,980 incl. fees. Want to see it? I've got tomorrow 10:00 AM or 2:30 PM open." },
         { t: "in", text: "2:30 works." },
         { t: "sys", text: "Booked · Test drive · Tomorrow 2:30 PM · Reminder set" },
         { t: "ai", text: "You're booked for 2:30 PM. I'll text a reminder an hour before. Reply STOP to opt out anytime." },
@@ -304,9 +304,9 @@
         { t: "sys", text: "Missed call → text-back · 6:18 PM" },
         { t: "in", text: "Hi, do you have any cleaning appointments this week?" },
         { t: "ai", text: "We do! I can offer Thu 9:00 AM or Fri 1:15 PM for a cleaning. Are you a returning patient?" },
-        { t: "in", text: "Returning — Friday please." },
+        { t: "in", text: "Returning, Friday please." },
         { t: "sys", text: "Booked · Cleaning · Fri 1:15 PM · Insurance on file" },
-        { t: "ai", text: "Done — Friday 1:15 PM. I'll send a reminder and your intake form the day before." },
+        { t: "ai", text: "Done. Friday 1:15 PM. I'll send a reminder and your intake form the day before." },
         { t: "sys", text: "Front desk freed · Confirmed ✓" }
       ]
     },
@@ -316,7 +316,7 @@
       steps: [
         { t: "sys", text: "New intake · Contact form · Tax season" },
         { t: "in", text: "I need help filing my small-business return. Do you take new clients?" },
-        { t: "ai", text: "We do. I can book a 30-min discovery call — Tue 11:00 AM or Wed 3:00 PM — and send a checklist of docs to bring." },
+        { t: "ai", text: "We do. I can book a 30-min discovery call: Tue 11:00 AM or Wed 3:00 PM, and send a checklist of docs to bring." },
         { t: "in", text: "Wednesday at 3." },
         { t: "sys", text: "Booked · Discovery call · Wed 3:00 PM · Checklist sent" },
         { t: "ai", text: "Booked for Wed 3:00 PM. The document checklist is in your inbox. Talk soon." },
@@ -329,7 +329,7 @@
       steps: [
         { t: "sys", text: "New quote request · Web · Auto" },
         { t: "in", text: "Looking for a quote on a 2021 Civic. Currently paying $180/mo." },
-        { t: "ai", text: "Happy to help — I can often beat that. I'll need your postal code and driving history. Call back today at 4:00 PM or tomorrow 9:30 AM?" },
+        { t: "ai", text: "Happy to help. I can often beat that. I'll need your postal code and driving history. Call back today at 4:00 PM or tomorrow 9:30 AM?" },
         { t: "in", text: "Today at 4 is good." },
         { t: "sys", text: "Booked · Quote call · Today 4:00 PM · Details captured" },
         { t: "ai", text: "Set for 4:00 PM today. I've logged your vehicle and current rate so we hit the ground running." },
@@ -342,7 +342,7 @@
       steps: [
         { t: "sys", text: "New message · Instagram DM · Fri 7:55 PM" },
         { t: "in", text: "Do you have a table for 6 tomorrow around 7?" },
-        { t: "ai", text: "We'd love to have you. For a party of 6 I can do 6:45 or 8:15 — which works better?" },
+        { t: "ai", text: "We'd love to have you. For a party of 6 I can do 6:45 or 8:15. Which works better?" },
         { t: "in", text: "6:45." },
         { t: "sys", text: "Booked · Reservation · 6 guests · Tomorrow 6:45 PM" },
         { t: "ai", text: "Booked for 6 at 6:45 PM tomorrow. I'll text a confirmation. See you then!" },
@@ -423,7 +423,7 @@
         }
         await sleep(prefersReduced ? 200 : 620, token);
       }
-      typingEl.innerHTML = `<span style="color:var(--good)">● scenario complete — loop ran hands-free</span>`;
+      typingEl.innerHTML = `<span style="color:var(--good)">● scenario complete · loop ran hands-free</span>`;
     } catch (e) { /* cancelled */ }
   }
 
@@ -451,7 +451,7 @@
   /* =========================================================
      Hero: playable product console.
      The visitor messages Shift Ü like a customer (type, or tap a
-     preset) and watches it work — pipeline stages light up, a reply
+     preset) and watches it work: pipeline stages light up, a reply
      types in, status chips resolve (green = handled). Auto-demos when
      idle so the hero is never static. No WebGL, no particle field.
      ========================================================= */
@@ -468,19 +468,19 @@
     // pipeline stage index legend: 0 Intake · 1 Schedule · 2 Follow-up · 3 Bill · 4 Route
     const SC = {
       rav4: { q: "Is the 2023 RAV4 still available?",
-        reply: "Yes — the RAV4 XLE is on the lot, $34,980 out-the-door. I've got tomorrow 10:00 AM or 2:30 PM open for a test drive.",
+        reply: "Yes, the RAV4 XLE is on the lot, $34,980 out-the-door. I've got tomorrow 10:00 AM or 2:30 PM open for a test drive.",
         chips: ["Test drive · Tue 2:30", "Reminder set", "Rep notified ✓"], stages: [0, 1, 2, 4] },
       cleaning: { q: "Book me a cleaning this Friday",
-        reply: "Done — Friday 1:15 PM for a cleaning. I'll text a reminder and your intake form the day before.",
+        reply: "Done. Friday 1:15 PM for a cleaning. I'll text a reminder and your intake form the day before.",
         chips: ["Booked · Fri 1:15", "Reminder set", "Confirmed ✓"], stages: [0, 1, 2, 4] },
       civic: { q: "Can I get a quote on my 2021 Civic?",
-        reply: "Happy to help — I can usually beat $180/mo. I'll call you today at 4:00 PM with options once I have your postal code.",
+        reply: "Happy to help. I can usually beat $180/mo. I'll call you today at 4:00 PM with options once I have your postal code.",
         chips: ["Callback · 4:00 PM", "Details captured", "Broker assigned ✓"], stages: [0, 2, 4] },
       table: { q: "Table for 6 tonight at 7?",
-        reply: "We'd love to have you — I can do 6:45 or 8:15 tonight. I'll hold 6:45 and text you a confirmation.",
+        reply: "We'd love to have you. I can do 6:45 or 8:15 tonight. I'll hold 6:45 and text you a confirmation.",
         chips: ["Reservation · 6:45 PM", "Confirmed ✓", "Host notified ✓"], stages: [0, 1, 4] },
       taxes: { q: "I need help filing my small-business taxes",
-        reply: "I can book a 30-minute discovery call — Tuesday 11:00 or Wednesday 3:00 — and send a checklist of docs to bring.",
+        reply: "I can book a 30-minute discovery call: Tuesday 11:00 or Wednesday 3:00, and send a checklist of docs to bring.",
         chips: ["Discovery · Wed 3:00", "Checklist sent", "Routed to senior ✓"], stages: [0, 1, 2, 4] }
     };
     const ORDER = ["rav4", "cleaning", "civic", "table", "taxes"];
@@ -499,12 +499,12 @@
       return { time, day, num, name, when };
     }
 
-    // intent + entity router — returns { q, reply, chips, stages }
+    // intent + entity router: returns { q, reply, chips, stages }
     function matchScenario(text) {
       const s = text.toLowerCase().trim();
       const e = extract(s);
       const when = e.when;
-      const greet = e.name ? "Hi " + cap(e.name) + " — " : "";
+      const greet = e.name ? "Hi " + cap(e.name) + ", " : "";
 
       if (/^(hi+|hey+|hello+|yo|howdy|good (morning|afternoon|evening)|sup|hiya)\b/.test(s) && s.length < 26)
         return { q: text, reply: (e.name ? "Hey " + cap(e.name) + "! " : "Hey! ") + "I'm Shift Ü. I can book an appointment, pull a price, check hours, or hand you to a teammate. What do you need?", chips: [], stages: [] };
@@ -519,30 +519,30 @@
         return { q: text, reply: greet + "We're open Mon–Sat, 8:00 AM–6:00 PM. Want me to hold a time for you while you're thinking about it?", chips: ["Info sent", "Offered a booking ✓"], stages: [0, 4] };
 
       if (/\b(reschedul|cancel|move my|change my|push my)\b/.test(s))
-        return { q: text, reply: greet + "No problem — I can move it" + (when ? " to " + when : "") + ". I'll update the booking and resend the confirmation right away.", chips: ["Booking updated", "Confirmation resent ✓"], stages: [0, 1, 4] };
+        return { q: text, reply: greet + "No problem. I can move it" + (when ? " to " + when : "") + ". I'll update the booking and resend the confirmation right away.", chips: ["Booking updated", "Confirmation resent ✓"], stages: [0, 1, 4] };
 
       if (/\b(complaint|complain|issue|problem|broken|refund|angry|upset|unhappy|terrible|disappointed)\b/.test(s))
-        return { q: text, reply: greet + "I'm sorry about that. I've logged the details and flagged this for a manager to make it right — someone will reach out shortly.", chips: ["Issue logged", "Escalated to manager ✓"], stages: [0, 4] };
+        return { q: text, reply: greet + "I'm sorry about that. I've logged the details and flagged this for a manager to make it right. Someone will reach out shortly.", chips: ["Issue logged", "Escalated to manager ✓"], stages: [0, 4] };
 
       if (/rav4|\bcar\b|vehicle|test drive|dealer|truck|\bsuv\b|sedan|availab|out.?the.?door|trade.?in|financ/.test(s))
-        return { q: text, reply: greet + "Yes — it's on the lot, $34,980 out-the-door. I can hold a test drive " + (when || "tomorrow at 2:30 PM") + " and text you a reminder beforehand.", chips: ["Test drive" + (when ? " · " + cap(when) : " · Tue 2:30"), "Reminder set", "Rep notified ✓"], stages: [0, 1, 2, 4] };
+        return { q: text, reply: greet + "Yes, it's on the lot, $34,980 out-the-door. I can hold a test drive " + (when || "tomorrow at 2:30 PM") + " and text you a reminder beforehand.", chips: ["Test drive" + (when ? " · " + cap(when) : " · Tue 2:30"), "Reminder set", "Rep notified ✓"], stages: [0, 1, 2, 4] };
 
       if (/clean|dental|teeth|dentist|hygien|checkup|cavity|filling|whiten/.test(s))
         return { q: text, reply: greet + "I can get you in" + (when ? " " + when : " this Friday at 1:15 PM") + " for a cleaning. I'll send a reminder and your intake form the day before.", chips: ["Booked" + (when ? " · " + cap(when) : " · Fri 1:15"), "Reminder set", "Confirmed ✓"], stages: [0, 1, 2, 4] };
 
       if (/quote|insur|civic|policy|premium|coverage|\brate\b|how much|pricing|\bprice\b|\bcost\b|estimate/.test(s))
-        return { q: text, reply: greet + "Happy to get you a number. I'll capture a couple of details and follow up with options " + (e.day || "today") + " — usually within the hour.", chips: ["Details captured", "Follow-up scheduled", "Routed to a specialist ✓"], stages: [0, 2, 4] };
+        return { q: text, reply: greet + "Happy to get you a number. I'll capture a couple of details and follow up with options " + (e.day || "today") + ", usually within the hour.", chips: ["Details captured", "Follow-up scheduled", "Routed to a specialist ✓"], stages: [0, 2, 4] };
 
       if (/table|reserv|dinner|tonight|party|\bseat\b|patio/.test(s)) {
         const ppl = e.num ? "a party of " + e.num : "your group";
-        return { q: text, reply: greet + "We'd love to have you. For " + ppl + " I can do 6:45 or 8:15" + (e.day ? " " + e.day : " tonight") + " — I'll hold 6:45 and text a confirmation.", chips: ["Reservation · 6:45 PM", "Confirmed ✓", "Host notified ✓"], stages: [0, 1, 4] };
+        return { q: text, reply: greet + "We'd love to have you. For " + ppl + " I can do 6:45 or 8:15" + (e.day ? " " + e.day : " tonight") + ". I'll hold 6:45 and text a confirmation.", chips: ["Reservation · 6:45 PM", "Confirmed ✓", "Host notified ✓"], stages: [0, 1, 4] };
       }
 
       if (/\btax|account|bookkeep|payroll|return|filing|file my|\bgst\b|receipts|invoice/.test(s))
-        return { q: text, reply: greet + "I can book a 30-minute discovery call" + (when ? " " + when : " — Tuesday 11:00 or Wednesday 3:00") + " and send a checklist of docs to bring.", chips: ["Discovery booked", "Checklist sent", "Routed to senior ✓"], stages: [0, 1, 2, 4] };
+        return { q: text, reply: greet + "I can book a 30-minute discovery call" + (when ? " " + when : ": Tuesday 11:00 or Wednesday 3:00") + " and send a checklist of docs to bring.", chips: ["Discovery booked", "Checklist sent", "Routed to senior ✓"], stages: [0, 1, 2, 4] };
 
       if (/\bbook|appointment|schedule|reserve|set up|sign up|slot|come in|\bvisit\b/.test(s))
-        return { q: text, reply: greet + "Done — I can get you in" + (when ? " " + when : " this week") + ". I'll confirm the slot, send a reminder, and have everything ready when you arrive.", chips: ["Booked" + (when ? " · " + cap(when) : ""), "Reminder set", "Confirmed ✓"], stages: [0, 1, 2, 4] };
+        return { q: text, reply: greet + "Done. I can get you in" + (when ? " " + when : " this week") + ". I'll confirm the slot, send a reminder, and have everything ready when you arrive.", chips: ["Booked" + (when ? " · " + cap(when) : ""), "Reminder set", "Confirmed ✓"], stages: [0, 1, 2, 4] };
 
       return { q: text, reply: greet + "Got it. Here's how I'd handle that: capture the request, book the next step, follow up on your cadence, and loop in a teammate if it needs a human.", chips: ["Captured", "Next step booked", "Handed off ✓"], stages: [0, 1, 2, 4] };
     }
@@ -631,7 +631,7 @@
       run(matchScenario(v));
     });
 
-    // rotating placeholder — hints at the range without ever auto-sending
+    // rotating placeholder: hints at the range without ever auto-sending
     const PROMPTS = [
       "Is the 2023 RAV4 still available?",
       "Book me a cleaning this Friday",
@@ -652,7 +652,7 @@
       input.addEventListener("blur", () => { if (!input.value) input.placeholder = "Try: " + PROMPTS[pi]; });
     }
 
-    addMsg("Hey — I'm Shift Ü. Message me like a customer would, or tap a question below to watch how I'd handle it.", "ai");
+    addMsg("Hey, I'm Shift Ü. Message me like a customer would, or tap a question below to watch how I'd handle it.", "ai");
   }
 
 
@@ -763,7 +763,7 @@
             scrollTrigger: { trigger: hero, start: "top top", end: "bottom top", scrub: 0.6 }
           });
         }
-      } catch (e) { /* GSAP optional — ignore */ }
+      } catch (e) { /* GSAP optional, ignore */ }
     }
 
     // wire the hero "watch the loop run a real lead" CTA to a same-page #demo
@@ -781,7 +781,7 @@
   }
 
   /* =========================================================
-     Theme toggle — dark (default) / light, persisted to localStorage.
+     Theme toggle: dark (default) / light, persisted to localStorage.
      The button is injected into the nav so every page gets it without
      editing each file. A tiny inline <head> script sets the initial
      theme before paint to avoid a flash.

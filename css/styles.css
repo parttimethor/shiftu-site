@@ -1,5 +1,5 @@
 /* =========================================================
-   Shift Ü — marketing site
+   Shift Ü - marketing site
    Dark, interactive, electric-blue on navy. Flat + glass.
    ========================================================= */
 
@@ -678,7 +678,7 @@ svg.ico, .ico {
 .settle-in.is-in { opacity: 1; transform: none; filter: blur(0); }
 
 /* =========================================================
-   Scroll choreography — all CSS, class-toggled by IntersectionObserver.
+   Scroll choreography - all CSS, class-toggled by IntersectionObserver.
    GSAP (if present) only SMOOTHS the same .is-ambient state; never required.
    ========================================================= */
 /* ambient handoff: as you scroll past the hero the canvas eases back + dims,
@@ -705,7 +705,7 @@ svg.ico, .ico {
 }
 
 /* =========================================================
-   THE SHIFT — CSS-only Z-depth: Before recessed/desaturated/crooked,
+   THE SHIFT - CSS-only Z-depth: Before recessed/desaturated/crooked,
    After forward/bright/level. Sprite echoes leak Before -> After.
    ========================================================= */
 .shift__grid { perspective: 1400px; }
@@ -721,7 +721,7 @@ svg.ico, .ico {
   transform: rotate(var(--skew, 0deg));
   transition: transform .7s var(--ease);
 }
-/* crooked bullets — seeded inline-ish via nth-child so no JS needed */
+/* crooked bullets - seeded inline-ish via nth-child so no JS needed */
 .panel--before .ticklist li:nth-child(1) { --skew: -1.4deg; }
 .panel--before .ticklist li:nth-child(2) { --skew: 1.1deg; }
 .panel--before .ticklist li:nth-child(3) { --skew: -.8deg; }
@@ -734,7 +734,7 @@ svg.ico, .ico {
 }
 .panel--after .ticklist li { transform: none; } /* settle dead-level */
 
-/* sprite echoes — pure CSS dots drifting Before -> After (NOT the WebGL canvas) */
+/* sprite echoes - pure CSS dots drifting Before -> After (NOT the WebGL canvas) */
 .shift__arrow { position: relative; }
 .shift__echo {
   position: absolute; top: 50%; left: 50%;
@@ -757,7 +757,7 @@ svg.ico, .ico {
 }
 
 /* =========================================================
-   HOW IT WORKS — settle vocabulary on the existing steps
+   HOW IT WORKS - settle vocabulary on the existing steps
    ========================================================= */
 .loop__step.is-in { /* the existing reveal handles entrance; settle adds polish */ }
 .loop__step .loop__num { transition: color .4s var(--ease); }
@@ -768,7 +768,7 @@ svg.ico, .ico {
 }
 
 /* =========================================================
-   STATS — settle-LOCK on the final digit instead of a hard stop
+   STATS - settle-LOCK on the final digit instead of a hard stop
    ========================================================= */
 .stat__num { display: inline-block; transition: transform .35s var(--ease), filter .35s var(--ease); }
 .stat__num.is-locked { animation: settleLock .5s var(--ease); }
@@ -779,7 +779,7 @@ svg.ico, .ico {
 }
 
 /* =========================================================
-   PLATFORM modules — settle reveal already via [data-reveal];
+   PLATFORM modules - settle reveal already via [data-reveal];
    hover lights a slice of meaning (cheap underline sweep)
    ========================================================= */
 .module h3 { position: relative; }
@@ -791,7 +791,7 @@ svg.ico, .ico {
 .module:hover h3::after { width: 60%; }
 
 /* =========================================================
-   CTA CARD — final CSS-sprite token crosses behind, exits handled (green)
+   CTA CARD - final CSS-sprite token crosses behind, exits handled (green)
    as the button glows. Loop bookend, decoupled from WebGL.
    ========================================================= */
 .cta__card { isolation: isolate; }
@@ -816,7 +816,7 @@ svg.ico, .ico {
 }
 
 /* =========================================================
-   reduced motion — keep the meaning, drop the motion.
+   reduced motion - keep the meaning, drop the motion.
    The engine is skipped in JS (html.reduced); these rules make
    the static fallback + headline land instantly + freeze polish.
    ========================================================= */
@@ -834,7 +834,7 @@ svg.ico, .ico {
   .stat__num.is-locked { animation: none; }
   .hero__hint { display: none; }
 
-  /* crooked bullets sit level — a finished, framable diagram */
+  /* crooked bullets sit level - a finished, framable diagram */
   .panel--before .ticklist li { transform: none; }
   .panel--before { transform: none; opacity: 1; filter: saturate(.7); }
   .panel--after { transform: none; }
@@ -850,7 +850,7 @@ svg.ico, .ico {
 }
 
 /* =========================================================
-   HERO — playable product console (replaces the WebGL hero)
+   HERO - playable product console (replaces the WebGL hero)
    ========================================================= */
 .hero--console { text-align: left; }
 .hero--console .hero__grid {
@@ -950,7 +950,7 @@ svg.ico, .ico {
 
 
 /* =========================================================
-   Mascot — Thomas (animated)
+   Mascot - Thomas (animated)
    ========================================================= */
 /* Thomas perches on the console's top edge (toward the right), peeking up.
    Anchored to the console wrapper so he never lands on copy and stays put. */
@@ -1002,7 +1002,7 @@ svg.ico, .ico {
 }
 
 /* =========================================================
-   Console — live typewriter caret (the reply types itself in)
+   Console - live typewriter caret (the reply types itself in)
    ========================================================= */
 .console__feed .msg__body.is-typing::after {
   content: ""; display: inline-block;
@@ -1039,7 +1039,7 @@ svg.ico, .ico {
 .theme-toggle--mobile .theme-toggle__label { display: inline; font-family: var(--display); font-weight: 500; font-size: .95rem; }
 
 /* =========================================================
-   LIGHT THEME — token flip + targeted surface overrides
+   LIGHT THEME - token flip + targeted surface overrides
    Most surfaces use --surface/--line/--ink tokens and flip for
    free; the rules below fix the hand-coded dark panels + the few
    light-on-dark text colors that would vanish on a light bg.
@@ -1111,3 +1111,34 @@ html[data-theme="light"] .hero__mascot-img { filter: drop-shadow(0 16px 26px rgb
 
 /* contact page: the form IS the conversion, so the floating assistant is redundant + was overlapping fields on mobile */
 .page-contact .asst-launch, .page-contact .asst { display: none !important; }
+
+/* =========================================================
+   Batch 3: credibility band, section rhythm, legal, mobile pipeline
+   ========================================================= */
+.cred { padding: 10px 0 44px; }
+.cred__inner { display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center; }
+.cred__line { color: var(--ink-2); font-size: clamp(1rem, 1.5vw, 1.16rem); max-width: 680px; line-height: 1.55; }
+.cred__line a { color: var(--blue-bright); font-weight: 600; white-space: nowrap; }
+.cred__line a:hover { text-decoration: underline; }
+.cred__chips { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; }
+.cred__chip { font-size: .85rem; color: var(--muted); padding: 8px 14px; border-radius: 999px; border: 1px solid var(--line); background: var(--surface); }
+.cred__chip b { color: var(--ink); font-weight: 600; }
+
+.section--alt { background: var(--surface); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
+
+.footer__legal { display: inline-flex; gap: 16px; }
+.footer__legal a { color: var(--muted); transition: color .2s; }
+.footer__legal a:hover { color: var(--blue-bright); }
+
+.legal { max-width: 760px; margin: 0 auto; text-align: left; }
+.legal h2 { font-family: var(--display); font-size: 1.22rem; font-weight: 600; letter-spacing: -.01em; margin: 30px 0 10px; }
+.legal p { color: var(--ink-2); font-size: 1rem; line-height: 1.7; margin-bottom: 12px; }
+.legal a { color: var(--blue-bright); }
+.legal a:hover { text-decoration: underline; }
+.legal__note { padding: 14px 18px; border-radius: 12px; border: 1px solid var(--line-2); background: var(--surface); font-size: .92rem; color: var(--muted); margin-bottom: 26px; }
+.legal__updated { font-size: .85rem; color: var(--muted); margin-top: 30px; }
+
+@media (max-width: 560px) {
+  .console__pipe { gap: 4px; padding: 10px 10px; }
+  .pstage { font-size: .64rem; padding: 6px 2px; letter-spacing: -.01em; }
+}
