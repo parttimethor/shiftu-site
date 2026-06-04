@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://parttimethor.github.io/shiftu-site/sitemap.xml

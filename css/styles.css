@@ -539,7 +539,7 @@ svg.ico, .ico {
    floating assistant (inspired by Section AI's widget)
    ========================================================= */
 .asst-launch {
-  position: fixed; right: 22px; bottom: 22px; z-index: 150;
+  position: fixed; right: 22px; bottom: calc(22px + env(safe-area-inset-bottom)); z-index: 150;
   display: flex; align-items: center; gap: 10px;
   padding: 12px 18px 12px 13px; border-radius: 999px;
   border: 1px solid rgba(79,141,255,.45);
@@ -553,7 +553,7 @@ svg.ico, .ico {
 .asst-launch.is-hidden { opacity: 0; pointer-events: none; transform: scale(.85); }
 
 .asst {
-  position: fixed; right: 22px; bottom: 22px; z-index: 151;
+  position: fixed; right: 22px; bottom: calc(22px + env(safe-area-inset-bottom)); z-index: 151;
   width: 360px; max-width: calc(100vw - 28px);
   height: 520px; max-height: calc(100dvh - 40px);
   display: flex; flex-direction: column; overflow: hidden;
@@ -577,7 +577,7 @@ svg.ico, .ico {
 .asst__chip { font-family: var(--display); font-size: .8rem; color: var(--ink-2); padding: 8px 13px; border-radius: 999px; border: 1px solid var(--line-2); background: var(--surface); transition: all .2s; }
 .asst__chip:hover { color: #fff; border-color: var(--blue); background: rgba(43,107,245,.18); }
 .asst__form { display: flex; gap: 8px; padding: 12px 14px; border-top: 1px solid var(--line); }
-.asst__input { flex: 1; padding: 11px 15px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line-2); color: var(--ink); font: inherit; font-size: .9rem; }
+.asst__input { flex: 1; padding: 11px 15px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line-2); color: var(--ink); font: inherit; font-size: 1rem; }
 .asst__input::placeholder { color: var(--muted); }
 .asst__input:focus { outline: none; border-color: var(--blue); }
 .asst__send { width: 42px; height: 42px; border-radius: 50%; flex: 0 0 auto; background: linear-gradient(180deg, var(--blue-bright), var(--blue)); display: grid; place-items: center; }
@@ -587,8 +587,8 @@ svg.ico, .ico {
 .am--me { align-self: flex-end; background: linear-gradient(180deg, rgba(79,141,255,.22), rgba(43,107,245,.16)); border: 1px solid rgba(79,141,255,.4); color: #eaf1ff; border-top-right-radius: 4px; }
 .am--ai a { color: var(--blue-bright); text-decoration: underline; }
 @media (max-width: 560px) {
-  .asst { right: 8px; left: 8px; bottom: 8px; width: auto; max-width: none; height: 72dvh; }
-  .asst-launch { right: 14px; bottom: 14px; }
+  .asst { right: 8px; left: 8px; bottom: calc(8px + env(safe-area-inset-bottom)); width: auto; max-width: none; height: 72dvh; }
+  .asst-launch { right: 14px; bottom: calc(14px + env(safe-area-inset-bottom)); }
 }
 
 /* =========================================================
@@ -633,111 +633,6 @@ svg.ico, .ico {
   [data-reveal] { opacity: 1; transform: none; }
   .cursor-glow, .bg-glow { display: none; }
   .hero__mouse span, .eyebrow__dot, .demo__pulse { animation: none; }
-}
-
-/* =========================================================
-   HERO — The Ops Engine (additions)
-   Extends the existing .hero; left-weighted content, ring lives
-   center-right behind the veil. All new state via classes only.
-   ========================================================= */
-
-/* left-weight the content so the ring owns the right two-thirds */
-.hero--engine { text-align: left; }
-.hero--engine .hero__content--left {
-  width: 100%;
-  max-width: 560px;
-  margin: 0;
-  margin-right: auto;
-  align-self: flex-start;
-  padding-left: clamp(0px, 4vw, 60px);
-}
-.hero--engine .hero__sub { margin-left: 0; }
-.hero--engine .hero__actions { justify-content: flex-start; }
-.hero--engine .hero__chips { justify-content: flex-start; }
-
-/* keep type readable when a bright node sweeps center: deepen the left veil */
-.hero--engine .hero__veil {
-  background:
-    linear-gradient(95deg, rgba(6,11,28,.86) 0%, rgba(6,11,28,.5) 34%, transparent 60%),
-    radial-gradient(ellipse 60% 50% at 62% 48%, transparent, rgba(6,11,28,.5) 82%),
-    linear-gradient(180deg, transparent 55%, var(--bg) 98%);
-}
-
-.hero__hint {
-  margin-top: 22px;
-  font-family: var(--display);
-  font-size: .8rem; letter-spacing: .02em;
-  color: var(--muted);
-  opacity: 0;
-  transition: opacity .8s var(--ease) .4s;
-}
-.hero__hint.is-shown { opacity: .75; }
-
-/* ---- DOM overlay: projected node labels + the single hero chip ---- */
-.hero__overlay { position: absolute; inset: 0; z-index: 0; pointer-events: none; }
-
-.hs-label {
-  position: absolute; top: 0; left: 0;
-  font-family: var(--body); font-size: .8rem; font-weight: 500;
-  letter-spacing: .01em; white-space: nowrap;
-  color: var(--ink-2);
-  transform: translate(-50%, -50%);
-  opacity: .58;
-  transition: opacity .45s var(--ease), color .45s var(--ease);
-  will-change: transform, opacity;
-}
-.hs-label__key { font-weight: 600; }
-.hs-label.is-lit { opacity: 1; color: #fff; }
-.hs-label__one {
-  display: block;
-  max-width: 220px;
-  margin-top: 6px;
-  font-size: .72rem; line-height: 1.35;
-  color: var(--muted);
-  opacity: 0; max-height: 0;
-  transition: opacity .45s var(--ease);
-}
-.hs-label.is-lit .hs-label__one { opacity: .9; max-height: 80px; }
-
-.hs-chip {
-  position: absolute; top: 0; left: 0;
-  transform: translate(-50%, calc(-100% - 14px));
-  display: inline-flex; align-items: center; gap: 7px;
-  padding: 7px 12px; border-radius: 999px;
-  font-family: var(--display); font-size: .76rem; font-weight: 500;
-  white-space: nowrap; color: var(--ink);
-  background: rgba(8,13,30,.78);
-  border: 1px solid rgba(79,141,255,.4);
-  box-shadow: 0 10px 30px -14px rgba(43,107,245,.7);
-  backdrop-filter: blur(8px);
-  opacity: 0;
-  transition: opacity .5s var(--ease);
-  will-change: transform, opacity;
-}
-.hs-chip.is-shown { opacity: 1; }
-.hs-chip__dot { width: 7px; height: 7px; border-radius: 50%; background: var(--blue-bright); box-shadow: 0 0 8px var(--blue-bright); }
-.hs-chip.is-done { border-color: rgba(52,211,153,.5); }
-.hs-chip.is-done .hs-chip__dot { background: var(--good); box-shadow: 0 0 8px var(--good); }
-
-/* ---- static SVG fallback (hidden until engine is skipped) ---- */
-.hero__static { display: none; }
-html.reduced .hero__canvas,
-html.no-webgl .hero__canvas { display: none; }
-html.reduced .hero--engine .hero__static,
-html.no-webgl .hero--engine .hero__static {
-  display: block;
-  position: absolute; inset: 0; z-index: -1;
-  width: 100%; height: 100%;
-  opacity: .92;
-}
-.hero__static .hs-node text {
-  font-family: var(--body); font-size: 19px; fill: var(--muted);
-  text-anchor: middle;
-}
-.hero__static .hs-node--end text { fill: var(--ink-2); }
-.hs-caption {
-  font-family: var(--body); font-size: 20px; letter-spacing: .04em;
-  fill: var(--muted); text-anchor: middle;
 }
 
 /* =========================================================
@@ -921,25 +816,6 @@ html.no-webgl .hero--engine .hero__static {
 }
 
 /* =========================================================
-   responsive — hero engine
-   ========================================================= */
-@media (max-width: 980px) {
-  .hero--engine { text-align: center; }
-  .hero--engine .hero__content--left { max-width: 720px; margin: 0 auto; padding-left: 0; }
-  .hero--engine .hero__actions,
-  .hero--engine .hero__chips { justify-content: center; }
-  .hero--engine .hero__veil {
-    background:
-      radial-gradient(ellipse 70% 55% at 50% 46%, transparent, rgba(6,11,28,.6) 82%),
-      linear-gradient(180deg, transparent 52%, var(--bg) 98%);
-  }
-}
-@media (max-width: 560px) {
-  .hero__hint { display: none; }
-  .hs-label__one { display: none; } /* keep DOM churn low on phones */
-}
-
-/* =========================================================
    reduced motion — keep the meaning, drop the motion.
    The engine is skipped in JS (html.reduced); these rules make
    the static fallback + headline land instantly + freeze polish.
@@ -1049,14 +925,14 @@ html.no-webgl .hero--engine .hero__static {
 
 /* input */
 .console__form { display: flex; gap: 8px; padding: 12px 14px; border-top: 1px solid var(--line); }
-.console__input { flex: 1; padding: 11px 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line-2); color: var(--ink); font: inherit; font-size: .9rem; }
+.console__input { flex: 1; padding: 11px 14px; border-radius: 999px; background: var(--surface); border: 1px solid var(--line-2); color: var(--ink); font: inherit; font-size: 1rem; }
 .console__input::placeholder { color: var(--muted); }
 .console__input:focus { outline: none; border-color: var(--blue); }
 .console__send { width: 42px; height: 42px; flex: 0 0 auto; border-radius: 50%; background: linear-gradient(180deg, var(--blue-bright), var(--blue)); display: grid; place-items: center; }
 .console__send:hover { filter: brightness(1.08); }
 .console__send svg { width: 18px; height: 18px; fill: none; stroke: #fff; stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 
-@media (max-width: 980px) {
+@media (max-width: 1024px) {
   .hero--console { text-align: center; }
   .hero--console .hero__grid { grid-template-columns: 1fr; gap: 38px; }
   .hero--console .hero__content { max-width: 640px; margin: 0 auto; }
@@ -1120,7 +996,7 @@ html.no-webgl .hero--engine .hero__static {
 .asst-launch__ava { padding: 0 !important; background: rgba(255,255,255,.16) !important; object-fit: contain; }
 .asst__ava--img { object-fit: contain; padding: 3px; background: radial-gradient(circle at 50% 38%, rgba(79,141,255,.32), rgba(43,107,245,.14)); }
 
-@media (max-width: 980px) { .hero__mascot { display: none; } }
+@media (max-width: 1024px) { .hero__mascot { display: none; } }
 @media (prefers-reduced-motion: reduce) {
   .hero__mascot-img, .hero__mascot-glow { animation: none; }
 }
@@ -1179,6 +1055,9 @@ html[data-theme="light"] {
   --ink-2:  #38436a;
   --muted:  #5d6788;
   --blue-glow: 0 0 0 1px rgba(43,107,245,.22), 0 14px 40px -12px rgba(43,107,245,.30);
+  --blue-bright: #1f57d6;   /* darker so accent TEXT clears 4.5:1 on the light bg */
+  --blue-soft:   #2a62de;
+  --good:        #0a8f5f;
   color-scheme: light;
 }
 
@@ -1229,3 +1108,6 @@ html[data-theme="light"] .ind__avail:not(.ind__soon) { color: #0e9f6e; }
 
 /* keep the mascot drop-shadow readable on white */
 html[data-theme="light"] .hero__mascot-img { filter: drop-shadow(0 16px 26px rgba(20,30,60,.28)); }
+
+/* contact page: the form IS the conversion, so the floating assistant is redundant + was overlapping fields on mobile */
+.page-contact .asst-launch, .page-contact .asst { display: none !important; }
