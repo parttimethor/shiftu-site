@@ -966,10 +966,60 @@
     } else { play(current); }
   }
 
+  /* =========================================================
+     ROI calculator: "your day back". Move the sliders to your
+     business; outputs tween live. Estimate only (assumptions are
+     stated), which keeps it honest and on-brand (bounded math).
+     ========================================================= */
+  function initRoi() {
+    const root = $("[data-roi]");
+    if (!root) return;
+    const fields = { leads: { pre: false, suf: "" }, after: { pre: false, suf: "%" }, value: { pre: true, suf: "" }, admin: { pre: false, suf: " hrs" } };
+    const outLeads = $("[data-roi-leads]", root), outRev = $("[data-roi-rev]", root), outHours = $("[data-roi-hours]", root);
+    const num = (n) => Math.round(n).toLocaleString("en-US");
+    const getv = (n) => parseFloat(root.querySelector('[data-roi-in="' + n + '"]').value);
+
+    function setLabel(n) {
+      const el = root.querySelector('[data-roi-in="' + n + '"]');
+      const o = root.querySelector('[data-roi-out="' + n + '"]');
+      if (!o) return;
+      const f = fields[n];
+      o.textContent = (f.pre ? "$" : "") + parseFloat(el.value).toLocaleString("en-US") + (f.pre ? "" : f.suf);
+    }
+    function tween(el, to, money) {
+      const from = parseFloat(el.dataset.v || "0") || 0;
+      el.dataset.v = String(to);
+      if (prefersReduced) { el.textContent = (money ? "$" : "") + num(to); return; }
+      const start = performance.now(), dur = 550;
+      const step = (now) => {
+        const p = Math.min((now - start) / dur, 1), e = 1 - Math.pow(1 - p, 3);
+        el.textContent = (money ? "$" : "") + num(from + (to - from) * e);
+        if (p < 1) requestAnimationFrame(step);
+      };
+      requestAnimationFrame(step);
+    }
+    function compute() {
+      const leadsW = getv("leads"), after = getv("after") / 100, value = getv("value"), admin = getv("admin");
+      const recovered = leadsW * 4.33 * after * 0.9;   // ~90% of after-hours leads answered
+      const revenue = recovered * 0.25 * value;          // 25% close rate
+      const hours = admin * 0.6;                          // ~60% of repetitive admin offloaded
+      tween(outLeads, recovered, false);
+      tween(outRev, revenue, true);
+      tween(outHours, hours, false);
+    }
+    $$("[data-roi-in]", root).forEach((el) => {
+      const n = el.getAttribute("data-roi-in");
+      setLabel(n);
+      el.addEventListener("input", () => { setLabel(n); compute(); });
+    });
+    compute();
+  }
+
   /* ---------- boot ---------- */
   setupTheme();
   initConsole();
   initJourney();
+  initRoi();
   setupSettle();
   setupScrollChoreography();
 })();

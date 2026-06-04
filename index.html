@@ -259,6 +259,47 @@
     </div>
   </section>
 
+  <!-- ============ ROI CALCULATOR ============ -->
+  <section class="section roi-sec" id="roi">
+    <div class="container">
+      <header class="section__head" data-reveal>
+        <span class="kicker">The math</span>
+        <h2>What it gives you back.</h2>
+        <p>Move the sliders to match your business. This is an estimate from your inputs, not a measured
+          result. The real number comes from a demo on your own workflows.</p>
+      </header>
+      <div class="roi" data-roi data-reveal>
+        <div class="roi__inputs">
+          <div class="roi__field">
+            <label for="roi-leads">Leads a week <output data-roi-out="leads">40</output></label>
+            <input id="roi-leads" type="range" data-roi-in="leads" min="5" max="400" value="40" step="5" aria-label="Leads a week" />
+          </div>
+          <div class="roi__field">
+            <label for="roi-after">Arrive after hours or get missed <output data-roi-out="after">35%</output></label>
+            <input id="roi-after" type="range" data-roi-in="after" min="0" max="80" value="35" step="5" aria-label="Percent of leads after hours or missed" />
+          </div>
+          <div class="roi__field">
+            <label for="roi-value">Average customer value <output data-roi-out="value">$450</output></label>
+            <input id="roi-value" type="range" data-roi-in="value" min="50" max="5000" value="450" step="50" aria-label="Average customer value" />
+          </div>
+          <div class="roi__field">
+            <label for="roi-admin">Admin hours a week <output data-roi-out="admin">18 hrs</output></label>
+            <input id="roi-admin" type="range" data-roi-in="admin" min="0" max="80" value="18" step="1" aria-label="Admin hours a week" />
+          </div>
+        </div>
+        <div class="roi__results">
+          <div class="roi__stat"><span class="roi__num" data-roi-leads>0</span><span class="roi__lbl">Leads recovered / month</span></div>
+          <div class="roi__stat"><span class="roi__num" data-roi-rev>$0</span><span class="roi__lbl">Revenue recovered / month</span></div>
+          <div class="roi__stat"><span class="roi__num" data-roi-hours>0</span><span class="roi__lbl">Hours saved / week</span></div>
+          <p class="roi__assume">Assumes Shift Ü answers about 90% of after-hours leads, a 25% close rate, and takes
+            roughly 60% of the repetitive admin off your team. Your numbers will differ, which is exactly what a demo is for.</p>
+          <a href="contact.html" class="btn btn--primary btn--block btn--lg" data-magnetic>Get your real number
+            <svg viewBox="0 0 24 24" class="ico"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ============ CTA ============ -->
   <section class="section cta" id="contact">
     <div class="container">

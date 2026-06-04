@@ -1225,3 +1225,21 @@ html[data-theme="light"] .jrail__dot { background: #fff; }
 html[data-theme="light"] .jcard { background: linear-gradient(180deg, rgba(43,107,245,.12), rgba(43,107,245,.05)); }
 html[data-theme="light"] .jcard b { color: var(--ink); }
 html[data-theme="light"] .jcard--handoff { background: linear-gradient(180deg, rgba(16,185,129,.12), transparent); }
+
+/* =========================================================
+   ROI calculator
+   ========================================================= */
+.roi { display: grid; grid-template-columns: 1fr 1fr; gap: 22px; align-items: stretch; }
+.roi__inputs { display: flex; flex-direction: column; gap: 24px; justify-content: center; padding: clamp(24px,4vw,36px); border-radius: var(--radius-lg); border: 1px solid var(--line); background: linear-gradient(180deg, var(--surface), transparent); }
+.roi__field label { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; font-family: var(--display); font-size: .92rem; color: var(--ink-2); margin-bottom: 13px; }
+.roi__field output { font-family: var(--display); font-weight: 600; color: var(--ink); font-size: 1.08rem; font-variant-numeric: tabular-nums; }
+.roi__field input[type=range] { width: 100%; accent-color: var(--blue); cursor: pointer; }
+.roi__results { display: flex; flex-direction: column; gap: 12px; padding: clamp(24px,4vw,36px); border-radius: var(--radius-lg); border: 1px solid rgba(79,141,255,.3); background: linear-gradient(180deg, rgba(43,107,245,.1), transparent); box-shadow: 0 24px 60px -34px rgba(43,107,245,.8); }
+.roi__stat { display: flex; flex-direction: column; gap: 3px; padding: 13px 0; border-bottom: 1px solid var(--line); }
+.roi__stat:nth-of-type(3) { border-bottom: none; }
+.roi__num { font-family: var(--display); font-weight: 700; font-size: clamp(1.9rem,4.4vw,2.7rem); letter-spacing: -.02em; line-height: 1; font-variant-numeric: tabular-nums; background: linear-gradient(180deg, #fff, var(--blue-soft)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.roi__lbl { font-size: .9rem; color: var(--muted); }
+.roi__assume { font-size: .78rem; color: var(--muted); line-height: 1.55; margin-top: 6px; }
+.roi__results .btn { margin-top: 10px; }
+@media (max-width: 760px) { .roi { grid-template-columns: 1fr; } }
+html[data-theme="light"] .roi__num { background: linear-gradient(180deg, #0b1430, var(--blue)); -webkit-background-clip: text; background-clip: text; color: transparent; }
