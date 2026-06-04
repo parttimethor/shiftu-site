@@ -12,6 +12,9 @@
   const lerp = (a, b, t) => a + (b - a) * t;
   const clamp = (v, a, b) => Math.min(b, Math.max(a, v));
 
+  // shared hooks so the industry picker can drive the journey + console
+  const HOOKS = {};
+
   /* ---------- year ---------- */
   const yr = $("[data-year]");
   if (yr) yr.textContent = new Date().getFullYear();
@@ -465,6 +468,27 @@
     const stages = $$("[data-stage]", root);
     let busy = false, idleTimer = null, autoIdx = 0, ran = 0;
 
+    // Optional live brain: when window.SHIFTU_CONSOLE_API points at a deployed
+    // endpoint, free-typed messages get a real model reply (the pipeline + chips
+    // stay local). Empty by default, so the console runs fully scripted offline.
+    const CONSOLE_API = ((window.SHIFTU_CONSOLE_API || "") + "").trim();
+    async function fetchModelReply(message) {
+      const ctrl = new AbortController();
+      const to = setTimeout(() => ctrl.abort(), 9000);
+      try {
+        const res = await fetch(CONSOLE_API, {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ message: String(message).slice(0, 500) }),
+          signal: ctrl.signal
+        });
+        if (!res.ok) return null;
+        const data = await res.json();
+        const txt = (data && data.reply ? String(data.reply) : "").trim();
+        return txt || null;
+      } catch (e) { return null; } finally { clearTimeout(to); }
+    }
+
     // pipeline stage index legend: 0 Intake · 1 Schedule · 2 Follow-up · 3 Bill · 4 Route
     const SC = {
       rav4: { q: "Is the 2023 RAV4 still available?",
@@ -596,10 +620,14 @@
       }
       await sleep(order.length ? 360 : 240);
       if (prev >= 0) stages[prev].classList.replace("is-active", "is-done");
+      // a live model reply may be in flight (console API configured); keep the
+      // typing dots up while it lands, then fall back to the scripted reply
+      let replyText = sc.reply;
+      if (sc.replyPromise) { const r = await sc.replyPromise.catch(() => null); if (r) replyText = r; }
       typing.remove();
 
       const aiBody = addMsg("", "ai").querySelector(".msg__body");
-      await typeInto(aiBody, sc.reply);
+      await typeInto(aiBody, replyText);
 
       if (sc.chips && sc.chips.length) {
         const row = document.createElement("div");
@@ -624,11 +652,29 @@
       b.addEventListener("click", () => run(SC[id]));
       presetsWrap.appendChild(b);
     });
+
+    // industry picker can reorder presets to lead with the visitor's vertical
+    const IND2PRESET = { dealership: "rav4", dental: "cleaning", accounting: "taxes", insurance: "civic", restaurant: "table" };
+    HOOKS.console = function (key) {
+      const pk = IND2PRESET[key];
+      if (!pk || !SC[pk]) return;
+      const order = [pk].concat(ORDER.filter((id) => id !== pk));
+      presetsWrap.innerHTML = "";
+      order.forEach((id) => {
+        const b = document.createElement("button");
+        b.type = "button"; b.className = "preset"; b.textContent = SC[id].q;
+        b.addEventListener("click", () => run(SC[id]));
+        presetsWrap.appendChild(b);
+      });
+    };
+
     form.addEventListener("submit", (e) => {
       e.preventDefault();
       const v = input.value.trim(); if (!v) return;
       input.value = "";
-      run(matchScenario(v));
+      const sc = matchScenario(v);
+      if (CONSOLE_API) sc.replyPromise = fetchModelReply(v);
+      run(sc);
     });
 
     // rotating placeholder: hints at the range without ever auto-sending
@@ -964,6 +1010,20 @@
       const io = new IntersectionObserver((es) => { es.forEach((e) => { if (e.isIntersecting && !started) { started = true; play(current); } }); }, { threshold: 0.3 });
       io.observe(root);
     } else { play(current); }
+
+    HOOKS.journey = function (key) {
+      if (!SCN[key]) return false;
+      const lbl = SCN[key].label; let hit = false;
+      tabsEl.querySelectorAll(".journey__tab").forEach((t) => {
+        const on = t.textContent === lbl;
+        t.classList.toggle("is-active", on);
+        t.setAttribute("aria-selected", on ? "true" : "false");
+        if (on) hit = true;
+      });
+      current = key;
+      if (started && hit) play(key);
+      return hit;
+    };
   }
 
   /* =========================================================
@@ -1015,11 +1075,32 @@
     compute();
   }
 
+  /* =========================================================
+     Personalize: pick your industry once (hero eyebrow). The Lead
+     Journey and the console presets tailor to it, and the choice is
+     remembered. Falls back gracefully for verticals the Journey
+     doesn't cover yet.
+     ========================================================= */
+  function setupPersonalize() {
+    const sel = $("[data-personalize]");
+    if (!sel) return;
+    let saved = "";
+    try { saved = localStorage.getItem("shiftu-industry") || ""; } catch (e) {}
+    const apply = (key) => { if (HOOKS.journey) HOOKS.journey(key); if (HOOKS.console) HOOKS.console(key); };
+    if (saved) { sel.value = saved; apply(saved); }
+    sel.addEventListener("change", () => {
+      const v = sel.value;
+      try { localStorage.setItem("shiftu-industry", v); } catch (e) {}
+      apply(v);
+    });
+  }
+
   /* ---------- boot ---------- */
   setupTheme();
   initConsole();
   initJourney();
   initRoi();
+  setupPersonalize();
   setupSettle();
   setupScrollChoreography();
 })();
