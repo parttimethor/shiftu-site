@@ -140,7 +140,8 @@
     }, { passive: true });
     const mascotTick = () => {
       mvx = lerp(mvx, tvx, 0.06); mvy = lerp(mvy, tvy, 0.06);
-      mascotEl.style.transform = "translate(" + (mvx * 26) + "px," + (mvy * 16) + "px)";
+      // keep the CSS centering (translateX(-50%)) and add the cursor-follow lean on top
+      mascotEl.style.transform = "translateX(-50%) translate(" + (mvx * 26) + "px," + (mvy * 16) + "px)";
       requestAnimationFrame(mascotTick);
     };
     mascotTick();
@@ -464,40 +465,86 @@
     const stages = $$("[data-stage]", root);
     let busy = false, idleTimer = null, autoIdx = 0, ran = 0;
 
+    // pipeline stage index legend: 0 Intake · 1 Schedule · 2 Follow-up · 3 Bill · 4 Route
     const SC = {
       rav4: { q: "Is the 2023 RAV4 still available?",
         reply: "Yes — the RAV4 XLE is on the lot, $34,980 out-the-door. I've got tomorrow 10:00 AM or 2:30 PM open for a test drive.",
-        chips: ["Test drive · Tue 2:30", "Reminder set", "Rep notified ✓"] },
+        chips: ["Test drive · Tue 2:30", "Reminder set", "Rep notified ✓"], stages: [0, 1, 2, 4] },
       cleaning: { q: "Book me a cleaning this Friday",
         reply: "Done — Friday 1:15 PM for a cleaning. I'll text a reminder and your intake form the day before.",
-        chips: ["Booked · Fri 1:15", "Reminder set", "Confirmed ✓"] },
+        chips: ["Booked · Fri 1:15", "Reminder set", "Confirmed ✓"], stages: [0, 1, 2, 4] },
       civic: { q: "Can I get a quote on my 2021 Civic?",
         reply: "Happy to help — I can usually beat $180/mo. I'll call you today at 4:00 PM with options once I have your postal code.",
-        chips: ["Callback · 4:00 PM", "Details captured", "Broker assigned ✓"] },
+        chips: ["Callback · 4:00 PM", "Details captured", "Broker assigned ✓"], stages: [0, 2, 4] },
       table: { q: "Table for 6 tonight at 7?",
         reply: "We'd love to have you — I can do 6:45 or 8:15 tonight. I'll hold 6:45 and text you a confirmation.",
-        chips: ["Reservation · 6:45 PM", "Confirmed ✓", "Host notified ✓"] },
+        chips: ["Reservation · 6:45 PM", "Confirmed ✓", "Host notified ✓"], stages: [0, 1, 4] },
       taxes: { q: "I need help filing my small-business taxes",
         reply: "I can book a 30-minute discovery call — Tuesday 11:00 or Wednesday 3:00 — and send a checklist of docs to bring.",
-        chips: ["Discovery · Wed 3:00", "Checklist sent", "Routed to senior ✓"] }
+        chips: ["Discovery · Wed 3:00", "Checklist sent", "Routed to senior ✓"], stages: [0, 1, 2, 4] }
     };
     const ORDER = ["rav4", "cleaning", "civic", "table", "taxes"];
-    const DEFAULT = {
-      reply: "Got it. I'll capture that, book the next step, follow up on your cadence, and hand off anything that needs a human. Here's what happens next.",
-      chips: ["Captured", "Next step booked", "Handed off ✓"]
-    };
 
     const esc = (s) => s.replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
     const sleep = (ms) => new Promise((r) => setTimeout(r, prefersReduced ? Math.min(ms, 60) : ms));
+    const cap = (w) => (w ? w.charAt(0).toUpperCase() + w.slice(1) : w);
 
+    // pull light "entities" out of free text so replies feel understood
+    function extract(s) {
+      const time = (s.match(/\b(\d{1,2}(?::\d{2})?\s?(?:am|pm)|noon|\d{1,2}\s?o'?clock)\b/) || [])[1];
+      const day = (s.match(/\b(today|tonight|tomorrow|monday|tuesday|wednesday|thursday|friday|saturday|sunday|this week|next week|this weekend|weekend|morning|afternoon|evening)\b/) || [])[1];
+      const num = (s.match(/\b(?:for|party of|of|table for)\s+(\d{1,2})\b/) || [])[1];
+      const name = (s.match(/\b(?:i'?m|i am|this is|my name is)\s+([a-z]{2,})\b/) || [])[1];
+      const when = [day, time].filter(Boolean).join(" ");
+      return { time, day, num, name, when };
+    }
+
+    // intent + entity router — returns { q, reply, chips, stages }
     function matchScenario(text) {
-      const s = text.toLowerCase();
-      if (/rav4|car|vehicle|test drive|dealer|truck|suv|availab|out.?the.?door/.test(s)) return SC.rav4;
-      if (/clean|dental|teeth|dentist|hygien|checkup|cavity/.test(s)) return SC.cleaning;
-      if (/quote|insur|civic|policy|premium|coverage|\brate\b/.test(s)) return SC.civic;
-      if (/table|reserv|dinner|tonight|party|seat/.test(s)) return SC.table;
-      if (/tax|account|file|return|bookkeep|invoice|payroll/.test(s)) return SC.taxes;
-      return Object.assign({ q: text }, DEFAULT);
+      const s = text.toLowerCase().trim();
+      const e = extract(s);
+      const when = e.when;
+      const greet = e.name ? "Hi " + cap(e.name) + " — " : "";
+
+      if (/^(hi+|hey+|hello+|yo|howdy|good (morning|afternoon|evening)|sup|hiya)\b/.test(s) && s.length < 26)
+        return { q: text, reply: (e.name ? "Hey " + cap(e.name) + "! " : "Hey! ") + "I'm Shift Ü. I can book an appointment, pull a price, check hours, or hand you to a teammate. What do you need?", chips: [], stages: [] };
+
+      if (/\b(thanks|thank you|thx|ty|appreciate|cheers)\b/.test(s))
+        return { q: text, reply: "Anytime. Want this running on your own workflows? A 20-minute demo and your team gets the same thing.", chips: [], stages: [] };
+
+      if (/\b(human|agent|representative|real person|speak to someone|manager)\b/.test(s))
+        return { q: text, reply: greet + "Of course. I'll route you to a teammate with this whole conversation attached, so you won't have to repeat yourself.", chips: ["Context attached", "Routed to team ✓"], stages: [0, 4] };
+
+      if (/\b(hours|open|closing|when do you close|location|address|where are you|directions|parking)\b/.test(s))
+        return { q: text, reply: greet + "We're open Mon–Sat, 8:00 AM–6:00 PM. Want me to hold a time for you while you're thinking about it?", chips: ["Info sent", "Offered a booking ✓"], stages: [0, 4] };
+
+      if (/\b(reschedul|cancel|move my|change my|push my)\b/.test(s))
+        return { q: text, reply: greet + "No problem — I can move it" + (when ? " to " + when : "") + ". I'll update the booking and resend the confirmation right away.", chips: ["Booking updated", "Confirmation resent ✓"], stages: [0, 1, 4] };
+
+      if (/\b(complaint|complain|issue|problem|broken|refund|angry|upset|unhappy|terrible|disappointed)\b/.test(s))
+        return { q: text, reply: greet + "I'm sorry about that. I've logged the details and flagged this for a manager to make it right — someone will reach out shortly.", chips: ["Issue logged", "Escalated to manager ✓"], stages: [0, 4] };
+
+      if (/rav4|\bcar\b|vehicle|test drive|dealer|truck|\bsuv\b|sedan|availab|out.?the.?door|trade.?in|financ/.test(s))
+        return { q: text, reply: greet + "Yes — it's on the lot, $34,980 out-the-door. I can hold a test drive " + (when || "tomorrow at 2:30 PM") + " and text you a reminder beforehand.", chips: ["Test drive" + (when ? " · " + cap(when) : " · Tue 2:30"), "Reminder set", "Rep notified ✓"], stages: [0, 1, 2, 4] };
+
+      if (/clean|dental|teeth|dentist|hygien|checkup|cavity|filling|whiten/.test(s))
+        return { q: text, reply: greet + "I can get you in" + (when ? " " + when : " this Friday at 1:15 PM") + " for a cleaning. I'll send a reminder and your intake form the day before.", chips: ["Booked" + (when ? " · " + cap(when) : " · Fri 1:15"), "Reminder set", "Confirmed ✓"], stages: [0, 1, 2, 4] };
+
+      if (/quote|insur|civic|policy|premium|coverage|\brate\b|how much|pricing|\bprice\b|\bcost\b|estimate/.test(s))
+        return { q: text, reply: greet + "Happy to get you a number. I'll capture a couple of details and follow up with options " + (e.day || "today") + " — usually within the hour.", chips: ["Details captured", "Follow-up scheduled", "Routed to a specialist ✓"], stages: [0, 2, 4] };
+
+      if (/table|reserv|dinner|tonight|party|\bseat\b|patio/.test(s)) {
+        const ppl = e.num ? "a party of " + e.num : "your group";
+        return { q: text, reply: greet + "We'd love to have you. For " + ppl + " I can do 6:45 or 8:15" + (e.day ? " " + e.day : " tonight") + " — I'll hold 6:45 and text a confirmation.", chips: ["Reservation · 6:45 PM", "Confirmed ✓", "Host notified ✓"], stages: [0, 1, 4] };
+      }
+
+      if (/\btax|account|bookkeep|payroll|return|filing|file my|\bgst\b|receipts|invoice/.test(s))
+        return { q: text, reply: greet + "I can book a 30-minute discovery call" + (when ? " " + when : " — Tuesday 11:00 or Wednesday 3:00") + " and send a checklist of docs to bring.", chips: ["Discovery booked", "Checklist sent", "Routed to senior ✓"], stages: [0, 1, 2, 4] };
+
+      if (/\bbook|appointment|schedule|reserve|set up|sign up|slot|come in|\bvisit\b/.test(s))
+        return { q: text, reply: greet + "Done — I can get you in" + (when ? " " + when : " this week") + ". I'll confirm the slot, send a reminder, and have everything ready when you arrive.", chips: ["Booked" + (when ? " · " + cap(when) : ""), "Reminder set", "Confirmed ✓"], stages: [0, 1, 2, 4] };
+
+      return { q: text, reply: greet + "Got it. Here's how I'd handle that: capture the request, book the next step, follow up on your cadence, and loop in a teammate if it needs a human.", chips: ["Captured", "Next step booked", "Handed off ✓"], stages: [0, 1, 2, 4] };
     }
 
     function addMsg(text, who) {
@@ -518,6 +565,18 @@
     }
     function resetStages() { stages.forEach((s) => s.classList.remove("is-active", "is-done")); }
 
+    // type the reply in character-by-character so it reads as live thinking
+    async function typeInto(el, text) {
+      if (prefersReduced || isTouch) { el.textContent = text; return; }
+      el.classList.add("is-typing");
+      for (let i = 1; i <= text.length; i++) {
+        el.textContent = text.slice(0, i);
+        feed.scrollTop = feed.scrollHeight;
+        await sleep(text[i - 1] === " " ? 20 : 11 + Math.random() * 19);
+      }
+      el.classList.remove("is-typing");
+    }
+
     async function run(sc) {
       if (busy) return;
       busy = true; clearTimeout(idleTimer); ran++;
@@ -525,26 +584,36 @@
       addMsg(sc.q, "me");
       resetStages();
       const typing = addTyping();
-      for (let i = 0; i < stages.length; i++) {
-        await sleep(200);
-        if (i > 0) stages[i - 1].classList.replace("is-active", "is-done");
-        stages[i].classList.add("is-active");
+
+      // light only the stages this intent actually touches (selective routing)
+      const order = (sc.stages && sc.stages.length) ? sc.stages : [];
+      let prev = -1;
+      for (let i = 0; i < order.length; i++) {
+        await sleep(210);
+        if (prev >= 0) stages[prev].classList.replace("is-active", "is-done");
+        stages[order[i]].classList.add("is-active");
+        prev = order[i];
       }
-      await sleep(380);
-      stages[stages.length - 1].classList.replace("is-active", "is-done");
+      await sleep(order.length ? 360 : 240);
+      if (prev >= 0) stages[prev].classList.replace("is-active", "is-done");
       typing.remove();
-      addMsg(sc.reply, "ai");
-      const row = document.createElement("div");
-      row.className = "statusrow";
-      feed.appendChild(row);
-      for (let i = 0; i < sc.chips.length; i++) {
-        await sleep(prefersReduced ? 60 : 340);
-        const s = document.createElement("span");
-        s.className = "statuschip" + (i === sc.chips.length - 1 ? " statuschip--done" : "");
-        s.textContent = sc.chips[i];
-        row.appendChild(s);
-        requestAnimationFrame(() => s.classList.add("is-in"));
-        feed.scrollTop = feed.scrollHeight;
+
+      const aiBody = addMsg("", "ai").querySelector(".msg__body");
+      await typeInto(aiBody, sc.reply);
+
+      if (sc.chips && sc.chips.length) {
+        const row = document.createElement("div");
+        row.className = "statusrow";
+        feed.appendChild(row);
+        for (let i = 0; i < sc.chips.length; i++) {
+          await sleep(prefersReduced ? 60 : 320);
+          const c = document.createElement("span");
+          c.className = "statuschip" + (i === sc.chips.length - 1 ? " statuschip--done" : "");
+          c.textContent = sc.chips[i];
+          row.appendChild(c);
+          requestAnimationFrame(() => c.classList.add("is-in"));
+          feed.scrollTop = feed.scrollHeight;
+        }
       }
       busy = false;
     }
@@ -561,6 +630,27 @@
       input.value = "";
       run(matchScenario(v));
     });
+
+    // rotating placeholder — hints at the range without ever auto-sending
+    const PROMPTS = [
+      "Is the 2023 RAV4 still available?",
+      "Book me a cleaning this Friday",
+      "Quote on my 2021 Civic?",
+      "Table for 6 tonight at 7?",
+      "What are your hours?",
+      "I need to reschedule my appointment"
+    ];
+    const BASE_PH = input.getAttribute("placeholder") || "Message Shift Ü like a customer…";
+    if (!prefersReduced && !isTouch) {
+      let pi = 0;
+      setInterval(() => {
+        if (document.activeElement === input || input.value) return;
+        pi = (pi + 1) % PROMPTS.length;
+        input.placeholder = "Try: " + PROMPTS[pi];
+      }, 3200);
+      input.addEventListener("focus", () => { input.placeholder = BASE_PH; });
+      input.addEventListener("blur", () => { if (!input.value) input.placeholder = "Try: " + PROMPTS[pi]; });
+    }
 
     addMsg("Hey — I'm Shift Ü. Message me like a customer would, or tap a question below to watch how I'd handle it.", "ai");
   }
@@ -690,7 +780,55 @@
     }
   }
 
+  /* =========================================================
+     Theme toggle — dark (default) / light, persisted to localStorage.
+     The button is injected into the nav so every page gets it without
+     editing each file. A tiny inline <head> script sets the initial
+     theme before paint to avoid a flash.
+     ========================================================= */
+  function setupTheme() {
+    const root = document.documentElement;
+    const meta = $('meta[name="theme-color"]');
+    const getTheme = () => root.getAttribute("data-theme") || "dark";
+
+    const SUN = '<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg>';
+    const MOON = '<svg viewBox="0 0 24 24"><path d="M21 12.8A9 9 0 1 1 11.2 3 7 7 0 0 0 21 12.8z"/></svg>';
+
+    function apply(t) {
+      root.setAttribute("data-theme", t);
+      try { localStorage.setItem("shiftu-theme", t); } catch (e) {}
+      if (meta) meta.setAttribute("content", t === "light" ? "#eef1fa" : "#060b1c");
+      const label = t === "light" ? "Switch to dark theme" : "Switch to light theme";
+      $$("[data-theme-toggle]").forEach((b) => {
+        b.setAttribute("aria-label", label);
+        const lab = $(".theme-toggle__label", b);
+        if (lab) lab.textContent = t === "light" ? "Dark mode" : "Light mode";
+      });
+    }
+
+    function makeBtn(mobile) {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.className = "theme-toggle" + (mobile ? " theme-toggle--mobile" : "");
+      b.setAttribute("data-theme-toggle", "");
+      b.innerHTML =
+        '<span class="theme-toggle__moon" aria-hidden="true">' + MOON + "</span>" +
+        '<span class="theme-toggle__sun" aria-hidden="true">' + SUN + "</span>" +
+        (mobile ? '<span class="theme-toggle__label"></span>' : "");
+      b.addEventListener("click", () => apply(getTheme() === "light" ? "dark" : "light"));
+      return b;
+    }
+
+    const cta = $(".nav__cta");
+    if (cta) cta.insertBefore(makeBtn(false), cta.firstChild);
+    const mob = $(".nav__mobile");
+    if (mob) mob.insertBefore(makeBtn(true), mob.firstChild);
+
+    apply(getTheme());
+  }
+
   /* ---------- boot ---------- */
+  setupTheme();
   initConsole();
   setupSettle();
   setupScrollChoreography();
