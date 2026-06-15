@@ -1,0 +1,70 @@
+{
+  "target": "work-case",
+  "extract": null,
+  "copy": {
+    "page": "Case Study Template",
+    "route": "/work/[slug]",
+    "seoTitle": "Case Study | Shift U",
+    "seoDescription": "How we built the site and the AI behind it, and the results it drove for a business like yours.",
+    "sections": [
+      {
+        "id": "hero",
+        "eyebrow": "CASE STUDY",
+        "headline": "[PLACEHOLDER: Result in one line]",
+        "subhead": "[PLACEHOLDER: Client name], [PLACEHOLDER: industry + city].",
+        "body": "We built the website and the AI behind it. Here is what changed.",
+        "cta": "Book a call",
+        "flags": "PLACEHOLDER: client name, industry/location, and headline result (e.g. '3x more booked calls in 60 days')."
+      },
+      {
+        "id": "challenge",
+        "eyebrow": "THE CHALLENGE",
+        "headline": "What was slowing them down",
+        "body": "[PLACEHOLDER: The old site looked dated and leads went unanswered.] [PLACEHOLDER: Replies took hours, so prospects went cold.] [PLACEHOLDER: The owner handled everything by hand.]",
+        "flags": "PLACEHOLDER: 2-3 lines describing what was broken before we started, in the client's words."
+      },
+      {
+        "id": "what_we_built",
+        "eyebrow": "WHAT WE BUILT",
+        "headline": "The site and the AI behind it",
+        "subhead": "One team, one stack, built to convert and run on its own.",
+        "bullets": [
+          "[PLACEHOLDER: New website built to load fast and convert]",
+          "[PLACEHOLDER: WhatsApp AI agent answering 24/7 in their language]",
+          "[PLACEHOLDER: Lead qualification and booking handled automatically]",
+          "[PLACEHOLDER: Automations connecting their tools and CRM]",
+          "[PLACEHOLDER: Ongoing updates and support after launch]"
+        ],
+        "flags": "PLACEHOLDER: 3-5 bullets of what was actually delivered for this client."
+      },
+      {
+        "id": "results",
+        "eyebrow": "THE RESULTS",
+        "headline": "Numbers after launch",
+        "subhead": "Real outcomes, measured after go-live.",
+        "bullets": [
+          "[PLACEHOLDER: +X% more leads] in [PLACEHOLDER: timeframe]",
+          "[PLACEHOLDER: X hours saved per week] on manual replies",
+          "[PLACEHOLDER: X% faster response time], answered in seconds"
+        ],
+        "flags": "PLACEHOLDER: 3 metric cards. Each needs a real number and timeframe before publishing. [REVIEW: confirm every metric with client data]."
+      },
+      {
+        "id": "testimonial",
+        "eyebrow": "IN THEIR WORDS",
+        "headline": "What the client said",
+        "body": "\"[PLACEHOLDER: Short quote about the result and what it felt like to work with us, 2-3 lines max.]\"",
+        "subhead": "[PLACEHOLDER: Full name], [PLACEHOLDER: role], [PLACEHOLDER: company]",
+        "flags": "PLACEHOLDER: real quote + attribution (name, role, company). Do not publish without sign-off."
+      },
+      {
+        "id": "cta",
+        "eyebrow": "YOUR TURN",
+        "headline": "Want results like these",
+        "subhead": "Tell us what you sell. We will show you the site and the AI to match.",
+        "cta": "Book a call",
+        "flags": "Secondary action available: 'See our work'."
+      }
+    ]
+  }
+}

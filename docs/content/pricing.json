@@ -1,0 +1,205 @@
+{
+  "target": "pricing",
+  "extract": {
+    "route": "/pricing",
+    "type": "pricing",
+    "name": "Shift U Pricing",
+    "tagline": "Every offer, one page, in CAD.",
+    "summary": "Shift U's pricing page lists two categories: done-for-you services (landing pages, full websites, Google and Meta ads, AI chat agents, voice agents, and a full conversion system) and AI training programs (Operator Certification, Private Team Training, and Workforce Transformation). Each offer carries fixed scope, a written guarantee, and a stated turnaround time. Prices range from $350 one-time for a landing page up to a $55,000 flat engagement for Workforce Transformation.",
+    "pricing": "SERVICES: Landing Pages from $350 (one-time). Full Website from $800 (quoted by scope). Google and Meta Ads $300 per month, plus ad spend. AI Chat Agent $150 to $250 per month. Voice Agent per seat (quoted by call volume). Conversion System quoted (site plus CRM plus attribution). PROGRAMS: AI Operator Certification $7,500 per seat. Private Team Training $22,500 flat program fee (Most picked). Workforce Transformation $55,000 flat engagement.",
+    "included": [
+      "Landing Pages: Up to 7 sections, single offer",
+      "Landing Pages: Researched copy you approve section by section",
+      "Landing Pages: Custom design system, no template feel",
+      "Landing Pages: Mobile-first build, sub-2 second load",
+      "Landing Pages: SEO meta tags and JSON-LD schema",
+      "Landing Pages: Contact form delivered to your inbox",
+      "Landing Pages: Three revision rounds included",
+      "Full Website: Three to ten pages, shared design system",
+      "Full Website: Per-page SEO and schema",
+      "Full Website: Shared header, footer and form",
+      "Full Website: CMS or static, whichever fits the team",
+      "Full Website: Launch checklist and post-launch support",
+      "Full Website: Three revision rounds included",
+      "Google and Meta Ads: Account build, audiences and creative",
+      "Google and Meta Ads: Search, Performance Max, Meta lead gen, retargeting",
+      "Google and Meta Ads: Conversion tracking on site and in CRM",
+      "Google and Meta Ads: Weekly optimization, monthly written report",
+      "Google and Meta Ads: Month to month, cancel anytime",
+      "AI Chat Agent: Trained on your offers, pricing and FAQs",
+      "AI Chat Agent: Lead capture, qualification and routing",
+      "AI Chat Agent: Calendar booking and CRM handoff",
+      "AI Chat Agent: Monthly conversation review and tuning",
+      "AI Chat Agent: Hosted on your domain, branded to your business",
+      "Voice Agent: Inbound voice agent on your business line",
+      "Voice Agent: Custom voice, script and objection handling",
+      "Voice Agent: Booking, transfer and warm handoff",
+      "Voice Agent: Call recordings, transcripts and analytics",
+      "Voice Agent: Integrated with your CRM and calendar",
+      "Conversion System: Site and pages aligned to one conversion path",
+      "Conversion System: CRM unified with ads and inbox",
+      "Conversion System: Attribution from first touch to closed won",
+      "Conversion System: Quarterly read-out tied to revenue, not clicks",
+      "Conversion System: Operator training built in for handoff",
+      "AI Operator Certification: Certified Shift U AI Operator credential",
+      "AI Operator Certification: Working prompt library tuned to your business",
+      "AI Operator Certification: 90 day internal rollout plan with named owners",
+      "AI Operator Certification: Live coaching access for the full cohort window",
+      "AI Operator Certification: 6 weeks of cohort sessions, 100 percent pass guarantee",
+      "Private Team Training: Team-wide adoption of 3 core AI workflows",
+      "Private Team Training: Custom SOPs for sales, ops and admin",
+      "Private Team Training: Manager dashboard tracking time saved per role",
+      "Private Team Training: Two follow-up sessions at day 30 and day 60",
+      "Private Team Training: Zero Bottleneck Promise, working AI workflow live in 30 days, or we keep working at no charge",
+      "Workforce Transformation: Audit and roadmap signed off by leadership",
+      "Workforce Transformation: AI-rebuilt workflows across 5 core functions",
+      "Workforce Transformation: Executive coaching for the leadership team",
+      "Workforce Transformation: Quarterly business review for the first 12 months",
+      "Workforce Transformation: Transformation Guarantee, measurable revenue or margin lift inside 90 days, tracked and reported"
+    ],
+    "keyPoints": [
+      "Fixed scope, no surprise invoices",
+      "Written guarantee per offer",
+      "Prices do not change after the project starts",
+      "Fastest start: Ads and Chat Agent are live within 5 business days",
+      "Landing page SLA: Landing pages live in under 7 business days, or deposit refunds",
+      "Full Website: Two to four weeks, scoped at kickoff",
+      "Voice Agent: Trained and live in 10 business days",
+      "Conversion System: Four to eight weeks, scoped at kickoff",
+      "AI Operator Certification: 6 weeks, cohort based",
+      "Private Team Training: 4 weeks, on-site and remote",
+      "Workforce Transformation: 12 weeks, phased rollout",
+      "Ads are month to month with no agency lock-in and you own the accounts",
+      "Cancel any month; they tune until conversation quality clears the bar",
+      "Chat agent sounds like your business, not a chatbot",
+      "Quarterly business review tied to revenue, not vanity metrics",
+      "Quote in writing within 24 hours of the call"
+    ],
+    "proof": [
+      "100 percent pass guarantee on the Operator Certification exam",
+      "Zero Bottleneck Promise: working AI workflow live in 30 days, or we keep working at no charge",
+      "Transformation Guarantee: measurable revenue or margin lift inside 90 days, tracked and reported",
+      "Landing page SLA: live in under 7 business days, or deposit refunds",
+      "Ads and Chat Agent live within 5 business days"
+    ],
+    "faq": [
+      "When is the deposit due, and when does the balance hit?",
+      "Do prices change after the project starts?",
+      "Is hosting, domain and software included?",
+      "Do you work with businesses outside Alberta?",
+      "What is the refund policy if a build slips or a program does not fit?",
+      "Can I stack services and programs into one agreement?"
+    ],
+    "capgRemoved": "Removed all Canada-Alberta Job Grant (CAJG) and funding content. Specifically stripped: the page's two-category framing of \"Services (Not Grant Eligible)\" vs \"Programs (CAJG Eligible)\" and the per-service \"not grant eligible\" labels; the per-program \"Net after CAJG\" prices and \"Grant covers\" amounts (AI Operator Certification net $2,550 / grant covers $4,950; Private Team Training net $7,650 / grant covers $14,850; Workforce Transformation net $18,700 / grant covers $36,300); the statements \"The Canada-Alberta Job Grant covers up to 66 percent of AI training, with up to $10,000 per trainee per year\", \"Up to 66 percent funded, up to $10,000 per trainee per year, through 2028\", \"66% CAJG covers Of eligible training costs for Alberta employers, funded through 2028\", \"$10,000 Per trainee cap Maximum funded per trainee per year\", and \"CAJG covers up to 66 percent of eligible training costs, up to $10,000 per trainee per year, funded through 2028. The sticker price stays on the invoice, the grant reimburses the qualifying portion after Adam files the paperwork. The net column you see beside every program is the real out-of-pocket once funding lands\"; the \"CAJG paperwork handled by Adam\" benefit; the entire \"Alberta Options\" comparison table (Shift U vs NorQuest/Bow Valley/MacEwan vs Big-4 Consultancy vs Self-paced, including the \"CAJG up to 66% funding\" row, \"On-site Alberta delivery\" row, and \"Net after CAJG\" price rows); the grant calculator disclaimer about eligibility, claim amount, reimbursement timing and Alberta Labour approval; and three grant-related FAQ questions (\"How does the Canada-Alberta Job Grant change the price I actually pay?\", \"Which Shift U offers are CAJG eligible and which are not?\", and the FAQ answer about CAJG covering up to 66 percent). Kept the underlying services, programs, their sticker/list prices, scope, guarantees, and turnaround times."
+  },
+  "copy": {
+    "page": "Pricing",
+    "route": "/pricing",
+    "seoTitle": "Pricing | Shift U",
+    "seoDescription": "Clear pricing for websites, WhatsApp AI agents, and automations. Monthly plan or one-time build. No big upfront, cancel anytime.",
+    "sections": [
+      {
+        "id": "hero",
+        "eyebrow": "PRICING",
+        "headline": "Pick what fits, no surprises",
+        "subhead": "Every option is listed below with real numbers. No call required just to see what things cost.",
+        "body": "Website plus the AI behind it, under one roof. Start small or go all in. You keep the support after launch either way.",
+        "cta": "Book a call",
+        "flags": "All prices below are [REVIEW] placeholders. Confirm final numbers before publishing."
+      },
+      {
+        "id": "waas_tiers",
+        "eyebrow": "WEBSITE-AS-A-SERVICE",
+        "headline": "Your site, handled monthly",
+        "subhead": "Design, hosting, domain, updates, and support in one monthly fee. No big upfront. Cancel anytime.",
+        "body": "Most owners pick Pro. It covers the pages you actually need plus monthly changes, so the site never goes stale.",
+        "bullets": [
+          "Starter: [REVIEW: $X/mo], up to 3 pages, hosting, domain, SSL included",
+          "Starter: 1 content update request per month",
+          "Starter: contact form plus basic SEO setup",
+          "Starter: email support, 2 business day response",
+          "Pro (Most popular): [REVIEW: $X/mo], up to 7 pages, everything in Starter",
+          "Pro: unlimited small updates, monthly performance check",
+          "Pro: lead capture plus Google Business and analytics setup",
+          "Pro: priority support, same day response",
+          "Scale: [REVIEW: $X/mo], up to 15 pages, everything in Pro",
+          "Scale: WhatsApp AI agent included, booking and lead routing",
+          "Scale: A/B testing plus monthly growth report",
+          "Scale: dedicated contact, fastest turnaround"
+        ],
+        "cta": "Start with Pro",
+        "flags": "Middle tier (Pro) marked Most popular for decoy hierarchy. All three monthly prices are [REVIEW: $X/mo]. Page counts are suggested defaults, confirm before publishing."
+      },
+      {
+        "id": "one_shot",
+        "eyebrow": "ONE-SHOT BUILD",
+        "headline": "Own it outright, pay once",
+        "subhead": "Want to own the site and handle it yourself? We build it, hand over the files, done.",
+        "bullets": [
+          "Landing page: [REVIEW: $X], single high-converting page, ready to launch",
+          "Business site: [REVIEW: $X], up to 5 pages, full structure and SEO",
+          "Custom build: [REVIEW: $X], larger sites, quoted after a quick call",
+          "Every build includes mobile design, fast load, and handover"
+        ],
+        "body": "One-time payment, the code is yours. Add a maintenance plan later if you want us to keep it current.",
+        "cta": "Get a one-shot quote",
+        "flags": "All one-shot prices are [REVIEW: $X]."
+      },
+      {
+        "id": "agents_pricing",
+        "eyebrow": "WHATSAPP AI AGENTS",
+        "headline": "Answers and books while you sleep",
+        "subhead": "A 24/7 assistant that replies, qualifies leads, and books appointments in your customer's language.",
+        "body": "One-time setup to train it on your business. Then a flat monthly fee to run and maintain it.",
+        "bullets": [
+          "Setup: [REVIEW: $X] one-time, built and trained on your services",
+          "Monthly: [REVIEW: $X/mo], hosting, updates, and tuning included",
+          "Handles FAQs, lead qualifying, and appointment booking",
+          "Replies in the customer's language, day or night"
+        ],
+        "cta": "Book a call",
+        "flags": "Setup [REVIEW: $X] and monthly [REVIEW: $X/mo] both placeholders. Proof anchor (hundreds of conversations/month) lives on home/services, exact number is [PLACEHOLDER]."
+      },
+      {
+        "id": "automations_pricing",
+        "eyebrow": "BUSINESS AUTOMATIONS",
+        "headline": "Kill the manual work for good",
+        "subhead": "We connect your tools so leads, follow-ups, and data move on their own. No more copy-paste between apps.",
+        "body": "Most setups are a one-time project. Add a retainer if you want ongoing changes and monitoring.",
+        "bullets": [
+          "Project: from [REVIEW: $X], scoped after a short call",
+          "Retainer: [REVIEW: $X/mo], changes, monitoring, and new workflows",
+          "Connects CRM, forms, email, calendar, and WhatsApp",
+          "Common wins: auto follow-ups, lead routing, no double entry"
+        ],
+        "cta": "Map my automations",
+        "flags": "Project starting price [REVIEW: $X] and retainer [REVIEW: $X/mo] both placeholders."
+      },
+      {
+        "id": "comparison_note",
+        "headline": "Subscription or buy it once",
+        "body": "Subscription if you want low upfront cost and us handling it forever. One-shot if you want to own the build and run it yourself."
+      },
+      {
+        "id": "faq",
+        "eyebrow": "BILLING FAQ",
+        "headline": "The money questions, answered",
+        "bullets": [
+          "How does billing work? Monthly plans bill on the same date each month. One-shot builds are paid up front or in two parts.",
+          "Can I cancel anytime? Yes. Website-as-a-Service has no lock-in. Cancel and your site stays live through the paid period.",
+          "Do I own my website? On one-shot builds, yes, the code is yours. On subscription, the site stays with the plan while it runs.",
+          "What if I start monthly and want to buy it out? You can switch to a one-shot buyout later. We credit part of what you have paid."
+        ],
+        "flags": "Buyout credit terms are illustrative. [REVIEW] the exact buyout and credit policy before publishing."
+      },
+      {
+        "id": "cta",
+        "eyebrow": "STILL DECIDING",
+        "headline": "Tell us the goal, get a number",
+        "subhead": "One short call. We recommend the option that fits your budget and what you actually need, not the biggest invoice.",
+        "cta": "Book a call",
+        "flags": "Secondary action 'See our work' available site-wide."
+      }
+    ]
+  }
+}

@@ -1,0 +1,128 @@
+{
+  "target": "about",
+  "extract": {
+    "route": "/about",
+    "type": "about",
+    "name": "Shift U",
+    "tagline": "Built by operators, for Alberta operators.",
+    "summary": "About page for Shift U, an Edmonton company that does two things on purpose: it certifies one operator inside your business to run AI work end to end, and it ships the systems, sites and ads that put that operator to work the same quarter. The page tells the origin story, lays out four operating principles, introduces the three-person team, explains the Edmonton/Alberta-only focus, and lists open roles and partnership referrals.",
+    "pricing": "",
+    "included": [
+      "Operator certification (run AI work end to end)",
+      "A working automation",
+      "Refunded deposit on a late landing page",
+      "Zero Bottleneck Promise on the first 30 days",
+      "100 percent pass rate on Operator Certification",
+      "Transformation Guarantee on the enterprise tier",
+      "Landing pages live in under 7 business days or we refund the deposit",
+      "Services listed in footer: Landing Pages, Full Website, Google and Meta Ads, AI Chat Agent, Voice Agent, Conversion System",
+      "Programs listed in footer: AI Operator Certification, Private Team Training, Workforce Transformation"
+    ],
+    "keyPoints": [
+      "Shift U is an Edmonton company that does two things on purpose: certify one operator inside your business to run AI work end to end, and ship the systems, sites and ads that put that operator to work the same quarter.",
+      "ORIGIN: We started Shift U because Alberta business owners kept asking the same question. 'I want one person on my team who can run AI work like a senior.' Nobody was selling that. So we built it. (Joshua, Sales and Discovery Lead)",
+      "Marcus had been shipping AI workflows inside production businesses since 2019. Joshua had been selling to Alberta SMBs for a decade. Adam had been running disciplined project management that keeps a 7 day promise from slipping. The gap was not the technology, it was a trained operator inside the building who knew the business.",
+      "WHAT WE STAND ON: Four principles, written down on day one. They explain why every engagement runs the way it runs, and why we say no to roughly half the leads we meet.",
+      "Principle 1 - Operator-run, not consultant-run: Every program is led by people who have shipped revenue inside small businesses, not slide decks. Marcus has run operations, Joshua has closed sales, Adam has owned client outcomes.",
+      "Principle 2 - Edmonton and Alberta only: We pick a 90 minute drive radius from downtown Edmonton on purpose. Local case studies, local payroll math, and a facilitator who can drive to your office for the on-site week.",
+      "Principle 3 - Outcomes are the deliverable: Operator certification, a working automation, a refunded deposit on a late landing page. We tie every engagement to a result you can measure, and we put it in writing before the kickoff call.",
+      "Principle 4 - Guarantees in writing: Zero Bottleneck Promise on the first 30 days. 100 percent pass rate on Operator Certification. Transformation Guarantee on the enterprise tier. Landing pages live in under 7 business days or we refund the deposit.",
+      "THE TEAM: Three operators, one phone number. Small company, on purpose. Joshua scopes the work, Marcus runs the training, Adam owns the build week to week. You work with all three, by name, for the life of the engagement.",
+      "WHY EDMONTON AND ALBERTA ONLY: A 90 minute radius is a feature, not a limit. We turn down work outside the province on purpose.",
+      "Reason 01 - 90 minute radius from downtown Edmonton: Every on-site coaching day is a same day drive. Calgary, Red Deer, Sherwood Park, Spruce Grove, St. Albert and Leduc are all in scope. Past that radius we send teams to remote programs instead.",
+      "Reason 03 - 5 to 50 employees, our sweet spot: Big enough to feel the gap an AI operator closes, small enough that one trained person changes the trajectory of the company. If you are over 200 staff, our enterprise tier still applies, the rhythm just shifts.",
+      "Outside Alberta? Workforce Transformation is available remote-first for organizations over 200 staff. Joshua will triage on the discovery call.",
+      "OPEN ROLES AND PARTNERSHIPS: Build with us, or refer work to us. Two roles open right now, plus a standing line for CPAs, payroll firms, accountants and chambers who serve Alberta SMBs.",
+      "Senior AI Facilitator (Full-time / Edmonton, hybrid): Co-lead Operator Certification cohorts with Marcus. Production experience with LLM agents and workflow tooling required. You will own week 4 through 8 of the curriculum within your first cohort.",
+      "Implementation Engineer (Full-time / Edmonton, hybrid): Build the chat agents, voice agents and conversion systems we sell on the digital services side. Ship one or two engagements per month end to end, from kickoff to handoff.",
+      "LET US TALK: A 30 minute call, no pitch deck. Just your numbers. Bring the bottleneck, the team size and the budget. We bring the path and the price. If we are not a fit, you walk with a free scorecard either way.",
+      "Contact: General enquiries hello@shiftu.ca; Discovery calls booked on the calendar; Studio in Edmonton, Alberta; Edmonton time, weekdays 9 to 5.",
+      "Team member Joshua - Sales and Discovery Lead: Runs every discovery call. Decides whether we are a fit before we send a quote. Spent a decade selling to Alberta SMBs across services, trades and professional firms. Owns: Discovery, scoping, fit checks, contracts and kickoff.",
+      "Team member Marcus - Lead Facilitator: Designs and runs Operator Certification and Private Training. The voice in the room every Tuesday. Has shipped AI workflows inside production businesses since 2019. Owns: Curriculum, cohort facilitation, on-site coaching weeks, certification scoring, post-grad office hours. If you walk out of week 8 not running AI work end to end, that is on him.",
+      "Team member Adam - Account Manager: Owns the client relationship after kickoff. Keeps the build on schedule and the team unblocked. Flags a slipping deadline before it slips. Owns: Project management, status updates, blocker resolution, deliverable QA and renewal conversations. The reason the 7 day promise holds is that Adam will not let it not hold."
+    ],
+    "proof": [
+      "Marcus has been shipping AI workflows inside production businesses since 2019",
+      "Joshua spent a decade selling to Alberta SMBs across services, trades and professional firms",
+      "Team of three operators (Joshua, Marcus, Adam)",
+      "90 minute drive radius from downtown Edmonton (Calgary, Red Deer, Sherwood Park, Spruce Grove, St. Albert and Leduc all in scope)",
+      "5 to 50 employees is the stated sweet spot",
+      "100 percent pass rate on Operator Certification",
+      "Landing pages live in under 7 business days or deposit refunded",
+      "Say no to roughly half the leads we meet",
+      "Curriculum runs to week 8 (Operator Certification); cohort sessions every Tuesday"
+    ],
+    "faq": [],
+    "capgRemoved": "The page is heavily wrapped in Canada-Alberta Job Grant (CAJG) funding framing, ALL of which was stripped. Removed verbatim: (1) Top banner: \"The Canada-Alberta Job Grant covers up to 66 percent of AI training, with up to $10,000 per trainee per year.\" with a \"See the numbers\" CTA. (2) Hero trust chips \"CAJG facilitator\" and \"Funded through 2028\". (3) Principle 2 phrase \"local CAJG paperwork\". (4) Joshua's \"Owns\" line included \"CAJG eligibility math\" (stripped that item). (5) Reason 02 block entirely removed: \"66 percent CAJG funded through 2028 - We file the Canada-Alberta Job Grant paperwork with you, not for you. The grant covers up to 66 percent of program cost, up to $10,000 per trainee per year, and we know the Alberta intake forms cold.\" (6) Reason 04 block removed: \"2028 funding runway confirmed - The CAJG program is funded through fiscal 2028. We plan cohorts, retainers and transformation engagements with that runway in mind so your training dollars stay inside the window.\" (7) Stats strip removed: \"66% CAJG coverage on eligible programs\", \"$10K Per trainee per year through the grant\", \"2028 Grant runway confirmed\". (8) Partnership copy referencing \"refer the CAJG paperwork without becoming AI trainers\" (kept the partnership/referral concept but stripped CAJG paperwork wording). (9) \"LET US TALK\" line \"We bring the path, the price and the CAJG math\" was trimmed to remove \"and the CAJG math\". (10) Footer description \"CAJG-eligible programs and a digital stack tuned for revenue\" had the CAJG-eligible framing stripped. The underlying service (certifying one in-house AI operator + shipping AI systems/sites/ads, plus the three programs and digital services) is kept; only the grant-funding wrapper is removed. No explicit dollar pricing exists on this page outside the grant figures, so the pricing field is empty."
+  },
+  "copy": {
+    "page": "About",
+    "route": "/about",
+    "seoTitle": "About Shift U | Good Tech, Real Results",
+    "seoDescription": "We build the website and the AI behind it. Sites, WhatsApp agents, and automations that bring more leads and less manual work.",
+    "sections": [
+      {
+        "id": "hero",
+        "eyebrow": "ABOUT SHIFT U",
+        "headline": "Good tech, real results",
+        "subhead": "We build the website and the AI behind it.",
+        "body": "Most agencies sell you one or the other. We do both, under one roof, so your site and your sales engine actually talk to each other.",
+        "cta": "Book a call"
+      },
+      {
+        "id": "story",
+        "eyebrow": "WHY WE EXIST",
+        "headline": "Small teams deserve real tech",
+        "subhead": "Enterprise tools without the enterprise headcount.",
+        "body": "Most owners get stuck with a pretty site that just sits there, or an AI tool nobody set up right. We started Shift U to close that gap. You get the website and the system working together, no tech team required."
+      },
+      {
+        "id": "how_we_work",
+        "eyebrow": "HOW WE WORK",
+        "headline": "Four rules we never break",
+        "subhead": "Simple principles that keep your project on track.",
+        "bullets": [
+          "Outcome first. We build for leads, not looks.",
+          "Plain talk. No jargon, no runaround.",
+          "Fast delivery. Live in days, not months.",
+          "We stay. Launch is the start, not the finish."
+        ]
+      },
+      {
+        "id": "reach",
+        "eyebrow": "WHERE WE WORK",
+        "headline": "Two countries, one standard",
+        "subhead": "We serve businesses in Argentina and Canada.",
+        "body": "Wherever you are, the work is the same. Sites and AI that bring in leads and cut the manual busywork. We work in English."
+      },
+      {
+        "id": "values",
+        "eyebrow": "WHAT WE STAND FOR",
+        "headline": "What you can count on",
+        "subhead": "Three things that shape every build.",
+        "bullets": [
+          "Honest. We tell you what works and what does not.",
+          "Practical. Tech that earns its place, nothing extra.",
+          "Present. Real support after the site goes live."
+        ]
+      },
+      {
+        "id": "team",
+        "eyebrow": "THE TEAM",
+        "headline": "The people behind your build",
+        "subhead": "Builders who answer their own messages.",
+        "body": "A small, hands-on team that builds, ships, and supports your project directly. No account managers between you and the work.",
+        "flags": "[PLACEHOLDER: add team member names, roles, and photos] [PLACEHOLDER: founder bio, 2-3 lines]"
+      },
+      {
+        "id": "cta",
+        "eyebrow": "READY WHEN YOU ARE",
+        "headline": "Let's build your engine",
+        "subhead": "A site and AI that work while you sleep.",
+        "body": "Tell us what you sell. We will show you what to build and what it costs, no pressure.",
+        "cta": "Book a call",
+        "flags": "Secondary CTA available: See our work"
+      }
+    ]
+  }
+}

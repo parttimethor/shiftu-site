@@ -1,0 +1,186 @@
+{
+  "target": "services/landing-pages",
+  "extract": {
+    "route": "/services/landing-pages",
+    "type": "service",
+    "name": "Landing Pages",
+    "tagline": "One page. One offer. Designed to convert. Built in under 7 business days, or we refund the deposit.",
+    "summary": "A done-for-you landing page service offering three tiers (Standard, Extended, Full Site) that builds a single-offer, conversion-first page with researched copy, custom design, mobile-first sub-2-second load, SEO/schema, and a contact form. Pages ship in under 7 business days (2-3 weeks for full sites) with three revision rounds included.",
+    "pricing": "Standard: $350 one-time. Extended: $450 one-time. Full Site: starting at $800 (scales up to 6 to 10 pages on quote). Prices in USD. A deposit at booking secures the build slot. Balance on launch.",
+    "included": [
+      "Standard ($350): Up to 7 sections, single offer",
+      "Standard ($350): Researched copy, your approval per section",
+      "Standard ($350): Custom design, no template feel",
+      "Standard ($350): Mobile-first, sub-2 second load",
+      "Standard ($350): SEO meta tags and JSON-LD schema",
+      "Standard ($350): Contact form into your inbox",
+      "Standard ($350): Three revision rounds included",
+      "Standard ($350): Built in under 7 business days",
+      "Extended ($450): All 8 sections, success flow included",
+      "Extended ($450): Video hero with poster fallback",
+      "Extended ($450): Scroll reveals and microinteractions",
+      "Extended ($450): Bilingual content if needed",
+      "Extended ($450): Multi-CTA strategy, primary plus secondary",
+      "Extended ($450): Advanced schema, OG image package",
+      "Extended ($450): Three revision rounds included",
+      "Extended ($450): Built in under 7 business days",
+      "Full Site ($800+): 3 to 5 pages, shared design system",
+      "Full Site ($800+): Home, About, Services, Contact, plus one custom",
+      "Full Site ($800+): Per-page SEO and schema",
+      "Full Site ($800+): Shared header, footer, and form",
+      "Full Site ($800+): Cross-page navigation tested",
+      "Full Site ($800+): Built in 2 to 3 weeks",
+      "Full Site ($800+): Three revision rounds included",
+      "Full Site ($800+): Scales up to 6 to 10 pages on quote",
+      "Eight core deliverables (all tiers): One offer, locked",
+      "Eight core deliverables (all tiers): Researched copy",
+      "Eight core deliverables (all tiers): Conversion-first layout",
+      "Eight core deliverables (all tiers): Custom visuals",
+      "Eight core deliverables (all tiers): Sub-2 second load",
+      "Eight core deliverables (all tiers): SEO and schema baked in",
+      "Eight core deliverables (all tiers): Form to your inbox",
+      "Eight core deliverables (all tiers): Security and revisions"
+    ],
+    "keyPoints": [
+      "A landing page is not a website. It is one decision, asked one time",
+      "No menu of services, no scroll fatigue, no confusion",
+      "Headlines built from real customer language",
+      "Eight proven sections: hero, problem, value stack, proof, transformation, CTA",
+      "Mobile-first build with compressed assets; fast pages convert more",
+      "How it works Day 1: Intake and research (34-question brief, 30-minute market research)",
+      "How it works Day 2: Strategy and copy draft (section map, conversion hook, approval)",
+      "How it works Day 3: Design system (typography, color, layout, motion)",
+      "How it works Days 4-5: Build and assets (mobile-first coding, image sourcing, microinteractions)",
+      "How it works Day 6: QA and security pass (Playwright testing, form checks, security audit)",
+      "How it works Day 7: Launch (deploy to Vercel or host, source files, handoff docs)",
+      "CTA buttons: Book a discovery call, See all pricing, Start the Standard build, Start the Extended build, Get a full site quote, Book the discovery call"
+    ],
+    "proof": [
+      "Medical Aesthetics, Edmonton: Before, 800 visitors/month to a 5-page site with under 1% form conversion. After: 312% lift in booking form submissions, first 30 days",
+      "Home Services, Alberta: Before, 71% bounce rate, $84 cost per lead. After: 47% drop in cost per qualified lead",
+      "B2B SaaS, Remote: Before, long-form page with 7 CTAs and confused leads. After: 184% increase in demo bookings, quarter over quarter"
+    ],
+    "faq": [
+      "Q: What does the 7 business day promise actually cover? A: From the moment your intake form and deposit clear, you get the live page within 7 business days. If we miss that window for any reason on our side, the deposit comes back. Client-side delays on copy approval or asset delivery pause the clock and we will tell you when they do.",
+      "Q: Can you write the copy or do I need to provide it? (answer in collapsed accordion, not captured in static fetch)",
+      "Q: Do you build on WordPress, Wix, Squarespace, or something else? (answer in collapsed accordion, not captured in static fetch)",
+      "Q: How does the refund work if I am not happy? (answer in collapsed accordion, not captured in static fetch)",
+      "Q: Is hosting and the domain included? (answer in collapsed accordion, not captured in static fetch)",
+      "Q: What if I want a chat agent or voice agent on the page later? (answer in collapsed accordion, not captured in static fetch)"
+    ],
+    "capgRemoved": "STRIPPED the following grant/funding content found on the page: (1) A header/banner line: \"The Canada-Alberta Job Grant covers up to 66 percent of AI training, with up to $10,000 per trainee per year.\" (2) A site-level positioning line: \"AI workforce training and digital services for Alberta operators. CAJG-eligible programs and a digital stack tuned for revenue.\" (3) An entire FAQ question \"Will the Canada-Alberta Job Grant cover this?\" was removed from the faq array (its accordion answer was not rendered anyway). Removed all CAJG / Canada-Alberta Job Grant / \"66 percent\" / \"$10,000 per trainee per year\" / grant-eligible / \"Alberta operators\" funding framing. The underlying service and its real prices ($350 / $450 / $800+ one-time, deposit at booking) are kept intact."
+  },
+  "copy": {
+    "page": "Websites & Landing Pages",
+    "route": "/services/websites",
+    "seoTitle": "Websites That Sell | Shift U",
+    "seoDescription": "We build websites and the AI behind them. One premium build or a monthly plan with hosting, updates, and support. Book a call.",
+    "sections": [
+      {
+        "id": "hero",
+        "eyebrow": "WEBSITES & LANDING PAGES",
+        "headline": "A website that sells, built fast",
+        "subhead": "Not a brochure. A page that turns visitors into booked calls.",
+        "body": "We design it, build it, and wire in the AI that follows up. Live in days, not months.",
+        "cta": "Book a call",
+        "flags": "Secondary CTA available: 'See our work'."
+      },
+      {
+        "id": "problem",
+        "eyebrow": "THE COST OF A BAD SITE",
+        "headline": "A dead site loses leads daily",
+        "subhead": "Every problem below is a customer who booked with someone else.",
+        "bullets": [
+          "Loads slow, so people bounce before they read",
+          "Looks dated, so they doubt you before they call",
+          "No clear next step, so nobody takes action",
+          "Goes quiet after launch, then breaks"
+        ],
+        "body": "Most sites are pretty and silent. Yours should book the call while you sleep."
+      },
+      {
+        "id": "two_modes",
+        "eyebrow": "TWO WAYS TO BUILD",
+        "headline": "Buy it once, or pay monthly",
+        "subhead": "Same quality. Pick the model that fits your cash flow.",
+        "body": "One-shot is a premium build you own outright. Website-as-a-Service spreads the cost into a low monthly fee with everything handled.",
+        "bullets": [
+          "One-shot build: custom design, you own it, single upfront price",
+          "One-shot fit: you have budget now and want full ownership",
+          "Website-as-a-Service: low monthly fee, no big upfront, cancel anytime",
+          "WaaS fit: you want it live fast with zero maintenance headaches",
+          "Both ship fast and both include the AI follow-up layer"
+        ],
+        "flags": "two_modes is a side-by-side comparison block. Render One-shot and WaaS as two columns."
+      },
+      {
+        "id": "whats_included",
+        "eyebrow": "WEBSITE-AS-A-SERVICE",
+        "headline": "One monthly fee covers everything",
+        "subhead": "No surprise invoices. No chasing a developer who vanished.",
+        "bullets": [
+          "Custom design built around your offer",
+          "Hosting and your domain, set up and managed",
+          "Updates and content changes when you need them",
+          "Maintenance, security, and uptime handled for you",
+          "Real support after launch, cancel anytime"
+        ],
+        "body": "We stay on after go-live. The site keeps working and so do we."
+      },
+      {
+        "id": "features",
+        "eyebrow": "BUILT TO CONVERT",
+        "headline": "Fast, mobile, and built to sell",
+        "subhead": "Every page is engineered for the click, not just the look.",
+        "bullets": [
+          "Loads in under two seconds, so visitors stay",
+          "Built around one clear action per page",
+          "Flawless on phones, where most traffic lives",
+          "SEO done right, so the right people find you"
+        ]
+      },
+      {
+        "id": "proof",
+        "eyebrow": "REAL RESULTS",
+        "headline": "Numbers our clients actually see",
+        "subhead": "Proof, not promises. Swap these for your live figures.",
+        "bullets": [
+          "[PLACEHOLDER: X% more booked calls in the first 30 days]",
+          "[PLACEHOLDER: site live in X days from kickoff]",
+          "[PLACEHOLDER: X leads captured per month, on autopilot]",
+          "[PLACEHOLDER: client quote, full name, business]"
+        ],
+        "flags": "All four bullets are placeholders. Replace with real metrics and a named testimonial before launch."
+      },
+      {
+        "id": "pricing_teaser",
+        "eyebrow": "PRICING",
+        "headline": "Clear pricing, no surprises",
+        "subhead": "Pick a one-time build or a monthly plan. Full breakdown on the pricing page.",
+        "body": "One-shot builds start at [REVIEW: $X]. Website-as-a-Service starts at [REVIEW: $X per month].",
+        "cta": "See full pricing",
+        "flags": "Both prices are [REVIEW]. CTA points to /pricing. Confirm starting numbers before publishing."
+      },
+      {
+        "id": "faq",
+        "eyebrow": "QUESTIONS",
+        "headline": "Answers before you ask",
+        "bullets": [
+          "How fast can it go live? Most builds ship in days, not weeks. [PLACEHOLDER: typical timeline]",
+          "Can I cancel the monthly plan? Yes. Website-as-a-Service is cancel anytime, no lock-in.",
+          "Do I own the site? One-shot builds are yours outright. WaaS stays managed by us while you subscribe.",
+          "What about the AI part? Every site can include a WhatsApp agent that answers and books leads 24/7."
+        ],
+        "flags": "Timeline answer has a [PLACEHOLDER]. Confirm exact turnaround before publishing."
+      },
+      {
+        "id": "cta",
+        "eyebrow": "READY WHEN YOU ARE",
+        "headline": "Get a site that books the call",
+        "subhead": "Tell us your offer. We will show you exactly what we would build.",
+        "cta": "Book a call",
+        "flags": "Secondary CTA available: 'See our work'."
+      }
+    ]
+  }
+}

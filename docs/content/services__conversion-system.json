@@ -1,0 +1,49 @@
+{
+  "target": "services/conversion-system",
+  "extract": {
+    "route": "/services/conversion-system",
+    "type": "service",
+    "name": "Conversion System: Site, CRM, Attribution and Reporting",
+    "tagline": "Site, CRM, attribution and reporting in one loop.",
+    "summary": "A done-for-you revenue system that rebuilds the website for lead capture and wires it into a CRM with attribution and reporting in a single loop. It covers the full path from capturing a lead to qualifying, routing, closing, and measuring, with automated follow-up, nurture sequences, tracking, and weekly reporting. Priced as a one-time build plus a monthly retainer, going live in roughly 14 to 21 business days.",
+    "pricing": "One-time: $4,000. Recurring: $400 per month after. Timeline: fourteen to twenty-one business days.",
+    "included": [
+      "Site rebuilt for capture",
+      "CRM with owners, stages, follow-up tasks",
+      "Attribution by channel (organic, ads, referral, direct)",
+      "Automated routing (under two minutes)",
+      "Instant alerts (email and Slack)",
+      "Email and SMS nurture (four-step sequence)",
+      "Booking and calendar sync",
+      "Tracking configuration (GA4, Meta Pixel, conversion events)",
+      "Weekly Monday reports with metrics"
+    ],
+    "keyPoints": [
+      "How it works runs as a single loop in five stages: Capture, Qualify, Route, Close, Measure",
+      "Leads are routed automatically in under two minutes",
+      "Instant alerts fire to email and Slack when a lead comes in",
+      "A four-step email and SMS nurture sequence follows up with leads",
+      "Booking and calendar sync lets leads schedule directly",
+      "Tracking is configured across GA4, Meta Pixel, and conversion events",
+      "Weekly Monday reports deliver the metrics that matter",
+      "The site rebuild is the longest step; the CRM and tracking layer is wired up in the same window"
+    ],
+    "proof": [
+      "92% of leads followed up inside two minutes",
+      "Sample week: 4,182 sessions (+12.4%)",
+      "Sample week: 63 form submissions (+18.9%)",
+      "Sample week: 21 calls booked",
+      "Sample week: $38.50 cost per lead",
+      "Sample week: 34% quote-to-close rate"
+    ],
+    "faq": [
+      "How long does setup take? Most builds go live in fourteen to twenty-one business days. The site rebuild is the longest step, the CRM and tracking layer is wired up in the same window.",
+      "Do I need a CRM already? (No answer text provided on page)",
+      "What does the $400 per month cover? (No answer text provided on page)",
+      "Can the system include the AI Chat Agent or Voice Agent? (No answer text provided on page)",
+      "What if I already run Google or Meta Ads? (No answer text provided on page)"
+    ],
+    "capgRemoved": "Removed the grant/funding wrapper found on the page. Stripped the sentence: \"The Canada-Alberta Job Grant covers up to 66 percent of AI training, with up to $10,000 per trainee per year.\" Stripped the site/category framing: \"AI workforce training and digital services for Alberta operators. CAJG-eligible programs and a digital stack tuned for revenue.\" Stripped the FAQ question \"Does this qualify for the Canada-Alberta Job Grant?\" (which had no answer text on the page). All references to CAJG, Canada-Alberta Job Grant, \"66 percent / 66% covered,\" \"$10,000 per trainee per year,\" \"Alberta operators,\" and \"CAJG-eligible programs\" were excluded from the extraction. The underlying service and its real pricing ($4,000 one-time + $400/month) were kept."
+  },
+  "copy": null
+}

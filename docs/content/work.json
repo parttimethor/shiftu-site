@@ -1,0 +1,57 @@
+{
+  "target": "work",
+  "extract": null,
+  "copy": {
+    "page": "Work",
+    "route": "/work",
+    "seoTitle": "Our Work | Shift U",
+    "seoDescription": "Real builds, real results. Websites, WhatsApp AI agents, and automations we shipped for businesses in Argentina and Canada.",
+    "sections": [
+      {
+        "id": "hero",
+        "eyebrow": "OUR WORK",
+        "headline": "Real builds. Real results.",
+        "subhead": "Sites, WhatsApp agents, and automations we shipped and still support.",
+        "body": "Every project below went live and stayed live. Browse by what you need, then book a call.",
+        "cta": "Book a call",
+        "flags": "No placeholders in this section."
+      },
+      {
+        "id": "intro",
+        "eyebrow": "BROWSE BY SERVICE",
+        "headline": "Find work like yours",
+        "subhead": "Three service lines, one team behind all of them.",
+        "body": "Filter by what you came for. Each card shows the problem we solved and the number that moved.",
+        "bullets": [
+          "Websites and landing pages",
+          "WhatsApp AI agents",
+          "Business automations"
+        ],
+        "flags": "Filter labels match the case tags below. Wire each to its service line."
+      },
+      {
+        "id": "case_grid",
+        "eyebrow": "CASE STUDIES",
+        "headline": "Work that paid for itself",
+        "subhead": "Four builds, four outcomes you can measure.",
+        "bullets": [
+          "[PLACEHOLDER: client type, e.g. dental clinic] | Phone rang all day, nobody answered after hours | [PLACEHOLDER metric: +X booked appointments/month] | WhatsApp AI Agent",
+          "[PLACEHOLDER: client type, e.g. home services contractor] | Old site loaded slow and lost leads | [PLACEHOLDER metric: +X% more contact form submissions] | Website",
+          "[PLACEHOLDER: client type, e.g. e-commerce shop] | Manual order follow-ups ate the whole day | [PLACEHOLDER metric: X hours/week saved] | Business Automation",
+          "[PLACEHOLDER: client type, e.g. real estate office] | Leads went cold before anyone replied | [PLACEHOLDER metric: X-minute first reply, 24/7] | WhatsApp AI Agent"
+        ],
+        "body": "Each card holds a client type, the one problem we fixed, and the single result that mattered.",
+        "flags": "All 4 client types are [PLACEHOLDER] and all 4 metrics are [PLACEHOLDER metric] until real cases are confirmed. Add a logo or screenshot per card. Service tag must match the filter in the intro section."
+      },
+      {
+        "id": "cta",
+        "eyebrow": "YOUR PROJECT NEXT",
+        "headline": "Want results like these?",
+        "subhead": "Tell us the problem. We tell you what we would build.",
+        "body": "Book a call and we map the site, agent, or automation that fits your business. No big upfront, cancel anytime.",
+        "cta": "Book a call",
+        "flags": "Secondary link can point to See our work or back to the grid above."
+      }
+    ]
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "target": "services/voice-agent",
+  "extract": {
+    "route": "/services/voice-agent",
+    "type": "service",
+    "name": "Voice Agent",
+    "tagline": "AI that answers calls and books appointments",
+    "summary": "Done-for-you AI voice agent that answers your phone line 24/7, qualifies callers, books appointments straight into your calendar, and sends a transcript and summary the moment the call ends. Priced at $500 one-time setup plus $99/month (includes up to 500 inbound minutes). Goes live in 5 business days, month-to-month after setup.",
+    "pricing": "One-time setup: $500. Monthly platform fee: $99 (includes up to 500 inbound minutes, hosting, monitoring, monthly tuning). Overage billed at a flat per-minute rate with a usage alert at 80 percent. Month-to-month after the one-time setup.",
+    "included": [
+      "One-time setup: $500",
+      "Monthly platform fee: $99 — includes up to 500 inbound minutes, hosting, monitoring, monthly tuning",
+      "Twenty four hour coverage. No more missed after hours calls, no more weekend voicemail piles. The agent stays on shift permanently.",
+      "English and French ready. Trained on Alberta accents. We can wire in additional languages on request.",
+      "Human handoff, not a wall. When intent gets complex, the agent warm transfers to your line or sends a same hour callback request.",
+      "Lands inside your stack. Bookings into Google Calendar, Calendly, Acuity, Jobber, or your in house CRM. Transcripts into HubSpot, Pipedrive, or Notion.",
+      "After each call you receive a transcript, a one paragraph summary, the caller intent, and the booking outcome — sent by email, SMS, or pushed into your CRM",
+      "Live in 5 business days for standard setup; you review and approve the agent before any caller hears it"
+    ],
+    "keyPoints": [
+      "Headline: AI that answers calls and books appointments",
+      "Hero subcopy: Stop losing leads after hours. A natural voice agent answers your line, qualifies the caller, books straight into your calendar, and sends you a transcript the moment the call ends.",
+      "How it works step 1 — A real number answers, day or night: We forward your existing line, or attach a new local Edmonton number. The agent picks up on the first ring with your business name and tone.",
+      "How it works step 2 — It listens, qualifies, and answers: The agent works from a knowledge base built from your services, pricing rules, hours, and policies. It handles common questions without guessing.",
+      "How it works step 3 — It books, reschedules, or escalates: Open slots pull live from Google Calendar or your booking system. The caller hears available times and confirms by voice. Complex calls get warm transferred to a human.",
+      "How it works step 4 — You get a clean summary, every time: After each call, you receive a transcript, a one paragraph summary, the caller intent, and the booking outcome. Sent by email, SMS, or pushed into your CRM.",
+      "Closing CTA section headline: Stop letting good leads hit voicemail.",
+      "Closing CTA copy: Twenty minutes on a discovery call. We walk through a sample call built on your services, your pricing, and your tone. You decide if it is ready to answer your line.",
+      "Primary CTA button: Book a discovery call (links to /contact?service=voice-agent)"
+    ],
+    "proof": [
+      "248 — Calls answered",
+      "171 — Bookings closed",
+      "1:42 — Avg duration"
+    ],
+    "faq": [
+      "Does it sound like a robot? — No. The voice is natural, with timing and breath patterns that match a trained receptionist. Most callers do not realize it is AI until they are told.",
+      "What happens when the agent does not know an answer? — It says so honestly, captures the question, and either books a callback with a human or routes the live call to your team. It never invents information.",
+      "Can it actually book on my calendar? — Yes. We connect to Google Calendar, Calendly, Acuity, Jobber, or your existing scheduling tool. The agent reads live availability and writes confirmed bookings back.",
+      "How long until it goes live? — Five business days for standard setup. Knowledge base build is the longest step. You review and approve the agent before any caller hears it.",
+      "What if call volume goes above 500 minutes per month? — Overage is billed at a flat per minute rate, no surprises. We send a usage alert at 80 percent so you can decide before any extra charge lands.",
+      "Can I cancel? — Yes. Month to month after the one time setup. If you stop, we hand over the knowledge base and transcripts so nothing walks out the door with us."
+    ],
+    "capgRemoved": "Stripped all Canada-Alberta Job Grant / CAJG content. Removed: (1) A page banner/meta line: \"The Canada-Alberta Job Grant covers up to 66 percent of AI training, with up to $10,000 per trainee per year.\" (2) Phrase \"CAJG eligible when paired with operator training.\" (3) Phrase \"CAJG eligible up to 66 percent, up to $10,000 per trainee per year, funded through 2028.\" (4) An entire FAQ entry was REMOVED from the faq array — Q: \"What does CAJG cover here?\" A: \"The voice agent on its own is a service, not training. If you pair it with our AI Operator Certification so your team learns to manage and tune it, that training is CAJG eligible up to 66 percent, up to $10,000 per trainee per year, through 2028.\" The underlying service and its real price ($500 setup / $99 per month) were kept; only the grant-funding wrapper, the \"Alberta accents/operators\" grant framing tied to funding, and the CAJG FAQ were removed."
+  },
+  "copy": null
+}

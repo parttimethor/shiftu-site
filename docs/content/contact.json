@@ -1,0 +1,112 @@
+{
+  "target": "contact",
+  "extract": {
+    "route": "/contact",
+    "type": "contact",
+    "name": "Shift U",
+    "tagline": "Talk to Joshua. Book a 25 minute discovery call, send a message, or get pointed at the right resource. No SDR funnel, no slide deck, no pressure.",
+    "summary": "Contact page for Shift U, an Edmonton, Alberta operator that sells AI workforce training programs plus a digital services stack (websites, paid ads, chat/voice agents, conversion systems). The page is a low-pressure contact/booking hub: book a 25 minute discovery call with Joshua or submit a message form, with a same-business-day reply promise.",
+    "pricing": "Training Programs: AI Operator Certification $7,500; Private Training $22,500; Workforce Transformation $55,000. Digital Services: Landing Page from $350; Full Website 3 to 10 pages (price not stated); Google and Meta Ads $300 a month; AI Chat Agent $150 to $250; Voice Agent (price not stated); Conversion System (price not stated).",
+    "included": [
+      "Training programs: AI Operator Certification, Private Training, Workforce Transformation",
+      "Operator playbooks",
+      "Cohorts happen in person or on-site at your office",
+      "Digital services: Landing Pages",
+      "Full Website (3 to 10 pages)",
+      "Google and Meta Ads management ($300 a month)",
+      "AI Chat Agent",
+      "Voice Agent (AI calls and bookings)",
+      "Conversion System: site plus CRM plus attribution",
+      "25 minute discovery call with Joshua",
+      "If not the right fit, you get three referrals out"
+    ],
+    "keyPoints": [
+      "Hero: 'Talk to Joshua.'",
+      "Subheading: 'Book a 25 minute discovery call, send a message, or get pointed at the right resource. No SDR funnel, no slide deck, no pressure.'",
+      "CTA buttons: 'Book a discovery call' and 'Send a message instead'",
+      "Discovery call is 25 minutes, your agenda, with Joshua",
+      "'No prep, no sales pitch, no pressure'",
+      "'Reply inside 1 business day'",
+      "'Operator-run, no sales team'",
+      "'Same business day, before 5pm Mountain' reply window",
+      "'If we are not the right fit you get three referrals out'",
+      "Contact form fields: Your name, Work email, Company, 'What can we help with?' (dropdown), Budget or team size, 'Tell us what is going on' (text area), 'Send to the team' (submit button)",
+      "Team: Joshua = Sales and Discovery Lead; Marcus = Lead Facilitator; Adam = Account Manager",
+      "Email: hello@shiftu.ca",
+      "Hours: Mon to Fri, 9am to 5pm Mountain",
+      "Edmonton studio, downtown Edmonton (by appointment)",
+      "Service area: Alberta, with remote work across Canada"
+    ],
+    "proof": [],
+    "faq": [],
+    "capgRemoved": "Stripped grant/funding content found on the page: (1) Tagline originally read \"AI workforce training and digital services for Alberta operators. CAJG-eligible programs and a digital stack tuned for revenue.\" — removed the \"CAJG-eligible programs\" clause. (2) \"The Canada-Alberta Job Grant covers up to 66 percent of AI training, with up to $10,000 per trainee per year.\" — removed entirely. (3) \"CAJG paperwork supported: Adam handles the grant application alongside the program enrollment.\" — removed the grant-application framing (kept Adam as Account Manager). (4) \"CAJG-eligible programs\" descriptor on training. No \"funded through 2028\" text was present. All CAPG/CAJG/Canada-Alberta Job Grant/66%/$10,000 per trainee/grant-funding wrapper removed; the underlying training programs and their real prices ($7,500 / $22,500 / $55,000) and digital service pricing were kept."
+  },
+  "copy": {
+    "page": "Contact",
+    "route": "/contact",
+    "seoTitle": "Contact Shift U | Book a Call",
+    "seoDescription": "Book a call or get a quote. We build the website and the AI behind it. Fast replies, no pushy sales.",
+    "sections": [
+      {
+        "id": "hero",
+        "eyebrow": "CONTACT",
+        "headline": "Let's build it together",
+        "subhead": "Book a call or get a quote. No pressure, no pitch.",
+        "body": "Tell us what you need: a website, a WhatsApp agent, or automations that cut the manual work. We reply fast and point you to the right next step.",
+        "cta": "Book a call",
+        "flags": "none"
+      },
+      {
+        "id": "book_call",
+        "eyebrow": "FASTEST WAY",
+        "headline": "Pick a time that works",
+        "subhead": "A short call beats a long email thread.",
+        "body": "Grab a slot and we'll talk through your goals, what to build first, and what it costs. You leave with a clear plan, even if you never hire us.",
+        "bullets": [
+          "15 to 20 minutes, on your schedule",
+          "We reply within [PLACEHOLDER: X hours] on business days",
+          "You get a plan and a price, not a sales script"
+        ],
+        "cta": "Book a call",
+        "flags": "[PLACEHOLDER: confirm response time SLA for book_call promise]"
+      },
+      {
+        "id": "form_intro",
+        "eyebrow": "PREFER TO WRITE",
+        "headline": "Send the details, get a quote",
+        "subhead": "Four quick fields. We read every one.",
+        "body": "Fill the form and we'll come back with a real answer, not a generic auto-reply.",
+        "bullets": [
+          "Your name",
+          "Your business",
+          "Best email to reach you",
+          "What you need (site, AI agent, automation)"
+        ],
+        "cta": "Get a quote",
+        "flags": "none"
+      },
+      {
+        "id": "whatsapp",
+        "eyebrow": "RIGHT NOW",
+        "headline": "Chat with us on WhatsApp",
+        "subhead": "Quick question? Message us directly.",
+        "body": "Same place your customers would reach you. Ask anything and we'll answer like a human, fast.",
+        "cta": "Chat on WhatsApp",
+        "flags": "[PLACEHOLDER: WhatsApp number / wa.me link]"
+      },
+      {
+        "id": "promise",
+        "eyebrow": "OUR PROMISE",
+        "headline": "Fast replies, zero pressure",
+        "subhead": "We answer quick and we never push.",
+        "body": "You get straight answers and a clear price. If we are not the right fit, we will tell you that too.",
+        "bullets": [
+          "Real reply from a real person",
+          "Plain talk, no jargon, no hard sell",
+          "We stay around after launch"
+        ],
+        "flags": "none"
+      }
+    ]
+  }
+}

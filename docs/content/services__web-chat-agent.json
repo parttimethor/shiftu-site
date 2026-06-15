@@ -1,0 +1,160 @@
+{
+  "target": "services/web-chat-agent",
+  "extract": {
+    "route": "/services/ai-chat-agent",
+    "type": "service",
+    "name": "AI Chat Agent",
+    "tagline": "A chat agent that actually knows your business.",
+    "summary": "A custom website chat agent trained on the business's hours, services, pricing logic, and the same 30 questions the team answers every week. It books qualified meetings, qualifies and routes leads to the inbox, and hands live conversations to a human. Delivered via a 14-day pilot with a one-time setup fee.",
+    "pricing": "$150 to $250 setup, paid one time. Stated as \"Maximum setup fee, paid one time only\" with a counter animating $0 to $250. A monthly running cost is referenced via the FAQ question \"How much does it cost to run each month?\" but the answer text is collapsed in an accordion and not present in the static page render, so no monthly dollar figure is published in the extractable content.",
+    "included": [
+      "Trained answers locked in before launch day (the same 30 questions, trained on your real answers)",
+      "Awake 24/7 - 'Awake every night your team is asleep'",
+      "Answer the same 30 questions: hours, services, pricing ranges, location, financing, warranty",
+      "Book qualified meetings: walks the visitor through 4 to 6 qualification questions, then drops them into your calendar with the answers attached",
+      "Qualify and route leads: tags each conversation by intent and urgency, routes hot ones to your sales inbox while quiet ones go to follow-up",
+      "Reply in English or French: detects the visitor language on the first message and responds in kind",
+      "Hand off to a human: when the conversation gets specific, the agent pauses and pings your team on Slack or email so a person can take over",
+      "Stay on topic: guardrails keep it answering for your business only, no off-brand replies, no leaking the prompt, no fabricated quotes",
+      "Integration - Google Calendar and Calendly: reads your real availability before offering a slot, then writes the booking back with notes",
+      "Integration - HubSpot, Pipedrive, GoHighLevel: each conversation becomes a contact and a deal in your CRM with the source page, intent tag, and full transcript",
+      "Integration - Slack, Gmail, Outlook: hot leads ping the channel or inbox you choose, with a one-line summary plus a link to the transcript",
+      "Integration - Zapier and webhooks: any tool with a webhook can listen (Notion for transcripts, Airtable for triage, help desk for tickets)",
+      "Pairs with the Voice Agent: if a visitor wants to talk instead of type, the chat hands off to the Shift U voice agent for inbound calls and bookings",
+      "Knowledge base of your choice: Notion, Google Docs, your website, or a flat PDF; the agent re-reads it on a schedule so updates show up automatically"
+    ],
+    "keyPoints": [
+      "Hero subheadline: 'Trained on your hours, services, pricing logic and the same 30 questions your team answers every week. It books meetings, qualifies leads and hands the live ones to your inbox.'",
+      "Pairs with the Shift U Voice Agent and Conversion System 'if you want bookings, calls and attribution under one roof.'",
+      "Section 'What it does - Six jobs it ships with on day one.' Every Shift U chat agent runs the same six jobs out of the box; the training, tone and integrations are tuned to your business during the 14-day pilot.",
+      "Integrations philosophy: 'The chat agent does not replace your stack, it routes into it. Calendar reads, CRM writes, Slack pings, webhooks for anything else.'",
+      "14-day pilot: 'From kickoff to live on your site in two weeks. No multi-month rollout. We use the first week to train and the second week to test. By day 14 it is live, your team has the runbook, and you own the prompts.'",
+      "Day 1 - Discovery and prompt design: 'We pull your top 30 questions from real customer messages, your team, and your existing FAQ. Then we draft the system prompt.'",
+      "Day 2 to 5 - Knowledge base and integrations: 'We wire your calendar, CRM, and Slack. We load the knowledge base. We tune tone, refusal patterns, and handoff triggers.'",
+      "Day 6 to 9 - Internal pilot: 'Your team uses it for a week and tries to break it. We patch every gap, retrain on the misses, and lock the guardrails.'",
+      "Day 10 to 14 - Public launch and tuning: 'We go live on your site. We watch the first wave of real conversations, fix what slips, and write the handoff runbook.'",
+      "Closing CTA: 'Want one trained on your 30 questions? Book a 20-minute discovery call. We walk your site, your top inbound questions, and the two integrations that would matter most.'"
+    ],
+    "proof": [
+      "Testimonial: 'Most chat tools are toys with a fancy bubble. A real chat agent is a teammate who never forgets a price, never misses a lead, and never sends a visitor searching for the answer.' — Joshua, Sales and Discovery Lead at Shift U",
+      "Stat block: 14 days from kickoff to public launch (trained answers locked in before launch day)",
+      "Stat block: 30+ questions trained",
+      "Stat block: 24/7 ('Awake every night your team is asleep')",
+      "Stat block: $250 maximum setup fee, paid one time only"
+    ],
+    "faq": [
+      "Q: How is this different from a generic chatbot? A: Generic chatbots answer from a public model with no context. Ours is trained on your hours, services, pricing logic, objections, and refund rules, then guarded so it stays on topic. It also books, not just talks.",
+      "Q: What does the $150 to $250 setup cover? A: (answer collapsed in accordion, not present in static page render)",
+      "Q: How much does it cost to run each month? A: (answer collapsed in accordion, not present in static page render)",
+      "Q: What if the agent says something wrong? A: (answer collapsed in accordion, not present in static page render)",
+      "Q: Can it speak French too? A: (answer collapsed in accordion, not present in static page render)",
+      "Q: Does it work on a site that is not built by Shift U? A: (answer collapsed in accordion, not present in static page render)",
+      "Q: Is this CAJG eligible? [STRIPPED - grant question removed per rule; question + answer excluded]"
+    ],
+    "capgRemoved": "Stripped the following grant/funding content found on the page: (1) Top site banner: \"The Canada-Alberta Job Grant covers up to 66 percent of AI training, with up to $10,000 per trainee per year. See the numbers.\" (2) FAQ item \"Is this CAJG eligible?\" - this entire grant-eligibility question (and its collapsed answer) was removed and excluded from the faq array. (3) Footer tagline: \"AI workforce training and digital services for Alberta operators. CAJG-eligible programs and a digital stack tuned for revenue.\" - the \"CAJG-eligible programs\" and \"Alberta operators\" grant framing removed. (4) In-copy Alberta grant framing on the \"Reply in English or French\" feature (\"Useful for Alberta sites that field both\") - kept the real bilingual EN/FR capability as a feature but dropped the Alberta-grant geographic framing. The underlying service and its real one-time $150 to $250 setup price were preserved; only the grant-funding wrapper (CAJG, 66 percent, $10,000 per trainee, Alberta-operator/grant-eligible framing) was removed."
+  },
+  "copy": {
+    "page": "WhatsApp AI Agents",
+    "route": "/services/whatsapp-agents",
+    "seoTitle": "WhatsApp AI Agents | Shift U",
+    "seoDescription": "A 24/7 WhatsApp agent that answers, qualifies leads, and books appointments in your customer's language. More leads, less manual work.",
+    "sections": [
+      {
+        "id": "hero",
+        "eyebrow": "WHATSAPP AI AGENTS",
+        "headline": "It books the call while you sleep",
+        "subhead": "A WhatsApp agent that answers every message, qualifies the lead, and puts the appointment on your calendar. In your customer's language, day or night.",
+        "bullets": [
+          "Replies in seconds, every hour of the day",
+          "Qualifies leads so you only talk to buyers",
+          "Books appointments straight to your calendar"
+        ],
+        "cta": "Book a call",
+        "flags": "Hero claim is product capability, not a metric. No placeholders."
+      },
+      {
+        "id": "problem",
+        "eyebrow": "THE COST OF SLOW",
+        "headline": "Every missed message is a lost sale",
+        "subhead": "Leads message at night, on weekends, while you are on a job. By the time you reply, they booked with someone faster.",
+        "bullets": [
+          "Messages pile up while you work",
+          "Slow replies push buyers to a competitor",
+          "Hot leads go cold after a few hours",
+          "You answer the same questions all day"
+        ],
+        "flags": "No placeholders."
+      },
+      {
+        "id": "how_it_works",
+        "eyebrow": "HOW IT WORKS",
+        "headline": "Answers, qualifies, books",
+        "subhead": "Three steps that run on their own, in your customer's language.",
+        "bullets": [
+          "Answers: replies instantly to every WhatsApp message",
+          "Qualifies: asks the right questions, filters out tire-kickers",
+          "Books: drops ready buyers onto your calendar"
+        ],
+        "body": "It speaks the customer's language automatically. A lead in English or Spanish gets a clear answer either way.",
+        "flags": "No placeholders."
+      },
+      {
+        "id": "features",
+        "eyebrow": "WHAT IT DOES",
+        "headline": "Built to capture and close leads",
+        "bullets": [
+          "Multilingual: replies in the customer's own language",
+          "Instant replies 24/7, no waiting, no day off",
+          "Lead capture: saves name, contact, and intent",
+          "Calendar booking: appointments land on your schedule",
+          "Human handoff: passes complex chats straight to you"
+        ],
+        "flags": "No placeholders."
+      },
+      {
+        "id": "proof",
+        "eyebrow": "THE NUMBERS",
+        "headline": "Hundreds of chats handled every month",
+        "subhead": "Our agents work in the background while owners focus on the business.",
+        "body": "Real conversations, real bookings, no extra staff.",
+        "bullets": [
+          "Result card 1: [PLACEHOLDER: business name] cut reply time from [PLACEHOLDER: hours] to under a minute",
+          "Result card 2: [PLACEHOLDER: business name] booked [PLACEHOLDER: number] appointments in [PLACEHOLDER: timeframe] with no extra staff"
+        ],
+        "flags": "Headline metric needs exact number [PLACEHOLDER: hundreds -> exact monthly conversation count]. Both result cards are [PLACEHOLDER] and must be filled with real client data before launch."
+      },
+      {
+        "id": "integrations",
+        "eyebrow": "WORKS WITH YOUR TOOLS",
+        "headline": "Connects to what you already use",
+        "subhead": "No new app to learn. The agent plugs into your existing stack.",
+        "bullets": [
+          "WhatsApp: lives where your customers already message",
+          "CRM: pushes every lead into your system",
+          "Calendar: books directly onto your schedule"
+        ],
+        "flags": "Confirm specific CRM and calendar platforms supported before launch. [REVIEW: confirm CRM and calendar platforms]"
+      },
+      {
+        "id": "faq",
+        "eyebrow": "QUICK ANSWERS",
+        "headline": "Questions owners ask first",
+        "bullets": [
+          "Does it sound like a robot? No. It replies in plain, natural language your customers trust.",
+          "What if it cannot answer? It hands the chat to you with full context, nothing gets dropped.",
+          "How long to set up? Most agents go live in [REVIEW: days]. We handle the build.",
+          "Will it work in two languages? Yes. It detects and replies in the customer's language."
+        ],
+        "flags": "Setup time [REVIEW: days] must be confirmed."
+      },
+      {
+        "id": "cta",
+        "eyebrow": "READY WHEN YOU ARE",
+        "headline": "Stop losing leads to slow replies",
+        "subhead": "We build the agent, connect your tools, and stay with you after launch. Book a call and see it answer your messages.",
+        "cta": "Book a call",
+        "flags": "Secondary CTA available: 'See our work'. No placeholders."
+      }
+    ]
+  }
+}

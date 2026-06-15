@@ -1,0 +1,1014 @@
+{
+  "summary": "Write + tighten English copy for all 12 Shift U marketing pages",
+  "agentCount": 24,
+  "logs": [],
+  "result": {
+    "pages": [
+      {
+        "page": "Home",
+        "route": "/",
+        "seoTitle": "Website + AI Agency | Shift U",
+        "seoDescription": "We build the website and the AI behind it. Sites, WhatsApp agents, and automations that bring more leads and less manual work.",
+        "sections": [
+          {
+            "id": "hero",
+            "eyebrow": "WEBSITES + AI, ONE ROOF",
+            "headline": "More leads, less manual work",
+            "subhead": "We build the website and the AI behind it. Sites, WhatsApp agents, and automations that run while you focus on the business.",
+            "bullets": [
+              "Book a call",
+              "See our work"
+            ],
+            "body": "Our WhatsApp agents handle hundreds of conversations every month, fully on autopilot.",
+            "cta": "Book a call",
+            "flags": "Trust strip metric needs exact number: [PLACEHOLDER: X+ WhatsApp conversations handled per month]. CTAs: primary 'Book a call', secondary 'See our work'."
+          },
+          {
+            "id": "trustbar",
+            "eyebrow": "TRUSTED BY GROWING BUSINESSES",
+            "headline": "Real work, real numbers",
+            "subhead": "Proof, not promises. Here is what the systems we build actually do.",
+            "bullets": [
+              "[PLACEHOLDER: X+] WhatsApp conversations handled monthly",
+              "[PLACEHOLDER: X] sites live across Argentina and Canada",
+              "[PLACEHOLDER: X%] of leads answered in under a minute"
+            ],
+            "flags": "Client logos row is a [PLACEHOLDER: logo strip, 4-6 brands]. All 3 stats are [PLACEHOLDER] until confirmed."
+          },
+          {
+            "id": "services_grid",
+            "eyebrow": "WHAT WE DO",
+            "headline": "Built, connected, handled",
+            "subhead": "Three core services do the heavy lifting. Two more round out the picture.",
+            "bullets": [
+              "Websites & landing pages: one-shot build or monthly subscription",
+              "WhatsApp AI agents: answer, qualify, and book 24/7",
+              "Business automations: connect your tools, kill manual work",
+              "Paid ads: Meta and Google campaigns that pull traffic",
+              "Branding: identity, logo, and a system that holds up"
+            ],
+            "flags": "First 3 are core service chip-cards, last 2 are secondary."
+          },
+          {
+            "id": "difference",
+            "eyebrow": "WHY SHIFT U",
+            "headline": "The fix for slow, pricey agencies",
+            "subhead": "Most agencies are expensive, slow, and gone after launch. We answer all three.",
+            "bullets": [
+              "Site plus AI under one roof, so nothing falls between teams",
+              "Website-as-a-Service: a pro site with no big upfront cost",
+              "Fast to launch, and we stay on after you go live"
+            ],
+            "flags": "These are the 3 value props framed as the objection answer."
+          },
+          {
+            "id": "feature_websites",
+            "eyebrow": "WEBSITES & LANDING PAGES",
+            "headline": "A site that sells, your way",
+            "subhead": "Buy it once or pay monthly. Either way you get a fast, clean site built to convert.",
+            "body": "Website-as-a-Service covers design, hosting, domain, updates, and support in one monthly fee. Cancel anytime, no big bill to start.",
+            "bullets": [
+              "One-shot build: own it outright",
+              "Monthly plan: design, hosting, and domain included",
+              "Updates and maintenance handled by us",
+              "Cancel anytime, no lock-in"
+            ],
+            "cta": "See our work",
+            "flags": "Alternating block. Monthly price is [REVIEW: $X/mo] if a number is shown."
+          },
+          {
+            "id": "feature_whatsapp",
+            "eyebrow": "WHATSAPP AI AGENTS",
+            "headline": "It books the call while you sleep",
+            "subhead": "A 24/7 assistant on WhatsApp that talks to every lead in their own language.",
+            "body": "It answers questions, qualifies the lead, and books the appointment. You wake up to a full calendar instead of missed messages.",
+            "bullets": [
+              "Replies in seconds, day or night",
+              "Qualifies leads before they reach you",
+              "Books appointments straight into your calendar",
+              "Speaks the customer's language automatically"
+            ],
+            "cta": "Book a call",
+            "flags": "Block feature. Proof anchor: [PLACEHOLDER: X+ conversations/mo]."
+          },
+          {
+            "id": "feature_automations",
+            "eyebrow": "BUSINESS AUTOMATIONS",
+            "headline": "Stop doing it by hand",
+            "subhead": "We connect your tools so the busywork runs itself.",
+            "body": "Lead follow-ups, CRM updates, and handoffs between apps happen on their own. You keep the results, not the copy-paste.",
+            "bullets": [
+              "n8n workflows wired to your stack",
+              "CRM and tools kept in sync",
+              "Automatic follow-ups so no lead goes cold",
+              "Integrations that remove the manual steps"
+            ],
+            "cta": "Book a call",
+            "flags": "Block feature."
+          },
+          {
+            "id": "waas_spotlight",
+            "eyebrow": "WEBSITE-AS-A-SERVICE",
+            "headline": "Pro site, no big upfront",
+            "subhead": "Skip the large bill. Get a polished site on a simple monthly plan.",
+            "body": "Design, hosting, domain, updates, and support are all included. Cancel anytime. It is the easiest way to look serious online without draining cash up front.",
+            "bullets": [
+              "Everything included in one monthly fee",
+              "No large payment to get started",
+              "Cancel anytime, no contracts",
+              "We keep it updated and online"
+            ],
+            "cta": "Book a call",
+            "flags": "Subscription teaser. Price is [REVIEW: $X/mo] when shown."
+          },
+          {
+            "id": "proof",
+            "eyebrow": "PROOF",
+            "headline": "The results speak first",
+            "subhead": "Numbers and words from the businesses we work with.",
+            "bullets": [
+              "[PLACEHOLDER: X+] WhatsApp conversations handled per month",
+              "[PLACEHOLDER: Result card 1 - e.g. 3x more booked calls in 60 days]",
+              "[PLACEHOLDER: Result card 2 - e.g. 12 hours/week saved on manual replies]",
+              "[PLACEHOLDER: Testimonial 1 - full name, business, one-line result]",
+              "[PLACEHOLDER: Testimonial 2 - full name, business, one-line result]"
+            ],
+            "flags": "All proof items are [PLACEHOLDER] until real data and quotes are supplied. 2 result cards + 2 testimonials + the WhatsApp metric."
+          },
+          {
+            "id": "process",
+            "eyebrow": "HOW IT WORKS",
+            "headline": "Four steps, no guesswork",
+            "subhead": "A clear path from first call to a system that runs itself.",
+            "bullets": [
+              "Discover: we learn your goals and where leads leak",
+              "Build: we ship a fast site made to convert",
+              "Automate: we add the AI agent and workflows",
+              "Support: we stay on to update and improve"
+            ],
+            "flags": "4-step process."
+          },
+          {
+            "id": "secondary_cta",
+            "eyebrow": "READY WHEN YOU ARE",
+            "headline": "Get the site and the AI",
+            "subhead": "One call to see how a site plus a WhatsApp agent fits your business.",
+            "cta": "Book a call",
+            "flags": "Book-a-call band. Secondary link 'See our work' optional."
+          }
+        ]
+      },
+      {
+        "page": "Services Hub",
+        "route": "/services",
+        "seoTitle": "AI & Web Services | Shift U",
+        "seoDescription": "Websites, WhatsApp AI agents, and automations that bring more leads and less manual work. One team, built and supported end to end.",
+        "sections": [
+          {
+            "id": "hero",
+            "eyebrow": "WHAT WE DO",
+            "headline": "Your site and the AI behind it",
+            "subhead": "One team builds the website, the WhatsApp agent, and the automations that run after launch.",
+            "body": "Good tech, real results. More leads coming in, less manual work going out.",
+            "cta": "Book a call"
+          },
+          {
+            "id": "services_grid",
+            "eyebrow": "SERVICES",
+            "headline": "Five ways we move your business",
+            "subhead": "Pick one or stack them. Everything connects under one roof.",
+            "bullets": [
+              "Websites & Landing Pages: built once or as a monthly subscription, no big upfront.",
+              "WhatsApp AI Agents: answers, qualifies, and books appointments 24/7.",
+              "Business Automations: connect your tools and kill the manual busywork.",
+              "Paid Ads & Marketing: Meta and Google campaigns that bring real leads.",
+              "Branding: identity, logo, and a system that looks the part."
+            ],
+            "cta": "See our work"
+          },
+          {
+            "id": "why_us",
+            "eyebrow": "WHY SHIFT U",
+            "headline": "Built, connected, and supported",
+            "subhead": "The three reasons clients stop shopping around.",
+            "bullets": [
+              "Site plus AI under one roof, no juggling vendors.",
+              "Website-as-a-Service: pay monthly, cancel anytime, no big upfront.",
+              "Fast to launch, and we stay on after go-live."
+            ]
+          },
+          {
+            "id": "cta",
+            "eyebrow": "NEXT STEP",
+            "headline": "Tell us where you lose leads",
+            "subhead": "Fifteen minutes. We map the site, agent, or automation that fixes it.",
+            "body": "No pressure, no jargon. You leave the call knowing exactly what to build first.",
+            "cta": "Book a call"
+          }
+        ]
+      },
+      {
+        "page": "Websites & Landing Pages",
+        "route": "/services/websites",
+        "seoTitle": "Websites That Sell | Shift U",
+        "seoDescription": "We build websites and the AI behind them. One premium build or a monthly plan with hosting, updates, and support. Book a call.",
+        "sections": [
+          {
+            "id": "hero",
+            "eyebrow": "WEBSITES & LANDING PAGES",
+            "headline": "A website that sells, built fast",
+            "subhead": "Not a brochure. A page that turns visitors into booked calls.",
+            "body": "We design it, build it, and wire in the AI that follows up. Live in days, not months.",
+            "cta": "Book a call",
+            "flags": "Secondary CTA available: 'See our work'."
+          },
+          {
+            "id": "problem",
+            "eyebrow": "THE COST OF A BAD SITE",
+            "headline": "A dead site loses leads daily",
+            "subhead": "Every problem below is a customer who booked with someone else.",
+            "bullets": [
+              "Loads slow, so people bounce before they read",
+              "Looks dated, so they doubt you before they call",
+              "No clear next step, so nobody takes action",
+              "Goes quiet after launch, then breaks"
+            ],
+            "body": "Most sites are pretty and silent. Yours should book the call while you sleep."
+          },
+          {
+            "id": "two_modes",
+            "eyebrow": "TWO WAYS TO BUILD",
+            "headline": "Buy it once, or pay monthly",
+            "subhead": "Same quality. Pick the model that fits your cash flow.",
+            "body": "One-shot is a premium build you own outright. Website-as-a-Service spreads the cost into a low monthly fee with everything handled.",
+            "bullets": [
+              "One-shot build: custom design, you own it, single upfront price",
+              "One-shot fit: you have budget now and want full ownership",
+              "Website-as-a-Service: low monthly fee, no big upfront, cancel anytime",
+              "WaaS fit: you want it live fast with zero maintenance headaches",
+              "Both ship fast and both include the AI follow-up layer"
+            ],
+            "flags": "two_modes is a side-by-side comparison block. Render One-shot and WaaS as two columns."
+          },
+          {
+            "id": "whats_included",
+            "eyebrow": "WEBSITE-AS-A-SERVICE",
+            "headline": "One monthly fee covers everything",
+            "subhead": "No surprise invoices. No chasing a developer who vanished.",
+            "bullets": [
+              "Custom design built around your offer",
+              "Hosting and your domain, set up and managed",
+              "Updates and content changes when you need them",
+              "Maintenance, security, and uptime handled for you",
+              "Real support after launch, cancel anytime"
+            ],
+            "body": "We stay on after go-live. The site keeps working and so do we."
+          },
+          {
+            "id": "features",
+            "eyebrow": "BUILT TO CONVERT",
+            "headline": "Fast, mobile, and built to sell",
+            "subhead": "Every page is engineered for the click, not just the look.",
+            "bullets": [
+              "Loads in under two seconds, so visitors stay",
+              "Built around one clear action per page",
+              "Flawless on phones, where most traffic lives",
+              "SEO done right, so the right people find you"
+            ]
+          },
+          {
+            "id": "proof",
+            "eyebrow": "REAL RESULTS",
+            "headline": "Numbers our clients actually see",
+            "subhead": "Proof, not promises. Swap these for your live figures.",
+            "bullets": [
+              "[PLACEHOLDER: X% more booked calls in the first 30 days]",
+              "[PLACEHOLDER: site live in X days from kickoff]",
+              "[PLACEHOLDER: X leads captured per month, on autopilot]",
+              "[PLACEHOLDER: client quote, full name, business]"
+            ],
+            "flags": "All four bullets are placeholders. Replace with real metrics and a named testimonial before launch."
+          },
+          {
+            "id": "pricing_teaser",
+            "eyebrow": "PRICING",
+            "headline": "Clear pricing, no surprises",
+            "subhead": "Pick a one-time build or a monthly plan. Full breakdown on the pricing page.",
+            "body": "One-shot builds start at [REVIEW: $X]. Website-as-a-Service starts at [REVIEW: $X per month].",
+            "cta": "See full pricing",
+            "flags": "Both prices are [REVIEW]. CTA points to /pricing. Confirm starting numbers before publishing."
+          },
+          {
+            "id": "faq",
+            "eyebrow": "QUESTIONS",
+            "headline": "Answers before you ask",
+            "bullets": [
+              "How fast can it go live? Most builds ship in days, not weeks. [PLACEHOLDER: typical timeline]",
+              "Can I cancel the monthly plan? Yes. Website-as-a-Service is cancel anytime, no lock-in.",
+              "Do I own the site? One-shot builds are yours outright. WaaS stays managed by us while you subscribe.",
+              "What about the AI part? Every site can include a WhatsApp agent that answers and books leads 24/7."
+            ],
+            "flags": "Timeline answer has a [PLACEHOLDER]. Confirm exact turnaround before publishing."
+          },
+          {
+            "id": "cta",
+            "eyebrow": "READY WHEN YOU ARE",
+            "headline": "Get a site that books the call",
+            "subhead": "Tell us your offer. We will show you exactly what we would build.",
+            "cta": "Book a call",
+            "flags": "Secondary CTA available: 'See our work'."
+          }
+        ]
+      },
+      {
+        "page": "WhatsApp AI Agents",
+        "route": "/services/whatsapp-agents",
+        "seoTitle": "WhatsApp AI Agents | Shift U",
+        "seoDescription": "A 24/7 WhatsApp agent that answers, qualifies leads, and books appointments in your customer's language. More leads, less manual work.",
+        "sections": [
+          {
+            "id": "hero",
+            "eyebrow": "WHATSAPP AI AGENTS",
+            "headline": "It books the call while you sleep",
+            "subhead": "A WhatsApp agent that answers every message, qualifies the lead, and puts the appointment on your calendar. In your customer's language, day or night.",
+            "bullets": [
+              "Replies in seconds, every hour of the day",
+              "Qualifies leads so you only talk to buyers",
+              "Books appointments straight to your calendar"
+            ],
+            "cta": "Book a call",
+            "flags": "Hero claim is product capability, not a metric. No placeholders."
+          },
+          {
+            "id": "problem",
+            "eyebrow": "THE COST OF SLOW",
+            "headline": "Every missed message is a lost sale",
+            "subhead": "Leads message at night, on weekends, while you are on a job. By the time you reply, they booked with someone faster.",
+            "bullets": [
+              "Messages pile up while you work",
+              "Slow replies push buyers to a competitor",
+              "Hot leads go cold after a few hours",
+              "You answer the same questions all day"
+            ],
+            "flags": "No placeholders."
+          },
+          {
+            "id": "how_it_works",
+            "eyebrow": "HOW IT WORKS",
+            "headline": "Answers, qualifies, books",
+            "subhead": "Three steps that run on their own, in your customer's language.",
+            "bullets": [
+              "Answers: replies instantly to every WhatsApp message",
+              "Qualifies: asks the right questions, filters out tire-kickers",
+              "Books: drops ready buyers onto your calendar"
+            ],
+            "body": "It speaks the customer's language automatically. A lead in English or Spanish gets a clear answer either way.",
+            "flags": "No placeholders."
+          },
+          {
+            "id": "features",
+            "eyebrow": "WHAT IT DOES",
+            "headline": "Built to capture and close leads",
+            "bullets": [
+              "Multilingual: replies in the customer's own language",
+              "Instant replies 24/7, no waiting, no day off",
+              "Lead capture: saves name, contact, and intent",
+              "Calendar booking: appointments land on your schedule",
+              "Human handoff: passes complex chats straight to you"
+            ],
+            "flags": "No placeholders."
+          },
+          {
+            "id": "proof",
+            "eyebrow": "THE NUMBERS",
+            "headline": "Hundreds of chats handled every month",
+            "subhead": "Our agents work in the background while owners focus on the business.",
+            "body": "Real conversations, real bookings, no extra staff.",
+            "bullets": [
+              "Result card 1: [PLACEHOLDER: business name] cut reply time from [PLACEHOLDER: hours] to under a minute",
+              "Result card 2: [PLACEHOLDER: business name] booked [PLACEHOLDER: number] appointments in [PLACEHOLDER: timeframe] with no extra staff"
+            ],
+            "flags": "Headline metric needs exact number [PLACEHOLDER: hundreds -> exact monthly conversation count]. Both result cards are [PLACEHOLDER] and must be filled with real client data before launch."
+          },
+          {
+            "id": "integrations",
+            "eyebrow": "WORKS WITH YOUR TOOLS",
+            "headline": "Connects to what you already use",
+            "subhead": "No new app to learn. The agent plugs into your existing stack.",
+            "bullets": [
+              "WhatsApp: lives where your customers already message",
+              "CRM: pushes every lead into your system",
+              "Calendar: books directly onto your schedule"
+            ],
+            "flags": "Confirm specific CRM and calendar platforms supported before launch. [REVIEW: confirm CRM and calendar platforms]"
+          },
+          {
+            "id": "faq",
+            "eyebrow": "QUICK ANSWERS",
+            "headline": "Questions owners ask first",
+            "bullets": [
+              "Does it sound like a robot? No. It replies in plain, natural language your customers trust.",
+              "What if it cannot answer? It hands the chat to you with full context, nothing gets dropped.",
+              "How long to set up? Most agents go live in [REVIEW: days]. We handle the build.",
+              "Will it work in two languages? Yes. It detects and replies in the customer's language."
+            ],
+            "flags": "Setup time [REVIEW: days] must be confirmed."
+          },
+          {
+            "id": "cta",
+            "eyebrow": "READY WHEN YOU ARE",
+            "headline": "Stop losing leads to slow replies",
+            "subhead": "We build the agent, connect your tools, and stay with you after launch. Book a call and see it answer your messages.",
+            "cta": "Book a call",
+            "flags": "Secondary CTA available: 'See our work'. No placeholders."
+          }
+        ]
+      },
+      {
+        "page": "Business Automations",
+        "route": "/services/automations",
+        "seoTitle": "Business Automation Services | Shift U",
+        "seoDescription": "We automate the manual work in your business. Connect your tools, sync your CRM, and run follow-ups on their own.",
+        "sections": [
+          {
+            "id": "hero",
+            "eyebrow": "BUSINESS AUTOMATIONS",
+            "headline": "Kill the manual work",
+            "subhead": "We connect your tools so the busywork runs on its own.",
+            "body": "Copy-paste between apps. Manual follow-ups. End-of-week reports. We automate all of it, so your team stops doing what software should.",
+            "bullets": [
+              "Connect the tools you already use",
+              "Follow-ups and data entry on autopilot",
+              "Less manual work, fewer dropped balls"
+            ],
+            "cta": "Book a call",
+            "flags": ""
+          },
+          {
+            "id": "problem",
+            "eyebrow": "THE PROBLEM",
+            "headline": "Your team is doing robot work",
+            "subhead": "The same tasks, every day, by hand.",
+            "body": "Most of the day goes to moving data around and chasing things that should chase themselves. It adds up fast.",
+            "bullets": [
+              "Copy-pasting the same info between tools",
+              "Leads that go cold while nobody follows up",
+              "Reports built by hand every single week",
+              "Mistakes from typing the same thing twice"
+            ],
+            "cta": "",
+            "flags": ""
+          },
+          {
+            "id": "what_we_automate",
+            "eyebrow": "WHAT WE AUTOMATE",
+            "headline": "We wire your tools together",
+            "subhead": "One system that talks to itself.",
+            "body": "We build the workflows that move your data and trigger your tasks, so nothing falls through the cracks.",
+            "bullets": [
+              "n8n workflows built around how you actually work",
+              "App integrations that connect your whole stack",
+              "CRM sync so every record stays current",
+              "Automatic follow-ups by email and WhatsApp",
+              "Reports that build and send themselves"
+            ],
+            "cta": "",
+            "flags": ""
+          },
+          {
+            "id": "examples",
+            "eyebrow": "EXAMPLES",
+            "headline": "What this looks like in practice",
+            "subhead": "Three automations we build often.",
+            "bullets": [
+              "Lead capture to CRM: a new form or DM creates the contact, tags it, and starts the follow-up. No typing.",
+              "Booking to reminders: a booked call lands on the calendar and fires reminders, so no-shows drop.",
+              "Weekly report on autopilot: numbers pull from your tools and land in your inbox every Monday."
+            ],
+            "cta": "",
+            "flags": ""
+          },
+          {
+            "id": "proof",
+            "eyebrow": "PROOF",
+            "headline": "Hours back, every week",
+            "subhead": "The manual work disappears, the time comes back.",
+            "body": "Our automations save teams real hours they used to spend on copy-paste and follow-up.",
+            "bullets": [
+              "[PLACEHOLDER: X hours saved per week per client]",
+              "[PLACEHOLDER: X automations live in production]",
+              "[PLACEHOLDER: short result quote from a client]"
+            ],
+            "cta": "",
+            "flags": "Contains placeholders: hours saved, automations live, client quote. Confirm real numbers before publishing."
+          },
+          {
+            "id": "faq",
+            "eyebrow": "FAQ",
+            "headline": "Questions before you start",
+            "subhead": "",
+            "bullets": [
+              "Will this work with my tools? Most likely yes. We connect the apps you already use, no need to switch platforms.",
+              "How long does it take? Simple automations go live in days, larger systems in 2-3 weeks. [REVIEW: confirm timeline]",
+              "What if something breaks? We stay after launch. We monitor, fix, and adjust as your business changes."
+            ],
+            "cta": "",
+            "flags": "[REVIEW: confirm delivery timeline in FAQ answer]"
+          },
+          {
+            "id": "cta",
+            "eyebrow": "GET STARTED",
+            "headline": "Let's automate your busywork",
+            "subhead": "Book a call and we map what to automate first.",
+            "body": "Tell us where the manual work hurts most. We show you what we can take off your plate.",
+            "cta": "Book a call",
+            "flags": ""
+          }
+        ]
+      },
+      {
+        "page": "Paid Ads",
+        "route": "/services/paid-ads",
+        "seoTitle": "Paid Ads That Pay Back | Shift U",
+        "seoDescription": "Meta and Google ads built to bring leads, not just clicks. Creative, targeting, and tracking that prove what works.",
+        "sections": [
+          {
+            "id": "hero",
+            "eyebrow": "PAID ADS & MARKETING",
+            "headline": "Ads that pay you back",
+            "subhead": "Meta and Google campaigns built around one number: cost per lead.",
+            "body": "We do not buy clicks for the sake of it. We build ads that turn spend into booked calls and real customers, then prove it with the numbers.",
+            "cta": "Book a call",
+            "flags": "none"
+          },
+          {
+            "id": "what_we_do",
+            "eyebrow": "WHAT WE DO",
+            "headline": "Meta and Google, done right",
+            "subhead": "Creative, targeting, and tracking under one roof.",
+            "body": "Most ads fail on one of three things: the creative, who sees it, or whether anyone measures it. We handle all three so your budget works.",
+            "bullets": [
+              "Creative that stops the scroll and gets the click",
+              "Targeting that reaches buyers, not browsers",
+              "Tracking set up so every lead is counted",
+              "Landing pages built to convert the traffic",
+              "Weekly reports in plain language, no jargon"
+            ],
+            "flags": "none"
+          },
+          {
+            "id": "approach",
+            "eyebrow": "HOW WE RUN IT",
+            "headline": "Test, cut, double down",
+            "subhead": "A simple loop that finds what works and kills what does not.",
+            "bullets": [
+              "Launch a few angles and let the data pick the winner",
+              "Cut what loses fast so budget is never wasted",
+              "Scale the winners and keep cost per lead low"
+            ],
+            "flags": "none"
+          },
+          {
+            "id": "proof",
+            "eyebrow": "RESULTS",
+            "headline": "We optimize for return",
+            "subhead": "The goal is not impressions. It is leads you can put a price on.",
+            "body": "Every account is judged on return on ad spend and cost per lead. We report both each week, so you always know what your money is doing.",
+            "bullets": [
+              "[PLACEHOLDER: ROAS, e.g. 4.2x return on ad spend]",
+              "[PLACEHOLDER: cost per lead, e.g. $X per booked call]",
+              "[PLACEHOLDER: client result, e.g. leads doubled in 60 days]"
+            ],
+            "flags": "All metrics are placeholders. Confirm real ROAS, cost per lead, and a client result before publishing."
+          },
+          {
+            "id": "cta",
+            "eyebrow": "GET STARTED",
+            "headline": "Turn ad spend into leads",
+            "subhead": "Tell us your goal and budget. We will tell you if ads make sense for you.",
+            "body": "No long contracts to start. A short call to check the fit, then a plan you can say yes to.",
+            "cta": "Book a call",
+            "flags": "none"
+          }
+        ]
+      },
+      {
+        "page": "Branding",
+        "route": "/services/branding",
+        "seoTitle": "Branding & Identity Design | Shift U",
+        "seoDescription": "A brand people trust at first glance. Logo, color, type, and a clear guide so your business looks the same everywhere.",
+        "sections": [
+          {
+            "id": "hero",
+            "eyebrow": "BRANDING",
+            "headline": "A brand people trust on sight",
+            "subhead": "Look like the business you actually are.",
+            "body": "We build the identity that makes people take you seriously. A clear logo, colors, and type that work everywhere you show up.",
+            "cta": "Book a call",
+            "flags": ""
+          },
+          {
+            "id": "what_we_do",
+            "eyebrow": "WHAT YOU GET",
+            "headline": "Everything your brand needs to look sharp",
+            "subhead": "One system. Used the same way every time.",
+            "body": "No guessing which font to use or which blue is right. You get the pieces and the rules to apply them.",
+            "bullets": [
+              "Brand identity built around how you sell",
+              "Logo in every format you will need",
+              "Color and type system that holds up",
+              "Brand guide so it stays consistent"
+            ],
+            "flags": ""
+          },
+          {
+            "id": "approach",
+            "eyebrow": "HOW WE WORK",
+            "headline": "Built to fit, not to win awards",
+            "subhead": "Practical design that does a job.",
+            "bullets": [
+              "We start with your customer, not a mood board",
+              "Every choice ties back to the sale",
+              "Ready to use on site, ads, and WhatsApp"
+            ],
+            "flags": ""
+          },
+          {
+            "id": "cta",
+            "headline": "Ready to look the part?",
+            "subhead": "Tell us about your business. We will show you what your brand could be.",
+            "cta": "Book a call",
+            "flags": ""
+          }
+        ]
+      },
+      {
+        "page": "Work",
+        "route": "/work",
+        "seoTitle": "Our Work | Shift U",
+        "seoDescription": "Real builds, real results. Websites, WhatsApp AI agents, and automations we shipped for businesses in Argentina and Canada.",
+        "sections": [
+          {
+            "id": "hero",
+            "eyebrow": "OUR WORK",
+            "headline": "Real builds. Real results.",
+            "subhead": "Sites, WhatsApp agents, and automations we shipped and still support.",
+            "body": "Every project below went live and stayed live. Browse by what you need, then book a call.",
+            "cta": "Book a call",
+            "flags": "No placeholders in this section."
+          },
+          {
+            "id": "intro",
+            "eyebrow": "BROWSE BY SERVICE",
+            "headline": "Find work like yours",
+            "subhead": "Three service lines, one team behind all of them.",
+            "body": "Filter by what you came for. Each card shows the problem we solved and the number that moved.",
+            "bullets": [
+              "Websites and landing pages",
+              "WhatsApp AI agents",
+              "Business automations"
+            ],
+            "flags": "Filter labels match the case tags below. Wire each to its service line."
+          },
+          {
+            "id": "case_grid",
+            "eyebrow": "CASE STUDIES",
+            "headline": "Work that paid for itself",
+            "subhead": "Four builds, four outcomes you can measure.",
+            "bullets": [
+              "[PLACEHOLDER: client type, e.g. dental clinic] | Phone rang all day, nobody answered after hours | [PLACEHOLDER metric: +X booked appointments/month] | WhatsApp AI Agent",
+              "[PLACEHOLDER: client type, e.g. home services contractor] | Old site loaded slow and lost leads | [PLACEHOLDER metric: +X% more contact form submissions] | Website",
+              "[PLACEHOLDER: client type, e.g. e-commerce shop] | Manual order follow-ups ate the whole day | [PLACEHOLDER metric: X hours/week saved] | Business Automation",
+              "[PLACEHOLDER: client type, e.g. real estate office] | Leads went cold before anyone replied | [PLACEHOLDER metric: X-minute first reply, 24/7] | WhatsApp AI Agent"
+            ],
+            "body": "Each card holds a client type, the one problem we fixed, and the single result that mattered.",
+            "flags": "All 4 client types are [PLACEHOLDER] and all 4 metrics are [PLACEHOLDER metric] until real cases are confirmed. Add a logo or screenshot per card. Service tag must match the filter in the intro section."
+          },
+          {
+            "id": "cta",
+            "eyebrow": "YOUR PROJECT NEXT",
+            "headline": "Want results like these?",
+            "subhead": "Tell us the problem. We tell you what we would build.",
+            "body": "Book a call and we map the site, agent, or automation that fits your business. No big upfront, cancel anytime.",
+            "cta": "Book a call",
+            "flags": "Secondary link can point to See our work or back to the grid above."
+          }
+        ]
+      },
+      {
+        "page": "Case Study Template",
+        "route": "/work/[slug]",
+        "seoTitle": "Case Study | Shift U",
+        "seoDescription": "How we built the site and the AI behind it, and the results it drove for a business like yours.",
+        "sections": [
+          {
+            "id": "hero",
+            "eyebrow": "CASE STUDY",
+            "headline": "[PLACEHOLDER: Result in one line]",
+            "subhead": "[PLACEHOLDER: Client name], [PLACEHOLDER: industry + city].",
+            "body": "We built the website and the AI behind it. Here is what changed.",
+            "cta": "Book a call",
+            "flags": "PLACEHOLDER: client name, industry/location, and headline result (e.g. '3x more booked calls in 60 days')."
+          },
+          {
+            "id": "challenge",
+            "eyebrow": "THE CHALLENGE",
+            "headline": "What was slowing them down",
+            "body": "[PLACEHOLDER: The old site looked dated and leads went unanswered.] [PLACEHOLDER: Replies took hours, so prospects went cold.] [PLACEHOLDER: The owner handled everything by hand.]",
+            "flags": "PLACEHOLDER: 2-3 lines describing what was broken before we started, in the client's words."
+          },
+          {
+            "id": "what_we_built",
+            "eyebrow": "WHAT WE BUILT",
+            "headline": "The site and the AI behind it",
+            "subhead": "One team, one stack, built to convert and run on its own.",
+            "bullets": [
+              "[PLACEHOLDER: New website built to load fast and convert]",
+              "[PLACEHOLDER: WhatsApp AI agent answering 24/7 in their language]",
+              "[PLACEHOLDER: Lead qualification and booking handled automatically]",
+              "[PLACEHOLDER: Automations connecting their tools and CRM]",
+              "[PLACEHOLDER: Ongoing updates and support after launch]"
+            ],
+            "flags": "PLACEHOLDER: 3-5 bullets of what was actually delivered for this client."
+          },
+          {
+            "id": "results",
+            "eyebrow": "THE RESULTS",
+            "headline": "Numbers after launch",
+            "subhead": "Real outcomes, measured after go-live.",
+            "bullets": [
+              "[PLACEHOLDER: +X% more leads] in [PLACEHOLDER: timeframe]",
+              "[PLACEHOLDER: X hours saved per week] on manual replies",
+              "[PLACEHOLDER: X% faster response time], answered in seconds"
+            ],
+            "flags": "PLACEHOLDER: 3 metric cards. Each needs a real number and timeframe before publishing. [REVIEW: confirm every metric with client data]."
+          },
+          {
+            "id": "testimonial",
+            "eyebrow": "IN THEIR WORDS",
+            "headline": "What the client said",
+            "body": "\"[PLACEHOLDER: Short quote about the result and what it felt like to work with us, 2-3 lines max.]\"",
+            "subhead": "[PLACEHOLDER: Full name], [PLACEHOLDER: role], [PLACEHOLDER: company]",
+            "flags": "PLACEHOLDER: real quote + attribution (name, role, company). Do not publish without sign-off."
+          },
+          {
+            "id": "cta",
+            "eyebrow": "YOUR TURN",
+            "headline": "Want results like these",
+            "subhead": "Tell us what you sell. We will show you the site and the AI to match.",
+            "cta": "Book a call",
+            "flags": "Secondary action available: 'See our work'."
+          }
+        ]
+      },
+      {
+        "page": "Pricing",
+        "route": "/pricing",
+        "seoTitle": "Pricing | Shift U",
+        "seoDescription": "Clear pricing for websites, WhatsApp AI agents, and automations. Monthly plan or one-time build. No big upfront, cancel anytime.",
+        "sections": [
+          {
+            "id": "hero",
+            "eyebrow": "PRICING",
+            "headline": "Pick what fits, no surprises",
+            "subhead": "Every option is listed below with real numbers. No call required just to see what things cost.",
+            "body": "Website plus the AI behind it, under one roof. Start small or go all in. You keep the support after launch either way.",
+            "cta": "Book a call",
+            "flags": "All prices below are [REVIEW] placeholders. Confirm final numbers before publishing."
+          },
+          {
+            "id": "waas_tiers",
+            "eyebrow": "WEBSITE-AS-A-SERVICE",
+            "headline": "Your site, handled monthly",
+            "subhead": "Design, hosting, domain, updates, and support in one monthly fee. No big upfront. Cancel anytime.",
+            "body": "Most owners pick Pro. It covers the pages you actually need plus monthly changes, so the site never goes stale.",
+            "bullets": [
+              "Starter: [REVIEW: $X/mo], up to 3 pages, hosting, domain, SSL included",
+              "Starter: 1 content update request per month",
+              "Starter: contact form plus basic SEO setup",
+              "Starter: email support, 2 business day response",
+              "Pro (Most popular): [REVIEW: $X/mo], up to 7 pages, everything in Starter",
+              "Pro: unlimited small updates, monthly performance check",
+              "Pro: lead capture plus Google Business and analytics setup",
+              "Pro: priority support, same day response",
+              "Scale: [REVIEW: $X/mo], up to 15 pages, everything in Pro",
+              "Scale: WhatsApp AI agent included, booking and lead routing",
+              "Scale: A/B testing plus monthly growth report",
+              "Scale: dedicated contact, fastest turnaround"
+            ],
+            "cta": "Start with Pro",
+            "flags": "Middle tier (Pro) marked Most popular for decoy hierarchy. All three monthly prices are [REVIEW: $X/mo]. Page counts are suggested defaults, confirm before publishing."
+          },
+          {
+            "id": "one_shot",
+            "eyebrow": "ONE-SHOT BUILD",
+            "headline": "Own it outright, pay once",
+            "subhead": "Want to own the site and handle it yourself? We build it, hand over the files, done.",
+            "bullets": [
+              "Landing page: [REVIEW: $X], single high-converting page, ready to launch",
+              "Business site: [REVIEW: $X], up to 5 pages, full structure and SEO",
+              "Custom build: [REVIEW: $X], larger sites, quoted after a quick call",
+              "Every build includes mobile design, fast load, and handover"
+            ],
+            "body": "One-time payment, the code is yours. Add a maintenance plan later if you want us to keep it current.",
+            "cta": "Get a one-shot quote",
+            "flags": "All one-shot prices are [REVIEW: $X]."
+          },
+          {
+            "id": "agents_pricing",
+            "eyebrow": "WHATSAPP AI AGENTS",
+            "headline": "Answers and books while you sleep",
+            "subhead": "A 24/7 assistant that replies, qualifies leads, and books appointments in your customer's language.",
+            "body": "One-time setup to train it on your business. Then a flat monthly fee to run and maintain it.",
+            "bullets": [
+              "Setup: [REVIEW: $X] one-time, built and trained on your services",
+              "Monthly: [REVIEW: $X/mo], hosting, updates, and tuning included",
+              "Handles FAQs, lead qualifying, and appointment booking",
+              "Replies in the customer's language, day or night"
+            ],
+            "cta": "Book a call",
+            "flags": "Setup [REVIEW: $X] and monthly [REVIEW: $X/mo] both placeholders. Proof anchor (hundreds of conversations/month) lives on home/services, exact number is [PLACEHOLDER]."
+          },
+          {
+            "id": "automations_pricing",
+            "eyebrow": "BUSINESS AUTOMATIONS",
+            "headline": "Kill the manual work for good",
+            "subhead": "We connect your tools so leads, follow-ups, and data move on their own. No more copy-paste between apps.",
+            "body": "Most setups are a one-time project. Add a retainer if you want ongoing changes and monitoring.",
+            "bullets": [
+              "Project: from [REVIEW: $X], scoped after a short call",
+              "Retainer: [REVIEW: $X/mo], changes, monitoring, and new workflows",
+              "Connects CRM, forms, email, calendar, and WhatsApp",
+              "Common wins: auto follow-ups, lead routing, no double entry"
+            ],
+            "cta": "Map my automations",
+            "flags": "Project starting price [REVIEW: $X] and retainer [REVIEW: $X/mo] both placeholders."
+          },
+          {
+            "id": "comparison_note",
+            "headline": "Subscription or buy it once",
+            "body": "Subscription if you want low upfront cost and us handling it forever. One-shot if you want to own the build and run it yourself."
+          },
+          {
+            "id": "faq",
+            "eyebrow": "BILLING FAQ",
+            "headline": "The money questions, answered",
+            "bullets": [
+              "How does billing work? Monthly plans bill on the same date each month. One-shot builds are paid up front or in two parts.",
+              "Can I cancel anytime? Yes. Website-as-a-Service has no lock-in. Cancel and your site stays live through the paid period.",
+              "Do I own my website? On one-shot builds, yes, the code is yours. On subscription, the site stays with the plan while it runs.",
+              "What if I start monthly and want to buy it out? You can switch to a one-shot buyout later. We credit part of what you have paid."
+            ],
+            "flags": "Buyout credit terms are illustrative. [REVIEW] the exact buyout and credit policy before publishing."
+          },
+          {
+            "id": "cta",
+            "eyebrow": "STILL DECIDING",
+            "headline": "Tell us the goal, get a number",
+            "subhead": "One short call. We recommend the option that fits your budget and what you actually need, not the biggest invoice.",
+            "cta": "Book a call",
+            "flags": "Secondary action 'See our work' available site-wide."
+          }
+        ]
+      },
+      {
+        "page": "About",
+        "route": "/about",
+        "seoTitle": "About Shift U | Good Tech, Real Results",
+        "seoDescription": "We build the website and the AI behind it. Sites, WhatsApp agents, and automations that bring more leads and less manual work.",
+        "sections": [
+          {
+            "id": "hero",
+            "eyebrow": "ABOUT SHIFT U",
+            "headline": "Good tech, real results",
+            "subhead": "We build the website and the AI behind it.",
+            "body": "Most agencies sell you one or the other. We do both, under one roof, so your site and your sales engine actually talk to each other.",
+            "cta": "Book a call"
+          },
+          {
+            "id": "story",
+            "eyebrow": "WHY WE EXIST",
+            "headline": "Small teams deserve real tech",
+            "subhead": "Enterprise tools without the enterprise headcount.",
+            "body": "Most owners get stuck with a pretty site that just sits there, or an AI tool nobody set up right. We started Shift U to close that gap. You get the website and the system working together, no tech team required."
+          },
+          {
+            "id": "how_we_work",
+            "eyebrow": "HOW WE WORK",
+            "headline": "Four rules we never break",
+            "subhead": "Simple principles that keep your project on track.",
+            "bullets": [
+              "Outcome first. We build for leads, not looks.",
+              "Plain talk. No jargon, no runaround.",
+              "Fast delivery. Live in days, not months.",
+              "We stay. Launch is the start, not the finish."
+            ]
+          },
+          {
+            "id": "reach",
+            "eyebrow": "WHERE WE WORK",
+            "headline": "Two countries, one standard",
+            "subhead": "We serve businesses in Argentina and Canada.",
+            "body": "Wherever you are, the work is the same. Sites and AI that bring in leads and cut the manual busywork. We work in English."
+          },
+          {
+            "id": "values",
+            "eyebrow": "WHAT WE STAND FOR",
+            "headline": "What you can count on",
+            "subhead": "Three things that shape every build.",
+            "bullets": [
+              "Honest. We tell you what works and what does not.",
+              "Practical. Tech that earns its place, nothing extra.",
+              "Present. Real support after the site goes live."
+            ]
+          },
+          {
+            "id": "team",
+            "eyebrow": "THE TEAM",
+            "headline": "The people behind your build",
+            "subhead": "Builders who answer their own messages.",
+            "body": "A small, hands-on team that builds, ships, and supports your project directly. No account managers between you and the work.",
+            "flags": "[PLACEHOLDER: add team member names, roles, and photos] [PLACEHOLDER: founder bio, 2-3 lines]"
+          },
+          {
+            "id": "cta",
+            "eyebrow": "READY WHEN YOU ARE",
+            "headline": "Let's build your engine",
+            "subhead": "A site and AI that work while you sleep.",
+            "body": "Tell us what you sell. We will show you what to build and what it costs, no pressure.",
+            "cta": "Book a call",
+            "flags": "Secondary CTA available: See our work"
+          }
+        ]
+      },
+      {
+        "page": "Contact",
+        "route": "/contact",
+        "seoTitle": "Contact Shift U | Book a Call",
+        "seoDescription": "Book a call or get a quote. We build the website and the AI behind it. Fast replies, no pushy sales.",
+        "sections": [
+          {
+            "id": "hero",
+            "eyebrow": "CONTACT",
+            "headline": "Let's build it together",
+            "subhead": "Book a call or get a quote. No pressure, no pitch.",
+            "body": "Tell us what you need: a website, a WhatsApp agent, or automations that cut the manual work. We reply fast and point you to the right next step.",
+            "cta": "Book a call",
+            "flags": "none"
+          },
+          {
+            "id": "book_call",
+            "eyebrow": "FASTEST WAY",
+            "headline": "Pick a time that works",
+            "subhead": "A short call beats a long email thread.",
+            "body": "Grab a slot and we'll talk through your goals, what to build first, and what it costs. You leave with a clear plan, even if you never hire us.",
+            "bullets": [
+              "15 to 20 minutes, on your schedule",
+              "We reply within [PLACEHOLDER: X hours] on business days",
+              "You get a plan and a price, not a sales script"
+            ],
+            "cta": "Book a call",
+            "flags": "[PLACEHOLDER: confirm response time SLA for book_call promise]"
+          },
+          {
+            "id": "form_intro",
+            "eyebrow": "PREFER TO WRITE",
+            "headline": "Send the details, get a quote",
+            "subhead": "Four quick fields. We read every one.",
+            "body": "Fill the form and we'll come back with a real answer, not a generic auto-reply.",
+            "bullets": [
+              "Your name",
+              "Your business",
+              "Best email to reach you",
+              "What you need (site, AI agent, automation)"
+            ],
+            "cta": "Get a quote",
+            "flags": "none"
+          },
+          {
+            "id": "whatsapp",
+            "eyebrow": "RIGHT NOW",
+            "headline": "Chat with us on WhatsApp",
+            "subhead": "Quick question? Message us directly.",
+            "body": "Same place your customers would reach you. Ask anything and we'll answer like a human, fast.",
+            "cta": "Chat on WhatsApp",
+            "flags": "[PLACEHOLDER: WhatsApp number / wa.me link]"
+          },
+          {
+            "id": "promise",
+            "eyebrow": "OUR PROMISE",
+            "headline": "Fast replies, zero pressure",
+            "subhead": "We answer quick and we never push.",
+            "body": "You get straight answers and a clear price. If we are not the right fit, we will tell you that too.",
+            "bullets": [
+              "Real reply from a real person",
+              "Plain talk, no jargon, no hard sell",
+              "We stay around after launch"
+            ],
+            "flags": "none"
+          }
+        ]
+      }
+    ]
+  }
+}
