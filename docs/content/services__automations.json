@@ -1,0 +1,150 @@
+{
+  "target": "services/automations",
+  "extract": {
+    "route": "/services/conversion-system",
+    "type": "service",
+    "name": "Conversion System: Site, CRM, Attribution and Reporting",
+    "tagline": "Site, CRM, attribution and reporting in one loop.",
+    "summary": "A done-for-you revenue system that rebuilds the website for lead capture and wires it into a CRM with attribution and reporting in a single loop. It covers the full path from capturing a lead to qualifying, routing, closing, and measuring, with automated follow-up, nurture sequences, tracking, and weekly reporting. Priced as a one-time build plus a monthly retainer, going live in roughly 14 to 21 business days.",
+    "pricing": "One-time: $4,000. Recurring: $400 per month after. Timeline: fourteen to twenty-one business days.",
+    "included": [
+      "Site rebuilt for capture",
+      "CRM with owners, stages, follow-up tasks",
+      "Attribution by channel (organic, ads, referral, direct)",
+      "Automated routing (under two minutes)",
+      "Instant alerts (email and Slack)",
+      "Email and SMS nurture (four-step sequence)",
+      "Booking and calendar sync",
+      "Tracking configuration (GA4, Meta Pixel, conversion events)",
+      "Weekly Monday reports with metrics"
+    ],
+    "keyPoints": [
+      "How it works runs as a single loop in five stages: Capture, Qualify, Route, Close, Measure",
+      "Leads are routed automatically in under two minutes",
+      "Instant alerts fire to email and Slack when a lead comes in",
+      "A four-step email and SMS nurture sequence follows up with leads",
+      "Booking and calendar sync lets leads schedule directly",
+      "Tracking is configured across GA4, Meta Pixel, and conversion events",
+      "Weekly Monday reports deliver the metrics that matter",
+      "The site rebuild is the longest step; the CRM and tracking layer is wired up in the same window"
+    ],
+    "proof": [
+      "92% of leads followed up inside two minutes",
+      "Sample week: 4,182 sessions (+12.4%)",
+      "Sample week: 63 form submissions (+18.9%)",
+      "Sample week: 21 calls booked",
+      "Sample week: $38.50 cost per lead",
+      "Sample week: 34% quote-to-close rate"
+    ],
+    "faq": [
+      "How long does setup take? Most builds go live in fourteen to twenty-one business days. The site rebuild is the longest step, the CRM and tracking layer is wired up in the same window.",
+      "Do I need a CRM already? (No answer text provided on page)",
+      "What does the $400 per month cover? (No answer text provided on page)",
+      "Can the system include the AI Chat Agent or Voice Agent? (No answer text provided on page)",
+      "What if I already run Google or Meta Ads? (No answer text provided on page)"
+    ],
+    "capgRemoved": "Removed the grant/funding wrapper found on the page. Stripped the sentence: \"The Canada-Alberta Job Grant covers up to 66 percent of AI training, with up to $10,000 per trainee per year.\" Stripped the site/category framing: \"AI workforce training and digital services for Alberta operators. CAJG-eligible programs and a digital stack tuned for revenue.\" Stripped the FAQ question \"Does this qualify for the Canada-Alberta Job Grant?\" (which had no answer text on the page). All references to CAJG, Canada-Alberta Job Grant, \"66 percent / 66% covered,\" \"$10,000 per trainee per year,\" \"Alberta operators,\" and \"CAJG-eligible programs\" were excluded from the extraction. The underlying service and its real pricing ($4,000 one-time + $400/month) were kept."
+  },
+  "copy": {
+    "page": "Business Automations",
+    "route": "/services/automations",
+    "seoTitle": "Business Automation Services | Shift U",
+    "seoDescription": "We automate the manual work in your business. Connect your tools, sync your CRM, and run follow-ups on their own.",
+    "sections": [
+      {
+        "id": "hero",
+        "eyebrow": "BUSINESS AUTOMATIONS",
+        "headline": "Kill the manual work",
+        "subhead": "We connect your tools so the busywork runs on its own.",
+        "body": "Copy-paste between apps. Manual follow-ups. End-of-week reports. We automate all of it, so your team stops doing what software should.",
+        "bullets": [
+          "Connect the tools you already use",
+          "Follow-ups and data entry on autopilot",
+          "Less manual work, fewer dropped balls"
+        ],
+        "cta": "Book a call",
+        "flags": ""
+      },
+      {
+        "id": "problem",
+        "eyebrow": "THE PROBLEM",
+        "headline": "Your team is doing robot work",
+        "subhead": "The same tasks, every day, by hand.",
+        "body": "Most of the day goes to moving data around and chasing things that should chase themselves. It adds up fast.",
+        "bullets": [
+          "Copy-pasting the same info between tools",
+          "Leads that go cold while nobody follows up",
+          "Reports built by hand every single week",
+          "Mistakes from typing the same thing twice"
+        ],
+        "cta": "",
+        "flags": ""
+      },
+      {
+        "id": "what_we_automate",
+        "eyebrow": "WHAT WE AUTOMATE",
+        "headline": "We wire your tools together",
+        "subhead": "One system that talks to itself.",
+        "body": "We build the workflows that move your data and trigger your tasks, so nothing falls through the cracks.",
+        "bullets": [
+          "n8n workflows built around how you actually work",
+          "App integrations that connect your whole stack",
+          "CRM sync so every record stays current",
+          "Automatic follow-ups by email and WhatsApp",
+          "Reports that build and send themselves"
+        ],
+        "cta": "",
+        "flags": ""
+      },
+      {
+        "id": "examples",
+        "eyebrow": "EXAMPLES",
+        "headline": "What this looks like in practice",
+        "subhead": "Three automations we build often.",
+        "bullets": [
+          "Lead capture to CRM: a new form or DM creates the contact, tags it, and starts the follow-up. No typing.",
+          "Booking to reminders: a booked call lands on the calendar and fires reminders, so no-shows drop.",
+          "Weekly report on autopilot: numbers pull from your tools and land in your inbox every Monday."
+        ],
+        "cta": "",
+        "flags": ""
+      },
+      {
+        "id": "proof",
+        "eyebrow": "PROOF",
+        "headline": "Hours back, every week",
+        "subhead": "The manual work disappears, the time comes back.",
+        "body": "Our automations save teams real hours they used to spend on copy-paste and follow-up.",
+        "bullets": [
+          "[PLACEHOLDER: X hours saved per week per client]",
+          "[PLACEHOLDER: X automations live in production]",
+          "[PLACEHOLDER: short result quote from a client]"
+        ],
+        "cta": "",
+        "flags": "Contains placeholders: hours saved, automations live, client quote. Confirm real numbers before publishing."
+      },
+      {
+        "id": "faq",
+        "eyebrow": "FAQ",
+        "headline": "Questions before you start",
+        "subhead": "",
+        "bullets": [
+          "Will this work with my tools? Most likely yes. We connect the apps you already use, no need to switch platforms.",
+          "How long does it take? Simple automations go live in days, larger systems in 2-3 weeks. [REVIEW: confirm timeline]",
+          "What if something breaks? We stay after launch. We monitor, fix, and adjust as your business changes."
+        ],
+        "cta": "",
+        "flags": "[REVIEW: confirm delivery timeline in FAQ answer]"
+      },
+      {
+        "id": "cta",
+        "eyebrow": "GET STARTED",
+        "headline": "Let's automate your busywork",
+        "subhead": "Book a call and we map what to automate first.",
+        "body": "Tell us where the manual work hurts most. We show you what we can take off your plate.",
+        "cta": "Book a call",
+        "flags": ""
+      }
+    ]
+  }
+}

@@ -1,0 +1,264 @@
+@import url("https://api.fontshare.com/v2/css?f[]=satoshi@400,500,700,900&display=swap");
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-satoshi: "Satoshi", system-ui, sans-serif;
+  color-scheme: light;
+
+  /* Light theme tokens (RGB triplets for tailwind alpha-value) */
+  --bg: 255 255 255;
+  --card: 255 255 255;
+  --surface: 246 247 251;
+  --surface-2: 238 241 248;
+  --fg: 16 16 63;
+  --fg-soft: 42 42 82;
+  --muted: 91 100 120;
+  --muted-soft: 138 146 168;
+  --ink-dark: 11 11 46;
+  --hair: rgba(16, 16, 63, 0.08);
+  --grid-line: rgba(16, 16, 63, 0.09);
+  --dot: rgba(16, 16, 63, 0.13);
+
+  /* Claymorphism (matte, premium navy). Light pair. */
+  --clay-surface: 248 249 253;
+  --clay-hi: rgba(255, 255, 255, 0.95);
+  --clay-lo: rgba(16, 16, 63, 0.10);
+  --clay-drop: rgba(16, 16, 63, 0.18);
+  --clay-glow: rgba(0, 62, 253, 0.22);
+}
+
+.dark {
+  color-scheme: dark;
+  --bg: 8 9 24;
+  --card: 19 21 43;
+  --surface: 13 15 35;
+  --surface-2: 24 26 52;
+  --fg: 237 239 246;
+  --fg-soft: 205 210 224;
+  --muted: 156 164 186;
+  --muted-soft: 120 128 150;
+  --ink-dark: 4 5 18;
+  --hair: rgba(255, 255, 255, 0.1);
+  --grid-line: rgba(0, 62, 253, 0.22);
+  --dot: rgba(255, 255, 255, 0.1);
+
+  /* Claymorphism dark pair (dark is NOT the inverse of light: low-opacity
+     highlight + soft blue glow so matte surfaces don't go muddy). */
+  --clay-surface: 22 24 49;
+  --clay-hi: rgba(255, 255, 255, 0.06);
+  --clay-lo: rgba(0, 0, 0, 0.5);
+  --clay-drop: rgba(0, 0, 0, 0.55);
+  --clay-glow: rgba(0, 62, 253, 0.30);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    @apply bg-base text-ink font-sans antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  ::selection {
+    background: rgba(0, 62, 253, 0.16);
+    color: #10103f;
+  }
+
+  h1, h2, h3 {
+    @apply font-display;
+    text-wrap: balance;
+  }
+
+  /* Tight, negative-tracked display per Visual DNA */
+  h1 { letter-spacing: -0.03em; line-height: 1.05; }
+  h2 { letter-spacing: -0.02em; line-height: 1.15; }
+  h3 { letter-spacing: -0.01em; line-height: 1.28; }
+
+  p { text-wrap: pretty; }
+
+  :focus-visible {
+    outline: 2px solid #003efd;
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+  /* Attio-style icon chip: soft tinted rounded square */
+  .icon-chip {
+    @apply grid place-items-center rounded-chip;
+    width: 42px;
+    height: 42px;
+    background: linear-gradient(135deg, rgba(0, 62, 253, 0.12), rgba(0, 62, 253, 0.05));
+    color: #003efd;
+  }
+  .icon-chip svg { width: 20px; height: 20px; stroke-width: 1.5; }
+
+  .icon-chip-lg { width: 56px; height: 56px; }
+  .icon-chip-lg svg { width: 26px; height: 26px; }
+
+  /* Eyebrow label */
+  .eyebrow {
+    @apply font-sans uppercase text-eyebrow font-semibold text-blue;
+  }
+
+  /* Mesh/glow backdrop used behind hero + dark sections */
+  .mesh-glow {
+    background:
+      radial-gradient(60% 50% at 50% 0%, rgba(0, 62, 253, 0.10), transparent 70%),
+      radial-gradient(40% 40% at 85% 20%, rgba(43, 91, 255, 0.08), transparent 70%);
+  }
+}
+
+@layer components {
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, var(--hair) 1px, transparent 1px),
+      linear-gradient(to bottom, var(--hair) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+}
+
+@keyframes gridpan {
+  from { background-position: 0 0; }
+  to { background-position: 48px 48px; }
+}
+.animate-gridpan {
+  animation: gridpan 22s linear infinite;
+}
+
+.dot-grid {
+  background-image: radial-gradient(var(--dot) 1.4px, transparent 1.4px);
+  background-size: 24px 24px;
+}
+
+@keyframes auroraA {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(9%, 7%) scale(1.18); }
+}
+@keyframes auroraB {
+  0%, 100% { transform: translate(0, 0) scale(1.1); }
+  50% { transform: translate(-8%, 10%) scale(0.95); }
+}
+@keyframes auroraC {
+  0%, 100% { transform: translate(0, 0) scale(1); }
+  50% { transform: translate(6%, -9%) scale(1.22); }
+}
+.aurora-a { animation: auroraA 18s ease-in-out infinite; }
+.aurora-b { animation: auroraB 22s ease-in-out infinite; }
+.aurora-c { animation: auroraC 26s ease-in-out infinite; }
+
+/* ---- Claymorphism surfaces (matte, premium navy/blue) ---- */
+@layer components {
+  .clay {
+    background: rgb(var(--clay-surface));
+    border-radius: 28px;
+    box-shadow:
+      0 22px 48px -18px var(--clay-drop),
+      inset 2px 2px 6px var(--clay-hi),
+      inset -3px -3px 8px var(--clay-lo);
+  }
+  .clay-sm {
+    border-radius: 20px;
+    box-shadow:
+      0 12px 28px -14px var(--clay-drop),
+      inset 1.5px 1.5px 4px var(--clay-hi),
+      inset -2px -2px 6px var(--clay-lo);
+  }
+  /* Electric-blue accent clay (CTAs, the "Yes" button, featured tier) */
+  .clay-blue {
+    background: linear-gradient(145deg, #2b5bff, #003efd);
+    color: #fff;
+    box-shadow:
+      0 20px 44px -16px var(--clay-glow),
+      inset 2px 2px 6px rgba(255, 255, 255, 0.32),
+      inset -3px -3px 8px rgba(0, 18, 90, 0.45);
+  }
+  /* Pressable depth for clay buttons */
+  .clay-pressable {
+    transition: transform 0.12s ease, box-shadow 0.12s ease;
+  }
+  .clay-pressable:active {
+    transform: translateY(1.5px) scale(0.99);
+    box-shadow:
+      0 8px 18px -14px var(--clay-drop),
+      inset 2px 2px 7px var(--clay-lo),
+      inset -2px -2px 6px var(--clay-hi);
+  }
+}
+
+/* Fractal-noise grain to kill banding on navy gradients + add matte texture.
+   Apply over dark/gradient surfaces; keep opacity low. */
+.grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+/* The Field: fixed full-viewport background layer host */
+.field-fixed {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  pointer-events: none;
+  overflow: hidden;
+}
+
+/* Lenis smooth-scroll base (prevents double-smoothing with html scroll-behavior) */
+html.lenis,
+html.lenis body {
+  height: auto;
+}
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+/* CPU architecture: traveling light circles along the circuit paths
+   (offset-path per line; the registry component ships no animation CSS). */
+@keyframes cpu-flow {
+  0% { offset-distance: 0%; opacity: 0; }
+  10% { opacity: 1; }
+  85% { opacity: 1; }
+  100% { offset-distance: 100%; opacity: 0; }
+}
+.cpu-line-1 { offset-path: path("M 10 20 h 79.5 q 5 0 5 5 v 24"); animation: cpu-flow 4.6s linear infinite; animation-delay: .2s; }
+.cpu-line-2 { offset-path: path("M 180 10 h -69.7 q -5 0 -5 5 v 24"); animation: cpu-flow 5.4s linear infinite; animation-delay: 1.1s; }
+.cpu-line-3 { offset-path: path("M 130 20 v 21.8 q 0 5 -5 5 h -10"); animation: cpu-flow 4.2s linear infinite; animation-delay: .5s; }
+.cpu-line-4 { offset-path: path("M 170 80 v -21.8 q 0 -5 -5 -5 h -50"); animation: cpu-flow 6s linear infinite; animation-delay: 1.6s; }
+.cpu-line-5 { offset-path: path("M 135 65 h 15 q 5 0 5 5 v 10 q 0 5 -5 5 h -39.8 q -5 0 -5 -5 v -20"); animation: cpu-flow 5.2s linear infinite; animation-delay: .9s; }
+.cpu-line-6 { offset-path: path("M 94.8 95 v -36"); animation: cpu-flow 3.8s linear infinite; animation-delay: 1.3s; }
+.cpu-line-7 { offset-path: path("M 88 88 v -15 q 0 -5 -5 -5 h -10 q -5 0 -5 -5 v -5 q 0 -5 5 -5 h 14"); animation: cpu-flow 5.6s linear infinite; animation-delay: .4s; }
+.cpu-line-8 { offset-path: path("M 30 30 h 25 q 5 0 5 5 v 6.5 q 0 5 5 5 h 20"); animation: cpu-flow 4.8s linear infinite; animation-delay: 1s; }
+
+/* feed/audit reveal */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: none; }
+}
+
+/* Aceternity spotlight sweep-in */
+@keyframes spotlight {
+  0% { opacity: 0; transform: translate(-72%, -62%) scale(0.5); }
+  100% { opacity: 1; transform: translate(-50%, -40%) scale(1); }
+}
+.animate-spotlight { animation: spotlight 2s ease 0.75s 1 forwards; }
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}

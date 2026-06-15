@@ -1,0 +1,54 @@
+{
+  "target": "services/branding",
+  "extract": null,
+  "copy": {
+    "page": "Branding",
+    "route": "/services/branding",
+    "seoTitle": "Branding & Identity Design | Shift U",
+    "seoDescription": "A brand people trust at first glance. Logo, color, type, and a clear guide so your business looks the same everywhere.",
+    "sections": [
+      {
+        "id": "hero",
+        "eyebrow": "BRANDING",
+        "headline": "A brand people trust on sight",
+        "subhead": "Look like the business you actually are.",
+        "body": "We build the identity that makes people take you seriously. A clear logo, colors, and type that work everywhere you show up.",
+        "cta": "Book a call",
+        "flags": ""
+      },
+      {
+        "id": "what_we_do",
+        "eyebrow": "WHAT YOU GET",
+        "headline": "Everything your brand needs to look sharp",
+        "subhead": "One system. Used the same way every time.",
+        "body": "No guessing which font to use or which blue is right. You get the pieces and the rules to apply them.",
+        "bullets": [
+          "Brand identity built around how you sell",
+          "Logo in every format you will need",
+          "Color and type system that holds up",
+          "Brand guide so it stays consistent"
+        ],
+        "flags": ""
+      },
+      {
+        "id": "approach",
+        "eyebrow": "HOW WE WORK",
+        "headline": "Built to fit, not to win awards",
+        "subhead": "Practical design that does a job.",
+        "bullets": [
+          "We start with your customer, not a mood board",
+          "Every choice ties back to the sale",
+          "Ready to use on site, ads, and WhatsApp"
+        ],
+        "flags": ""
+      },
+      {
+        "id": "cta",
+        "headline": "Ready to look the part?",
+        "subhead": "Tell us about your business. We will show you what your brand could be.",
+        "cta": "Book a call",
+        "flags": ""
+      }
+    ]
+  }
+}

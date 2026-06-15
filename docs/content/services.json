@@ -1,0 +1,116 @@
+{
+  "target": "services",
+  "extract": {
+    "route": "/services",
+    "type": "hub",
+    "name": "Services (Shift U)",
+    "summary": "A services hub page presenting six offerings (Landing Pages, Full Website, Google and Meta Ads, AI Chat Agent, Voice Agent, Conversion System) that connect a business's site, ads and AI into one revenue loop. Each service has fixed scope, written deadlines, a start price, and a delivery timeline. Clients can start with one service and stack more as revenue earns it.",
+    "tagline": "Six services, one revenue loop across your site, your ads and your AI.",
+    "pricing": "Landing Pages: $350 one-time. Full Website: 3 to 10 pages quoted by scope (shown as \"Quoted\"). Google and Meta Ads: $300 per month, plus ad spend. AI Chat Agent: $150 to $250 per month. Voice Agent: per seat quoted by call volume (shown as \"Per seat\"). Conversion System: quoted (site plus CRM plus attribution). Side-by-side \"Fixed start price\" row: Landing Pages $350, Full Website Quoted, Ads $300/mo, Chat Agent $150/mo, Voice Agent Per seat, Conversion System Quoted.",
+    "included": [
+      "Landing Pages: One conversion page, fully written and designed",
+      "Landing Pages: Custom design system tuned to your brand",
+      "Landing Pages: Form, analytics and tracking wired in",
+      "Landing Pages: Mobile speed under 2 seconds",
+      "Full Website: Three to ten pages, shared design system",
+      "Full Website: SEO foundation across every page",
+      "Full Website: CMS or static, whichever fits your team",
+      "Full Website: Launch checklist and post-launch support",
+      "Google and Meta Ads: Account build, audiences and creative",
+      "Google and Meta Ads: Conversion tracking on your site and CRM",
+      "Google and Meta Ads: Weekly optimization, monthly written report",
+      "Google and Meta Ads: Month to month, cancel anytime",
+      "AI Chat Agent: Trained on your offers, pricing and FAQs",
+      "AI Chat Agent: Lead capture, qualification and routing",
+      "AI Chat Agent: Calendar booking and CRM handoff",
+      "AI Chat Agent: Monthly conversation review and tuning",
+      "Voice Agent: Inbound voice agent on your business line",
+      "Voice Agent: Custom voice, script and objection handling",
+      "Voice Agent: Booking, transfer and warm handoff",
+      "Voice Agent: Call recordings, transcripts and analytics",
+      "Conversion System: Site and pages aligned to one conversion path",
+      "Conversion System: CRM unified with your ads and inbox",
+      "Conversion System: Attribution from first touch to closed won",
+      "Conversion System: Quarterly read-out tied to revenue, not clicks"
+    ],
+    "keyPoints": [
+      "Hero headline: Six services, one revenue loop across your site, your ads and your AI.",
+      "Eyebrow: SERVICES",
+      "Section: WHAT WE SHIP - intro: Six services, fixed scope, written deadlines.",
+      "Landing Pages tagline: A single conversion page built around one offer, one audience and one action.",
+      "Full Website tagline: Three to ten pages designed end to end.",
+      "Google and Meta Ads tagline: Paid acquisition managed monthly with attribution baked in.",
+      "AI Chat Agent tagline: A chat agent trained on your business, deployed on your site.",
+      "Voice Agent tagline: AI calls and bookings handled around the clock.",
+      "Conversion System tagline: Site, CMS and attribution tied into one revenue loop.",
+      "WHY THIS STACK section quote (Joshua, Sales and Discovery Lead): A page without ads dies quietly. Ads without a page light money on fire. The stack is the win, not any single piece of it.",
+      "SIDE BY SIDE section intro: Pick the service that closes the leak you have today.",
+      "Delivery timelines: Landing Pages live in under 7 business days; Full Website two to four weeks, scoped at kickoff; Ads live in 5 business days from kickoff; Chat Agent trained and live in 5 business days; Voice Agent trained and live in 10 business days; Conversion System four to eight weeks, scoped at kickoff.",
+      "Secondary CTAs / buttons: Book a discovery call | See pricing | Explore [Service Name]",
+      "Side-by-side comparison columns: Live in under 7 days, Custom design system, Lead capture and routing, Attribution to revenue, Calendar booking, 24/7 coverage.",
+      "Stacking model: most clients start with a landing page or an ad account, prove a return, then add chat, voice and the full conversion system as revenue earns it; every service is built to plug in cleanly on day one or six months in."
+    ],
+    "proof": [
+      "Testimonial / quote from Joshua, Sales and Discovery Lead: 'A page without ads dies quietly. Ads without a page light money on fire. The stack is the win, not any single piece of it.'",
+      "Stated performance claim: Landing page mobile speed under 2 seconds",
+      "No star ratings, client counts, or numeric metrics were present on the page"
+    ],
+    "faq": [
+      "Q: Can I start with one service and stack more later? A: Yes. Most clients start with either a landing page or an ad account, prove a return, then add chat, voice and the full conversion system as revenue earns it. Every service is built to plug in cleanly on day one or six months in.",
+      "Q: Do you require a long contract? (answer collapsed / not rendered in page HTML)",
+      "Q: Who owns the work after delivery? (answer collapsed / not rendered in page HTML)",
+      "Q: What if I am not sure which service I need? (answer collapsed / not rendered in page HTML)",
+      "Q: Do you work outside Edmonton or Alberta? (answer collapsed / not rendered in page HTML)"
+    ],
+    "capgRemoved": "Stripped the following grant/funding content found on the page: (1) The FAQ question \"How does the Canada-Alberta Job Grant apply here?\" and its (collapsed) answer were removed entirely. (2) The verbatim claim \"The Canada-Alberta Job Grant covers up to 66 percent of AI training, with up to $10,000 per trainee per year\" and the phrase \"funded through 2028\" were removed. (3) The \"CAJG eligible when paired with training\" column/row in the SIDE BY SIDE comparison table was removed from the included/comparison content. (4) Any \"Alberta operators / grant-eligible\" framing was excluded. The underlying services and their real prices ($350 Landing Pages, $300/mo Ads, $150 to $250/mo Chat Agent, plus the quoted/per-seat items) and timelines were kept intact; only the grant-funding wrapper was removed."
+  },
+  "copy": {
+    "page": "Services Hub",
+    "route": "/services",
+    "seoTitle": "AI & Web Services | Shift U",
+    "seoDescription": "Websites, WhatsApp AI agents, and automations that bring more leads and less manual work. One team, built and supported end to end.",
+    "sections": [
+      {
+        "id": "hero",
+        "eyebrow": "WHAT WE DO",
+        "headline": "Your site and the AI behind it",
+        "subhead": "One team builds the website, the WhatsApp agent, and the automations that run after launch.",
+        "body": "Good tech, real results. More leads coming in, less manual work going out.",
+        "cta": "Book a call"
+      },
+      {
+        "id": "services_grid",
+        "eyebrow": "SERVICES",
+        "headline": "Five ways we move your business",
+        "subhead": "Pick one or stack them. Everything connects under one roof.",
+        "bullets": [
+          "Websites & Landing Pages: built once or as a monthly subscription, no big upfront.",
+          "WhatsApp AI Agents: answers, qualifies, and books appointments 24/7.",
+          "Business Automations: connect your tools and kill the manual busywork.",
+          "Paid Ads & Marketing: Meta and Google campaigns that bring real leads.",
+          "Branding: identity, logo, and a system that looks the part."
+        ],
+        "cta": "See our work"
+      },
+      {
+        "id": "why_us",
+        "eyebrow": "WHY SHIFT U",
+        "headline": "Built, connected, and supported",
+        "subhead": "The three reasons clients stop shopping around.",
+        "bullets": [
+          "Site plus AI under one roof, no juggling vendors.",
+          "Website-as-a-Service: pay monthly, cancel anytime, no big upfront.",
+          "Fast to launch, and we stay on after go-live."
+        ]
+      },
+      {
+        "id": "cta",
+        "eyebrow": "NEXT STEP",
+        "headline": "Tell us where you lose leads",
+        "subhead": "Fifteen minutes. We map the site, agent, or automation that fixes it.",
+        "body": "No pressure, no jargon. You leave the call knowing exactly what to build first.",
+        "cta": "Book a call"
+      }
+    ]
+  }
+}

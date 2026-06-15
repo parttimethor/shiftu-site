@@ -1,0 +1,166 @@
+{
+  "target": "services/full-website",
+  "extract": {
+    "route": "/services/full-website",
+    "type": "service",
+    "name": "Full Website Build, 3 to 10 Pages",
+    "tagline": "Three to ten pages, designed around one conversion engine.",
+    "summary": "A done-for-you multi-page website build (3 to 10+ pages) built in Next.js, mapped to a single conversion goal, and handed off fully owned by the client. Tiered one-time pricing covers everything from a 3-5 page starter site to a custom 10+ page build, with low-cost hosting and a sub-six-week delivery window.",
+    "pricing": "Starter Site (3-5 pages): $1,500 one-time, plus hosting. Growth Site (6-10 pages): $2,500 one-time, plus hosting. Custom Build (10+ pages): From $5,000, scoped per project. Hosting: $0 to $20 per month.",
+    "included": [
+      "Sitemap and conversion architecture",
+      "Custom design system",
+      "Hand-built pages, mobile first",
+      "Technical SEO baseline",
+      "Responsive across every screen",
+      "Core Web Vitals tuned",
+      "Privacy and Terms included",
+      "Lead capture and form routing",
+      "Starter tier: Two rounds of revisions",
+      "Growth tier: Three rounds of revisions",
+      "Growth tier: AI chat agent integration ready",
+      "Custom tier: Discovery workshop included"
+    ],
+    "keyPoints": [
+      "Hero sub-headline: Your home page, your service pages, your about, your contact. Every page mapped to a clear decision your customer needs to make. Built in Next.js, owned by you, deployed in under six weeks.",
+      "Built for conversion, not awards",
+      "Owned, not rented",
+      "Operator-run, not agency-run",
+      "AI workflows built in",
+      "Process Step 1, Discovery and research (Days 1-3)",
+      "Process Step 2, Sitemap and copy (Days 4-8)",
+      "Process Step 3, Design system and visuals (Days 9-14)",
+      "Process Step 4, Build and QA (Days 15-22)",
+      "Process Step 5, Launch and handoff (Day 23+)",
+      "Section headings on page: What is included, Why this build, Process, Pricing tiers, FAQ, Next step",
+      "Final CTA: Book a discovery call / See all services"
+    ],
+    "proof": [
+      "Maximum build window: 0 wks to 6 wks",
+      "95+ Lighthouse score on every page",
+      "LCP under 2.5 seconds, INP under 200ms, CLS under 0.1"
+    ],
+    "faq": [
+      "Q: How long does a full website take to build? A: Starter Site lands in three to four weeks. Growth Site lands in four to six weeks. Custom Build timelines are scoped during discovery and depend on the integrations you need.",
+      "Q: Do I need to provide all the copy? (answer in collapsed accordion, not exposed in extraction)",
+      "Q: What is included in hosting? (answer in collapsed accordion, not exposed in extraction)",
+      "Q: Can you migrate my existing content? (answer in collapsed accordion, not exposed in extraction)",
+      "Q: What if I need edits after launch? (answer in collapsed accordion, not exposed in extraction)",
+      "Q: Will the site work with my CRM and marketing tools? (answer in collapsed accordion, not exposed in extraction)"
+    ],
+    "capgRemoved": "Found and STRIPPED two grant/funding statements from the page: (1) \"The Canada-Alberta Job Grant covers up to 66 percent of AI training, with up to $10,000 per trainee per year.\" (2) \"The Canada-Alberta Job Grant does not apply to digital services, but your training spend can free up the budget that does.\" Both references to the Canada-Alberta Job Grant, the 66 percent coverage, and the $10,000-per-trainee figure were removed. The underlying website-build service and its real pricing ($1,500 / $2,500 / from $5,000 / $0-$20 hosting) were kept intact."
+  },
+  "copy": {
+    "page": "Websites & Landing Pages",
+    "route": "/services/websites",
+    "seoTitle": "Websites That Sell | Shift U",
+    "seoDescription": "We build websites and the AI behind them. One premium build or a monthly plan with hosting, updates, and support. Book a call.",
+    "sections": [
+      {
+        "id": "hero",
+        "eyebrow": "WEBSITES & LANDING PAGES",
+        "headline": "A website that sells, built fast",
+        "subhead": "Not a brochure. A page that turns visitors into booked calls.",
+        "body": "We design it, build it, and wire in the AI that follows up. Live in days, not months.",
+        "cta": "Book a call",
+        "flags": "Secondary CTA available: 'See our work'."
+      },
+      {
+        "id": "problem",
+        "eyebrow": "THE COST OF A BAD SITE",
+        "headline": "A dead site loses leads daily",
+        "subhead": "Every problem below is a customer who booked with someone else.",
+        "bullets": [
+          "Loads slow, so people bounce before they read",
+          "Looks dated, so they doubt you before they call",
+          "No clear next step, so nobody takes action",
+          "Goes quiet after launch, then breaks"
+        ],
+        "body": "Most sites are pretty and silent. Yours should book the call while you sleep."
+      },
+      {
+        "id": "two_modes",
+        "eyebrow": "TWO WAYS TO BUILD",
+        "headline": "Buy it once, or pay monthly",
+        "subhead": "Same quality. Pick the model that fits your cash flow.",
+        "body": "One-shot is a premium build you own outright. Website-as-a-Service spreads the cost into a low monthly fee with everything handled.",
+        "bullets": [
+          "One-shot build: custom design, you own it, single upfront price",
+          "One-shot fit: you have budget now and want full ownership",
+          "Website-as-a-Service: low monthly fee, no big upfront, cancel anytime",
+          "WaaS fit: you want it live fast with zero maintenance headaches",
+          "Both ship fast and both include the AI follow-up layer"
+        ],
+        "flags": "two_modes is a side-by-side comparison block. Render One-shot and WaaS as two columns."
+      },
+      {
+        "id": "whats_included",
+        "eyebrow": "WEBSITE-AS-A-SERVICE",
+        "headline": "One monthly fee covers everything",
+        "subhead": "No surprise invoices. No chasing a developer who vanished.",
+        "bullets": [
+          "Custom design built around your offer",
+          "Hosting and your domain, set up and managed",
+          "Updates and content changes when you need them",
+          "Maintenance, security, and uptime handled for you",
+          "Real support after launch, cancel anytime"
+        ],
+        "body": "We stay on after go-live. The site keeps working and so do we."
+      },
+      {
+        "id": "features",
+        "eyebrow": "BUILT TO CONVERT",
+        "headline": "Fast, mobile, and built to sell",
+        "subhead": "Every page is engineered for the click, not just the look.",
+        "bullets": [
+          "Loads in under two seconds, so visitors stay",
+          "Built around one clear action per page",
+          "Flawless on phones, where most traffic lives",
+          "SEO done right, so the right people find you"
+        ]
+      },
+      {
+        "id": "proof",
+        "eyebrow": "REAL RESULTS",
+        "headline": "Numbers our clients actually see",
+        "subhead": "Proof, not promises. Swap these for your live figures.",
+        "bullets": [
+          "[PLACEHOLDER: X% more booked calls in the first 30 days]",
+          "[PLACEHOLDER: site live in X days from kickoff]",
+          "[PLACEHOLDER: X leads captured per month, on autopilot]",
+          "[PLACEHOLDER: client quote, full name, business]"
+        ],
+        "flags": "All four bullets are placeholders. Replace with real metrics and a named testimonial before launch."
+      },
+      {
+        "id": "pricing_teaser",
+        "eyebrow": "PRICING",
+        "headline": "Clear pricing, no surprises",
+        "subhead": "Pick a one-time build or a monthly plan. Full breakdown on the pricing page.",
+        "body": "One-shot builds start at [REVIEW: $X]. Website-as-a-Service starts at [REVIEW: $X per month].",
+        "cta": "See full pricing",
+        "flags": "Both prices are [REVIEW]. CTA points to /pricing. Confirm starting numbers before publishing."
+      },
+      {
+        "id": "faq",
+        "eyebrow": "QUESTIONS",
+        "headline": "Answers before you ask",
+        "bullets": [
+          "How fast can it go live? Most builds ship in days, not weeks. [PLACEHOLDER: typical timeline]",
+          "Can I cancel the monthly plan? Yes. Website-as-a-Service is cancel anytime, no lock-in.",
+          "Do I own the site? One-shot builds are yours outright. WaaS stays managed by us while you subscribe.",
+          "What about the AI part? Every site can include a WhatsApp agent that answers and books leads 24/7."
+        ],
+        "flags": "Timeline answer has a [PLACEHOLDER]. Confirm exact turnaround before publishing."
+      },
+      {
+        "id": "cta",
+        "eyebrow": "READY WHEN YOU ARE",
+        "headline": "Get a site that books the call",
+        "subhead": "Tell us your offer. We will show you exactly what we would build.",
+        "cta": "Book a call",
+        "flags": "Secondary CTA available: 'See our work'."
+      }
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "target": "programs/private-team-training",
+  "extract": {
+    "route": "/programs/private-training",
+    "type": "program",
+    "name": "Private Training",
+    "tagline": "Train your whole team, shipping real work.",
+    "summary": "Private Training is a closed, 12-week custom engagement that trains up to 8 operators from a single company as Shift U Certified Operators while shipping 4 to 7 production automations live inside the client's own stack. It is the one-team alternative to the mixed-company public cohort, with side-by-side build days led by Marcus and a 30-day post-handover support window.",
+    "pricing": "$22,500 CAD per engagement. Public cohort comparison: $7,500 per operator (8 weeks).",
+    "included": [
+      "Up to 8 operators from one company trained as Shift U Certified Operators",
+      "4 to 7 production automations live inside the client's stack",
+      "12-week custom engagement mapped to your workflows",
+      "Side-by-side build days with Marcus",
+      "Operator friction map covering every role in scope",
+      "Top 6 automation candidates with hour-savings projections",
+      "30-day post-handover direct access to Marcus"
+    ],
+    "keyPoints": [
+      "Core promise: A private engagement is the only way to move a whole team off manual at once. We do not lecture, we sit beside operators and ship work that lasts.",
+      "Phase 1 (Weeks 1-3): Discovery and workflow mapping with on-site interviews",
+      "Phase 2 (Weeks 4-5): Foundations and tool stack training",
+      "Phase 3 (Weeks 6-10): Side-by-side build sprints",
+      "Phase 4 (Weeks 11-12 + 30 days): Handover, certification, and support window",
+      "Private vs public comparison: closed cohort with one team only vs mixed companies; 12 weeks vs 8 weeks; 4 to 7 production automations shipped vs 1 capstone per operator; side-by-side build days vs group sessions"
+    ],
+    "proof": [
+      "100 percent Operator Certification Pass: every completing operator earns the credential, with free remediation sessions available if needed",
+      "Zero Bottleneck Promise, 30 days after handover: direct Marcus access, with a credit issued if workflows stall beyond one business day"
+    ],
+    "faq": [
+      "Public cohort vs private engagement - Cohort: mixed companies (public) vs closed, one team only (private)",
+      "Duration: 8 weeks (public) vs 12 weeks (private)",
+      "Automations shipped: 1 capstone per operator (public) vs 4 to 7 production automations (private)",
+      "Facilitator time: group sessions (public) vs side-by-side build days (private)",
+      "Investment: $7,500/operator (public) vs $22,500/engagement (private)"
+    ],
+    "capgRemoved": "Stripped all government grant/funding framing from the source page. Removed verbatim: the stated net-after-grant price (\"about $7,650 CAD based on the 66 percent CAJG reimbursement\"); \"The Canada-Alberta Job Grant covers up to 66 percent of AI training, with up to $10,000 per trainee per year.\"; \"CAJG eligible for the full 66 percent\"; \"66 percent reimbursed, up to $10,000 per trainee per year\"; \"the grant covers 66 percent of training, up to $10,000 per trainee per year, funded through 2028\"; \"CAJG-eligible programs\"; the included deliverable \"CAJG application packet sent to finance team (within 24 hours)\"; and the inquiry-form requirement \"Open to applying for the Canada-Alberta Job Grant.\" The Canada-Alberta Job Grant / CAJG was referenced 5+ times. Kept the real service and its true full price of $22,500 CAD per engagement; only the grant-funding wrapper and the discounted net price were removed."
+  },
+  "copy": null
+}

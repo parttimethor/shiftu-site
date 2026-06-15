@@ -1,0 +1,117 @@
+{
+  "target": "services/google-meta-ads",
+  "extract": {
+    "route": "/services/google-meta-ads",
+    "type": "service",
+    "name": "Google + Meta Ads Management in Edmonton",
+    "tagline": "Paid ads that pay back, not just spend.",
+    "summary": "A done-for-you Google and Meta paid ads management service in Edmonton for a flat $300/month management fee, with ad spend paid by the client directly to the platforms (no markup). The team plans, launches, and tunes Google Search, Performance Max, and Meta campaigns weekly, including conversion tracking, creative testing, and a weekly report.",
+    "pricing": "$300/mo management fee. Month to month after the first 30 day build sprint. Ad spend is paid separately by the client on their own credit card, directly to Google and Meta, with no markup, no upcharge, and no hidden fee.",
+    "included": [
+      "Google Search, Performance Max and Meta in one fee",
+      "Tracking, weekly tune ups and Friday report included",
+      "14-day onboarding",
+      "7-day reporting cadence",
+      "No hidden markup on ad spend",
+      "5 fresh ad variants per platform per month",
+      "3 ad creative tests per cycle (Meta)",
+      "Weekly bid and budget adjustments",
+      "GA4 event mapping for form, call, booking",
+      "UTM hygiene setup",
+      "Weekly negative keyword list updates",
+      "Landing page copy review"
+    ],
+    "keyPoints": [
+      "We plan, launch and tune your Google Search and Meta campaigns every week",
+      "Google Search, Performance Max and Meta managed under one fee",
+      "Tracking, weekly tune ups and a Friday report are included",
+      "Month to month after the first 30 day build sprint",
+      "No hidden markup on ad spend",
+      "14-day onboarding: Days 1-3 Kickoff and account access; Days 4-7 Tracking and audit; Days 8-11 Build campaigns and creative; Days 12-14 Launch and weekly cadence begins",
+      "7-day reporting cadence"
+    ],
+    "proof": [
+      "Sample dashboard - Ad spend (30 days): $4,820",
+      "Qualified leads: 47 (+18 vs prior 30)",
+      "Cost per qualified lead: $102 (down 24%)",
+      "Booked calls: 19 (+7 vs prior 30)",
+      "Google search impression share: 62% (goal 60%)",
+      "Meta CTR, cold prospecting: 2.4% (category benchmark 1.2%)"
+    ],
+    "faq": [
+      "Q: Is the $300 monthly fee the total cost? A: No. $300 per month is the management fee. Ad spend on Google and Meta is paid by you, on your own credit card, directly to the platforms. There is no markup, no upcharge and no hidden fee in between.",
+      "Q: How much should I budget for ad spend? (answer rendered client-side, not captured)",
+      "Q: Who owns the accounts and the data? (answer rendered client-side, not captured)",
+      "Q: Is there a long term contract? (answer rendered client-side, not captured)",
+      "Q: How fast will I see results? (answer rendered client-side, not captured)",
+      "Q: Do you do creative production? (answer rendered client-side, not captured)"
+    ],
+    "capgRemoved": "STRIPPED the following grant/funding content found on the page: (1) A page-top header statement: \"The Canada-Alberta Job Grant covers up to 66 percent of AI training, with up to $10,000 per trainee per year.\" (2) A footer description: \"AI workforce training and digital services for Alberta operators. CAJG-eligible programs and a digital stack tuned for revenue.\" (3) One FAQ question titled \"Can the Canada-Alberta Job Grant cover this?\" - this entire grant-funding FAQ entry was removed and excluded from the faq array. All CAPG/CAJG, \"66 percent covered\", \"$10,000 per trainee\", and \"Alberta operators / grant-eligible\" framing was removed. The underlying ads management service and its real $300/mo price are kept intact."
+  },
+  "copy": {
+    "page": "Paid Ads",
+    "route": "/services/paid-ads",
+    "seoTitle": "Paid Ads That Pay Back | Shift U",
+    "seoDescription": "Meta and Google ads built to bring leads, not just clicks. Creative, targeting, and tracking that prove what works.",
+    "sections": [
+      {
+        "id": "hero",
+        "eyebrow": "PAID ADS & MARKETING",
+        "headline": "Ads that pay you back",
+        "subhead": "Meta and Google campaigns built around one number: cost per lead.",
+        "body": "We do not buy clicks for the sake of it. We build ads that turn spend into booked calls and real customers, then prove it with the numbers.",
+        "cta": "Book a call",
+        "flags": "none"
+      },
+      {
+        "id": "what_we_do",
+        "eyebrow": "WHAT WE DO",
+        "headline": "Meta and Google, done right",
+        "subhead": "Creative, targeting, and tracking under one roof.",
+        "body": "Most ads fail on one of three things: the creative, who sees it, or whether anyone measures it. We handle all three so your budget works.",
+        "bullets": [
+          "Creative that stops the scroll and gets the click",
+          "Targeting that reaches buyers, not browsers",
+          "Tracking set up so every lead is counted",
+          "Landing pages built to convert the traffic",
+          "Weekly reports in plain language, no jargon"
+        ],
+        "flags": "none"
+      },
+      {
+        "id": "approach",
+        "eyebrow": "HOW WE RUN IT",
+        "headline": "Test, cut, double down",
+        "subhead": "A simple loop that finds what works and kills what does not.",
+        "bullets": [
+          "Launch a few angles and let the data pick the winner",
+          "Cut what loses fast so budget is never wasted",
+          "Scale the winners and keep cost per lead low"
+        ],
+        "flags": "none"
+      },
+      {
+        "id": "proof",
+        "eyebrow": "RESULTS",
+        "headline": "We optimize for return",
+        "subhead": "The goal is not impressions. It is leads you can put a price on.",
+        "body": "Every account is judged on return on ad spend and cost per lead. We report both each week, so you always know what your money is doing.",
+        "bullets": [
+          "[PLACEHOLDER: ROAS, e.g. 4.2x return on ad spend]",
+          "[PLACEHOLDER: cost per lead, e.g. $X per booked call]",
+          "[PLACEHOLDER: client result, e.g. leads doubled in 60 days]"
+        ],
+        "flags": "All metrics are placeholders. Confirm real ROAS, cost per lead, and a client result before publishing."
+      },
+      {
+        "id": "cta",
+        "eyebrow": "GET STARTED",
+        "headline": "Turn ad spend into leads",
+        "subhead": "Tell us your goal and budget. We will tell you if ads make sense for you.",
+        "body": "No long contracts to start. A short call to check the fit, then a plan you can say yes to.",
+        "cta": "Book a call",
+        "flags": "none"
+      }
+    ]
+  }
+}
