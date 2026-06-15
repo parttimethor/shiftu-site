@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from "next/server";
 import { recordLead } from "@/lib/leads";
+import { rateLimit, clientIp } from "@/lib/rate-limit";
 
 export const runtime = "nodejs";
 
@@ -15,6 +16,14 @@ type Body = {
 };
 
 export async function POST(req: NextRequest) {
+  const rl = rateLimit(`book:${clientIp(req)}`, { windowMs: 60_000, max: 5 });
+  if (!rl.ok) {
+    return NextResponse.json(
+      { error: "Too many requests. Please wait a moment and try again." },
+      { status: 429, headers: { "retry-after": String(rl.retryAfter) } },
+    );
+  }
+
   let body: Body;
   try {
     body = (await req.json()) as Body;

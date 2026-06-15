@@ -1,6 +1,6 @@
 "use client";
 import React, { useCallback, useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, LayoutGroup } from "framer-motion";
+import { AnimatePresence, motion, LayoutGroup, useReducedMotion } from "framer-motion";
 import { cn } from "@/lib/cn";
 
 export const FlipWords = ({
@@ -14,6 +14,7 @@ export const FlipWords = ({
 }) => {
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
+  const reduceMotion = useReducedMotion();
 
   // thanks for the fix Julian - https://github.com/Julian-AT
   const startAnimation = useCallback(() => {
@@ -23,11 +24,20 @@ export const FlipWords = ({
   }, [currentWord, words]);
 
   useEffect(() => {
-    if (!isAnimating)
-      setTimeout(() => {
-        startAnimation();
-      }, duration);
-  }, [isAnimating, duration, startAnimation]);
+    if (reduceMotion || isAnimating) return;
+    const t = setTimeout(() => startAnimation(), duration);
+    return () => clearTimeout(t);
+  }, [isAnimating, duration, startAnimation, reduceMotion]);
+
+  // Reduced motion: render the first word statically — no perpetual cycling and
+  // no enter/exit transforms (WCAG 2.2.2 Pause, Stop, Hide).
+  if (reduceMotion) {
+    return (
+      <span className={cn("z-10 inline-block relative text-left text-inherit px-2", className)}>
+        {words[0]}
+      </span>
+    );
+  }
 
   return (
     <AnimatePresence
