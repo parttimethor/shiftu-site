@@ -59,14 +59,6 @@ export function Footer() {
                   <Icon name="Mail" size={16} /> {site.contact.email}
                 </a>
               </li>
-              <li>
-                <a
-                  href={site.contact.whatsapp}
-                  className="inline-flex items-center gap-2 hover:text-white"
-                >
-                  <Icon name="MessageCircle" size={16} /> WhatsApp
-                </a>
-              </li>
               <li className="inline-flex items-center gap-2">
                 <Icon name="MapPin" size={16} /> Canada
               </li>

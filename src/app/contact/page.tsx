@@ -31,12 +31,6 @@ const channels = [
     body: "Send the details and we reply with a real answer, not an auto-response.",
     cta: { label: site.contact.email, href: `mailto:${site.contact.email}` },
   },
-  {
-    icon: "MessageCircle",
-    title: "WhatsApp",
-    body: "Quick question? Message us where your customers already reach you.",
-    cta: { label: "Chat on WhatsApp", href: site.contact.whatsapp },
-  },
 ];
 
 const promises = [
@@ -104,7 +98,7 @@ export default function ContactPage() {
             title="Reach us the way you like"
             subhead="A short call beats a long email thread, but the choice is yours."
           />
-          <div className="mt-12 grid gap-6 md:grid-cols-3">
+          <div className="mt-12 grid gap-6 sm:grid-cols-2">
             {channels.map((c, i) => (
               <Pop key={c.title} delay={i * 0.08}>
                 <div className="flex h-full flex-col rounded-card border border-hair bg-card p-7 shadow-s1">
@@ -203,9 +197,9 @@ export default function ContactPage() {
 
       <CtaBand
         title="Have a quick question?"
-        subhead="Book a call or message us on WhatsApp. We answer fast and point you to the right next step."
+        subhead="Book a call and we answer fast, then point you to the right next step."
         primary={{ label: "Book a call", href: "/contact" }}
-        secondary={{ label: "Chat on WhatsApp", href: site.contact.whatsapp }}
+        secondary={null}
       />
 
       <script

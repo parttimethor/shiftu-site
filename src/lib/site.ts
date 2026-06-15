@@ -26,12 +26,7 @@ export const site = {
   },
   contact: {
     email: "hello@shiftu.ca",
-    whatsapp: "https://wa.me/0000000000", // [PLACEHOLDER: WhatsApp number — or remove the WhatsApp CTAs]
     bookingNote: "We reply within one business day.",
-  },
-  social: {
-    instagram: "#", // [PLACEHOLDER]
-    linkedin: "#", // [PLACEHOLDER]
   },
 } as const;
 
