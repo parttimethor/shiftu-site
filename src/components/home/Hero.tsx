@@ -1,6 +1,7 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
+import { useEffect, useState } from "react";
 import { Button } from "../ui/Button";
 import { Icon } from "../ui/Icon";
 import { WorkflowOrbit } from "./WorkflowOrbit";
@@ -20,6 +21,30 @@ const item = {
 // Hook / Hero beat. The raycast blue scene shows through; a 3D agent (Spline)
 // sits on the right; flip-words give the headline motion. LCP = the H1 text.
 export function Hero() {
+  const reduce = useReducedMotion();
+  const [started, setStarted] = useState(false);
+
+  useEffect(() => {
+    // Play the entrance when the intro curtain lifts, so it is actually seen.
+    // On repeat visits (intro already shown this session) or reduced motion,
+    // start immediately. A fallback timer guarantees the hero never stays hidden.
+    let seen = false;
+    try {
+      seen = sessionStorage.getItem("introSeen") === "1";
+    } catch {}
+    if (seen || reduce) {
+      setStarted(true);
+      return;
+    }
+    const onDone = () => setStarted(true);
+    window.addEventListener("shiftu:intro-done", onDone);
+    const fallback = setTimeout(() => setStarted(true), 4500);
+    return () => {
+      window.removeEventListener("shiftu:intro-done", onDone);
+      clearTimeout(fallback);
+    };
+  }, [reduce]);
+
   return (
     <section className="relative isolate flex min-h-[92vh] items-center overflow-hidden pb-20 pt-32 text-white lg:pt-40">
       <Spotlight className="-top-40 left-0 md:-top-20 md:left-60" fill="#2B5BFF" />
@@ -28,7 +53,7 @@ export function Hero() {
 
       <div className="container relative grid items-center gap-8 lg:grid-cols-[1.05fr_0.95fr]">
         {/* Copy */}
-        <motion.div variants={container} initial="hidden" animate="show">
+        <motion.div variants={container} initial="hidden" animate={started ? "show" : "hidden"}>
           <motion.p
             variants={item}
             className="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/5 px-3 py-1 text-eyebrow font-semibold uppercase tracking-[0.08em] text-blue-bright backdrop-blur-sm"
@@ -86,7 +111,7 @@ export function Hero() {
         {/* The system in motion */}
         <motion.div
           initial={{ opacity: 0 }}
-          animate={{ opacity: 1 }}
+          animate={started ? { opacity: 1 } : { opacity: 0 }}
           transition={{ duration: 0.8, delay: 0.3 }}
           className="relative"
         >
