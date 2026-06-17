@@ -13,6 +13,8 @@ export const metadata: Metadata = {
   title: "Case Study",
   description:
     "How we built the website and the AI behind it, and the results it drove for a business like yours. See the work and the numbers.",
+  // Placeholder content: keep it out of search until it holds a real case study.
+  robots: { index: false, follow: true },
 };
 
 const challenge = [

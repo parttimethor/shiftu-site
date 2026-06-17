@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { MotionConfig } from "framer-motion";
 import { GeistSans } from "geist/font/sans";
 import { GeistMono } from "geist/font/mono";
 import { Nav } from "@/components/Nav";
@@ -65,13 +66,15 @@ export default function RootLayout({
             __html: `(function(){try{var t=localStorage.getItem('theme');var d=t?t==='dark':window.matchMedia('(prefers-color-scheme: dark)').matches;if(d)document.documentElement.classList.add('dark');}catch(e){}})();`,
           }}
         />
-        <IntroOverlay />
-        <SmoothScroll>
-          <Nav />
-          <main>{children}</main>
-          <Footer />
-        </SmoothScroll>
-        <ChatWidget />
+        <MotionConfig reducedMotion="user">
+          <IntroOverlay />
+          <SmoothScroll>
+            <Nav />
+            <main>{children}</main>
+            <Footer />
+          </SmoothScroll>
+          <ChatWidget />
+        </MotionConfig>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}

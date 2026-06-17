@@ -1,20 +1,9 @@
 import { Container, Eyebrow } from "@/components/ui/Section";
-import { RevealImages, type RevealItem } from "@/components/ui/reveal-images";
 import { Button } from "@/components/ui/Button";
 
-const W = { src: "/img/workspace.jpg", alt: "" };
-const P = { src: "/img/problem-phone.jpg", alt: "" };
-const B = { src: "/img/problem-busy.jpg", alt: "" };
+const items = ["Websites", "AI Agents", "Automation", "Lead Gen", "Ecommerce"];
 
-const items: RevealItem[] = [
-  { text: "Websites", images: [W, B] },
-  { text: "AI Agents", images: [P, W] },
-  { text: "Automation", images: [B, P] },
-  { text: "Lead Gen", images: [W, P] },
-  { text: "Ecommerce", images: [B, W] },
-];
-
-// "What we build" — big words that reveal the work on hover (reveal-images).
+// "What we build" — the core build categories as a clean list.
 export function RevealBuild() {
   return (
     <section className="relative bg-base py-section">
@@ -26,8 +15,8 @@ export function RevealBuild() {
               Pick where it hurts. We build the rest.
             </h2>
             <p className="mt-4 max-w-prose text-muted">
-              Hover to see the work. Each one removes a different bottleneck, and
-              they connect into one system.
+              Each one removes a different bottleneck, and they connect into one
+              system.
             </p>
             <div className="mt-8">
               <Button href="/services" arrow>
@@ -35,7 +24,16 @@ export function RevealBuild() {
               </Button>
             </div>
           </div>
-          <RevealImages items={items} className="text-ink lg:items-end" />
+          <ul className="flex flex-col text-ink lg:items-end">
+            {items.map((text) => (
+              <li
+                key={text}
+                className="py-6 text-5xl font-black uppercase tracking-tight sm:text-7xl"
+              >
+                {text}
+              </li>
+            ))}
+          </ul>
         </div>
       </Container>
     </section>

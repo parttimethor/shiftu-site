@@ -32,14 +32,14 @@ See `.env.example`. All are server-side only (no `NEXT_PUBLIC_`).
 | `RESEND_API_KEY` | Resend API key for the email ping | Email notification |
 | `CONTACT_TO` | Inbox that receives lead emails (your Gmail) | Email notification |
 | `CONTACT_FROM` | Sender; defaults to `onboarding@resend.dev` | — |
-| `ANTHROPIC_API_KEY` | Powers the on-site chat widget (Claude Haiku) | Chat replies |
+| _(none)_ | The chat widget runs on a built-in rule-based responder, no key, no cost | — |
 
 ## Deploy to Vercel (shiftu.ca)
 
 1. **Connect the repo** — Vercel ▸ Add New ▸ Project ▸ import `parttimethor/shiftu-site`. Framework auto-detects as Next.js (config in `vercel.json`). No build settings to change.
 2. **Set the leads tracker** — follow `scripts/leads-tracker.gs` (≈3 min) to create the Sheet + deploy the Apps Script, then add `LEADS_WEBHOOK_URL` and `LEADS_WEBHOOK_TOKEN` in Vercel ▸ Settings ▸ Environment Variables.
 3. **(Optional) Email ping** — add `RESEND_API_KEY` + `CONTACT_TO` (your Gmail). To send from `noreply@shiftu.ca`, verify the domain in Resend and set `CONTACT_FROM`.
-4. **(Optional) Chat** — add `ANTHROPIC_API_KEY`.
+4. **Chat** — nothing to configure; the widget runs on a built-in rule-based responder (`src/lib/chat-responder.ts`), no key and no per-message cost.
 5. **Add the domain** — Vercel ▸ Settings ▸ Domains ▸ add `shiftu.ca` (and `www.shiftu.ca`), then point DNS at Vercel per its instructions.
 6. **Display email** — the site shows `hello@shiftu.ca`. Set up a forward from that address to your Gmail at your domain/registrar, or change `site.contact.email` in `src/lib/site.ts`.
 7. **Deploy** — push to the production branch (or promote a deployment). Submit the contact form once to confirm a row lands in the Sheet.

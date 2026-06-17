@@ -69,7 +69,16 @@ export function IntroOverlay() {
       return;
     }
     document.body.style.overflow = "hidden";
-    timers.current.push(setTimeout(() => setLeaving(true), T.holdUntil * 1000));
+    timers.current.push(
+      setTimeout(() => {
+        setLeaving(true);
+        // Cue the hero entrance as the curtain lifts, so the page's load-in
+        // animation is actually seen instead of finishing hidden behind it.
+        try {
+          window.dispatchEvent(new Event("shiftu:intro-done"));
+        } catch {}
+      }, T.holdUntil * 1000),
+    );
     timers.current.push(
       setTimeout(() => {
         try {

@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 const input =
   "mt-2 w-full rounded-tile border border-hair bg-card px-4 py-3 text-[15px] text-ink shadow-s1 outline-none transition-colors placeholder:text-muted-soft focus:border-blue";
 
-export function BookCallForm() {
+export function BookCallForm({ options = [] }: { options?: string[] }) {
   const [status, setStatus] = useState<"idle" | "sending" | "ok" | "error">("idle");
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -22,6 +22,7 @@ export function BookCallForm() {
           name: f.get("name"),
           email: f.get("email"),
           phone: f.get("phone"),
+          need: f.get("need"),
           preferred: f.get("preferred"),
           notes: f.get("notes"),
         }),
@@ -40,8 +41,8 @@ export function BookCallForm() {
         </span>
         <h3 className="mt-4 text-xl font-bold text-ink">Request received</h3>
         <p className="mt-2 text-muted">
-          We will confirm your call and send a calendar invite to your email
-          shortly. Talk soon.
+          A real person will reply within one business day to confirm a time and
+          send a plan and a price. Talk soon.
         </p>
       </div>
     );
@@ -60,13 +61,29 @@ export function BookCallForm() {
         </label>
       </div>
 
+      {options.length > 0 && (
+        <label className="block">
+          <span className="text-sm font-medium text-ink">What can we help with?</span>
+          <select name="need" defaultValue="" className={input}>
+            <option value="" disabled>
+              Choose one
+            </option>
+            {options.map((o) => (
+              <option key={o} value={o}>
+                {o}
+              </option>
+            ))}
+          </select>
+        </label>
+      )}
+
       <div className="grid gap-5 sm:grid-cols-2">
         <label className="block">
           <span className="text-sm font-medium text-ink">Phone (optional)</span>
           <input type="tel" name="phone" placeholder="(555) 555-5555" className={input} />
         </label>
         <label className="block">
-          <span className="text-sm font-medium text-ink">Preferred time</span>
+          <span className="text-sm font-medium text-ink">Preferred time (optional)</span>
           <input type="datetime-local" name="preferred" className={input} />
         </label>
       </div>
@@ -81,7 +98,7 @@ export function BookCallForm() {
         disabled={status === "sending"}
         className="clay-blue clay-pressable inline-flex h-12 items-center justify-center gap-2 rounded-full px-6 text-base font-medium text-white disabled:opacity-60"
       >
-        {status === "sending" ? "Booking…" : "Book the call"}
+        {status === "sending" ? "Sending…" : "Book the call"}
         <Icon name="ArrowRight" size={18} />
       </button>
 

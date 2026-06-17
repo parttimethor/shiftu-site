@@ -16,7 +16,7 @@
   --fg: 16 16 63;
   --fg-soft: 42 42 82;
   --muted: 91 100 120;
-  --muted-soft: 138 146 168;
+  --muted-soft: 100 110 134; /* AA: ~4.7:1 on light surfaces (was 138 146 168 = 3.11:1) */
   --ink-dark: 11 11 46;
   --hair: rgba(16, 16, 63, 0.08);
   --grid-line: rgba(16, 16, 63, 0.09);

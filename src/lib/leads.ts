@@ -32,7 +32,7 @@ export type Lead = {
 type ChannelResult = { configured: boolean; delivered: boolean; reason?: string };
 
 export type RecordResult = {
-  ok: boolean; // false only when a configured channel hard-failed
+  ok: boolean; // false only when EVERY configured channel failed (lead reached no destination)
   configured: boolean; // at least one channel is set up
   sheet: ChannelResult;
   email: ChannelResult;
@@ -75,8 +75,30 @@ async function appendToTracker(lead: Lead): Promise<ChannelResult> {
         ts: new Date().toISOString(),
       }),
     });
-    if (!res.ok) return { configured: true, delivered: false, reason: `tracker ${res.status}` };
-    // Apps Script returns JSON {ok:true}; treat a 200 as success even if parsing fails.
+    if (!res.ok) return { configured: true, delivered: false, reason: `tracker http ${res.status}` };
+    // Apps Script ALWAYS responds 200 (ContentService) — even when it rejects the
+    // token or hits an error — so the HTTP status is not enough. Require ok:true in
+    // the JSON body, otherwise a token mismatch or wrong access setting would look
+    // delivered while the row never reaches the Sheet (silent lead loss).
+    let payload: { ok?: boolean; error?: string } | null = null;
+    try {
+      payload = (await res.json()) as { ok?: boolean; error?: string };
+    } catch {
+      // Non-JSON body usually means a Google login/HTML page: Web App access is
+      // not set to "Anyone", so the POST never reached the script.
+      return {
+        configured: true,
+        delivered: false,
+        reason: 'tracker returned a non-JSON body (set Web App access to "Anyone")',
+      };
+    }
+    if (!payload || payload.ok !== true) {
+      return {
+        configured: true,
+        delivered: false,
+        reason: `tracker rejected the lead: ${payload?.error ?? "ok:false (check LEADS_WEBHOOK_TOKEN matches the script SECRET)"}`,
+      };
+    }
     return { configured: true, delivered: true };
   } catch (e) {
     return {
@@ -171,6 +193,14 @@ export async function recordLead(lead: Lead): Promise<RecordResult> {
       email.reason,
       "|",
       JSON.stringify(cleaned),
+    );
+  } else if ((sheet.configured && !sheet.delivered) || (email.configured && !email.delivered)) {
+    // Lead is saved (one channel delivered) but another configured channel
+    // failed — surface it so a half-broken setup does not stay invisible.
+    console.warn(
+      "[lead] partial delivery (lead saved, one channel failed):",
+      `sheet=${sheet.delivered ? "ok" : sheet.reason}`,
+      `email=${email.delivered ? "ok" : email.reason}`,
     );
   }
 

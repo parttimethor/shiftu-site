@@ -1,15 +1,10 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import { Section, Container, Eyebrow } from "@/components/ui/Section";
-import { SectionHeading } from "@/components/ui/SectionHeading";
 import { PageHero } from "@/components/ui/PageHero";
-import { CtaBand } from "@/components/ui/CtaBand";
-import { Reveal, Pop } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { Icon } from "@/components/ui/Icon";
-import { IconChip } from "@/components/ui/IconChip";
 import { ChatMock } from "@/components/ui/Mock";
 import { BookCallForm } from "@/components/BookCallForm";
-import { ContactForm } from "@/components/ContactForm";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
@@ -18,19 +13,14 @@ export const metadata: Metadata = {
     "Book a call or get a quote. We build the website and the AI behind it. Fast replies from a real person, no pushy sales.",
 };
 
-const channels = [
-  {
-    icon: "Calendar",
-    title: "Book a call",
-    body: "15 to 20 minutes on your schedule. You leave with a plan and a price.",
-    cta: { label: "Book a call", href: "/contact" },
-  },
-  {
-    icon: "Mail",
-    title: "Email us",
-    body: "Send the details and we reply with a real answer, not an auto-response.",
-    cta: { label: site.contact.email, href: `mailto:${site.contact.email}` },
-  },
+const helpOptions = [
+  "Website or landing page",
+  "Lead generation + ads",
+  "AI chat or voice agent",
+  "Business automation",
+  "Ecommerce / Shopify",
+  "Custom system",
+  "Not sure yet, help me decide",
 ];
 
 const promises = [
@@ -38,16 +28,6 @@ const promises = [
   { icon: "MessageCircle", title: "Plain talk, no jargon", body: "Straight answers and a clear price. No script, no hard sell." },
   { icon: "BadgeCheck", title: "Honest fit check", body: "If we are not the right fit, we tell you that and point you elsewhere." },
   { icon: "ShieldCheck", title: "We stay after launch", body: "Support does not end at handoff. We are here when you need us." },
-];
-
-const helpOptions = [
-  "Landing page (from $350)",
-  "Full website (3 to 10 pages)",
-  "WhatsApp or web chat agent",
-  "Voice agent (AI calls and bookings)",
-  "Google or Meta ads ($300/mo)",
-  "Business automations",
-  "Not sure yet, help me decide",
 ];
 
 export default function ContactPage() {
@@ -71,69 +51,29 @@ export default function ContactPage() {
         align="center"
         eyebrow="Contact"
         title="Let's build it together"
-        subhead="Book a call or get a quote. Tell us what you need: a website, a chat agent, or automations that cut the manual work. No pressure, no pitch."
+        subhead="Tell us what you need: a website, a chat agent, or automations that cut the manual work. Book a call below, or email us. No pressure, no pitch."
         primary={{ label: "Book a call", href: "#book" }}
         secondary={{ label: "Email us", href: `mailto:${site.contact.email}` }}
       />
 
-      {/* Book a call */}
+      {/* Book a call: the one form + what happens next */}
       <Section id="book" tone="surface">
-        <Container size="narrow">
-          <SectionHeading
-            eyebrow="Book a call"
-            title="Grab a time that works"
-            subhead="Pick a preferred time and we'll confirm with a calendar invite. A real person, no pushy sales."
-          />
-          <Reveal className="mt-10 rounded-panel border border-hair bg-card p-7 shadow-s2 sm:p-9">
-            <BookCallForm />
-          </Reveal>
-        </Container>
-      </Section>
-
-      {/* Channels */}
-      <Section tone="surface">
-        <Container>
-          <SectionHeading
-            eyebrow="Pick your channel"
-            title="Reach us the way you like"
-            subhead="A short call beats a long email thread, but the choice is yours."
-          />
-          <div className="mt-12 grid gap-6 sm:grid-cols-2">
-            {channels.map((c, i) => (
-              <Pop key={c.title} delay={i * 0.08}>
-                <div className="flex h-full flex-col rounded-card border border-hair bg-card p-7 shadow-s1">
-                  <IconChip name={c.icon} size="lg" />
-                  <h3 className="mt-4 text-xl font-bold text-ink">{c.title}</h3>
-                  <p className="mt-2 flex-1 text-muted">{c.body}</p>
-                  <Link
-                    href={c.cta.href}
-                    className="mt-4 inline-flex items-center gap-1.5 text-[15px] font-medium text-blue hover:text-blue-bright"
-                  >
-                    {c.cta.label}
-                    <Icon name="ArrowUpRight" size={16} />
-                  </Link>
-                </div>
-              </Pop>
-            ))}
-          </div>
-        </Container>
-      </Section>
-
-      {/* Form + side panel */}
-      <Section>
         <Container>
           <div className="grid gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
             {/* Form */}
             <Reveal>
-              <Eyebrow>Prefer to write</Eyebrow>
+              <Eyebrow>Book a call</Eyebrow>
               <h2 className="mt-3 text-3xl font-bold text-ink sm:text-4xl">
-                Send the details, get a quote
+                Grab a time that works
               </h2>
               <p className="mt-4 max-w-prose text-muted">
-                Four quick fields. We read every one and come back with a real answer.
+                Pick a time and we'll confirm with a calendar invite, or just
+                leave the details and we'll reply. A real person, within one
+                business day, no pushy sales.
               </p>
-
-              <ContactForm options={helpOptions} />
+              <div className="mt-8 rounded-panel border border-hair bg-card p-7 shadow-s2 sm:p-9">
+                <BookCallForm options={helpOptions} />
+              </div>
             </Reveal>
 
             {/* Side panel */}
@@ -142,7 +82,7 @@ export default function ContactPage() {
                 <p className="text-sm font-semibold text-ink">What happens next</p>
                 <ol className="mt-4 space-y-4">
                   {[
-                    "You send the form or book a slot.",
+                    "You book a time or send a quick note.",
                     "We reply within one business day, no auto-responder.",
                     "You get a clear plan and a price, even if you never hire us.",
                   ].map((s, i) => (
@@ -154,6 +94,15 @@ export default function ContactPage() {
                     </li>
                   ))}
                 </ol>
+                <p className="mt-5 border-t border-hair pt-4 text-[15px] text-muted">
+                  Prefer to write?{" "}
+                  <a
+                    href={`mailto:${site.contact.email}`}
+                    className="font-medium text-blue hover:text-blue-bright"
+                  >
+                    {site.contact.email}
+                  </a>
+                </p>
               </div>
 
               <div className="mt-6 flex justify-center lg:justify-start">
@@ -194,13 +143,6 @@ export default function ContactPage() {
           </div>
         </Container>
       </Section>
-
-      <CtaBand
-        title="Have a quick question?"
-        subhead="Book a call and we answer fast, then point you to the right next step."
-        primary={{ label: "Book a call", href: "/contact" }}
-        secondary={null}
-      />
 
       <script
         type="application/ld+json"
