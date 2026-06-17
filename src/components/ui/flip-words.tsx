@@ -14,7 +14,13 @@ export const FlipWords = ({
 }) => {
   const [currentWord, setCurrentWord] = useState(words[0]);
   const [isAnimating, setIsAnimating] = useState<boolean>(false);
-  const reduceMotion = useReducedMotion();
+  const [mounted, setMounted] = useState(false);
+  const prefersReduced = useReducedMotion();
+  // Apply reduced motion only AFTER mount so the server and first client render
+  // produce identical markup (otherwise a reduced-motion client renders the
+  // static span while the server rendered the animated version -> hydration error).
+  const reduceMotion = mounted && prefersReduced;
+  useEffect(() => setMounted(true), []);
 
   // thanks for the fix Julian - https://github.com/Julian-AT
   const startAnimation = useCallback(() => {

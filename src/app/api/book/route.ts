@@ -11,6 +11,7 @@ type Body = {
   name?: string;
   email?: string;
   phone?: string;
+  need?: string;
   preferred?: string;
   notes?: string;
 };
@@ -42,6 +43,7 @@ export async function POST(req: NextRequest) {
     name,
     email,
     phone: (body.phone || "").trim(),
+    need: (body.need || "").trim(),
     preferred: (body.preferred || "").trim(),
     message: (body.notes || "").trim(),
     source: "shiftu.ca/contact#book",
